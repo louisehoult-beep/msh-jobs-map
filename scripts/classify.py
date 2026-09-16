@@ -50,6 +50,13 @@ SALES_TITLE_PATTERNS = [
     r"\bnational\s*sales\s*manager\b",
     r"\bhead\s*of\s*sales\b",
     r"\bsales\s*director\b",
+    # Found by the 16/09/2026 coverage audit: real medical-sales roles that the
+    # earlier patterns let through the net.
+    r"\bmedical\s*sales\s*associate\b",
+    r"\bsales\s*associate\b",
+    r"\bbusiness\s*development\s*consultant\b",
+    r"\bclinical\s*sales\s*support\b",
+    r"\bsales\s*support\s*specialist\b",
 ]
 
 CLINICAL_SUPPORT_TITLE_PATTERNS = [
@@ -67,6 +74,8 @@ CLINICAL_SUPPORT_TITLE_PATTERNS = [
     r"\bmedical\s*science\s*liaison\b",
     r"\bmsl\b",
     r"\bclinical\s*(support|liaison)\s*(manager|specialist)?\b",
+    r"\bvascular\s*access\s*specialist\b",
+    r"\btheatre\s*specialist\b",
 ]
 
 _SALES_RE = re.compile("|".join(SALES_TITLE_PATTERNS), re.IGNORECASE)

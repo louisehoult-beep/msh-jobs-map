@@ -19,13 +19,20 @@ BASE_URL = "https://api.adzuna.com/v1/api/jobs/gb/search"
 MAX_PAGES_PER_KEYWORD = 3
 RESULTS_PER_PAGE = 50
 
+# Budget note: the free tier allows 1,000 calls/month ~= 33/day. At 3 pages a
+# keyword that is 8 keywords/day = 720/month, leaving headroom.
+# The previous phrases were all multi-word ANDs and returned almost nothing
+# ("nurse advisor medical device" matched 0). These are broader; the two-gate
+# classifier is what removes the noise, not the search term.
 SEARCH_KEYWORDS = [
-    "medical sales territory manager",
-    "clinical sales specialist",
-    "medical device account manager",
-    "pharmaceutical business development",
-    "clinical educator medical device",
-    "nurse advisor medical device",
+    "medical sales",
+    "medical device",
+    "territory manager",
+    "clinical specialist",
+    "pharmaceutical sales",
+    "healthcare sales",
+    "surgical sales",
+    "medical representative",
 ]
 
 

@@ -27,6 +27,11 @@ SEARCH_KEYWORDS = [
     "pharmaceutical sales",
     "clinical nurse advisor",
     "product specialist medical device",
+    "medical representative",
+    "theatre sales",
+    "surgical sales",
+    "healthcare sales",
+    "clinical specialist medical device",
 ]
 
 
@@ -34,24 +39,45 @@ def _api_key() -> str | None:
     return os.environ.get("REED_API_KEY")
 
 
-def _request(keyword: str, page_size: int = 100) -> list[dict]:
+# Reed caps a single response at 100. Without paging we were taking 565 of the
+# 1,315 rows it actually holds for these keywords — "medical sales" alone has
+# 754 and we saw 100 of them. Page until exhausted, bounded per keyword so a
+# broad term cannot run away with the whole job.
+PAGE_SIZE = 100
+MAX_PER_KEYWORD = 400
+
+
+def _request(keyword: str) -> list[dict]:
     key = _api_key()
     if not key:
         return []
-
-    params = {"keywords": keyword, "resultsToTake": str(page_size)}
-    url = f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
     auth = base64.b64encode(f"{key}:".encode("utf-8")).decode("ascii")
-    req = urllib.request.Request(url, headers={"Authorization": f"Basic {auth}"})
 
-    try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            body = json.loads(resp.read().decode("utf-8"))
-    except Exception as exc:
-        print(f"[fetch_reed] keyword '{keyword}' failed: {exc}")
-        return []
+    collected: list[dict] = []
+    skip = 0
+    while skip < MAX_PER_KEYWORD:
+        params = {
+            "keywords": keyword,
+            "resultsToTake": str(PAGE_SIZE),
+            "resultsToSkip": str(skip),
+        }
+        url = f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
+        req = urllib.request.Request(url, headers={"Authorization": f"Basic {auth}"})
+        try:
+            with urllib.request.urlopen(req, timeout=25) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+        except Exception as exc:
+            print(f"[fetch_reed] keyword '{keyword}' page skip={skip} failed: {exc}")
+            break
 
-    return body.get("results", [])
+        page = body.get("results", [])
+        collected.extend(page)
+        total = body.get("totalResults", 0)
+        skip += PAGE_SIZE
+        if len(page) < PAGE_SIZE or skip >= total:
+            break
+
+    return collected
 
 
 def fetch_reed_listings() -> list[dict]:
