@@ -1,0 +1,397 @@
+<!-- ============================================================
+  Sales Jobs Map — drop-in panel for careers.html
+  Matches the live Hub's own style.css tokens (Inter, cream/white,
+  --blue/--gold/--purple accents) — no separate design system.
+  Data: jobs-map-pipeline/data/jobs-data.json, refreshed daily.
+  Paste this whole block into the careers.html grid, above the
+  existing "UK MEDICAL SALES RECRUITERS" panel. Also paste
+  jobs-map-pipeline/assets/uk-region-geometry.js as its own WPCode
+  snippet/script tag before this block — it is real UK/Ireland
+  coastline geometry (ONS regional boundaries + a simplified Ireland
+  outline), not decoration, and rarely needs touching once live.
+============================================================= -->
+<div class="panel b-blue" id="jmPanel" style="grid-column:1/-1;">
+  <h2>
+    <span class="ht"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>LIVE SALES JOBS MAP</span>
+    <span class="src" id="jmStamp">loading…</span>
+  </h2>
+  <div class="body" style="padding-bottom:4px;">
+    <p style="margin-bottom:14px;">Medical sales and clinical/product vacancies gathered automatically each day from Reed, Adzuna and specialist medical-sales recruiters. Filter by territory, level, speciality or clinical background, then click through to the live vacancy. The verified agency directory and external search links below remain the place for wider, manual coverage.</p>
+  </div>
+
+  <div class="jm">
+    <div class="jm-wrap">
+      <aside class="jm-filters">
+        <div id="jmFilters"></div>
+        <button class="jm-clear" id="jmClear" type="button">Clear all filters</button>
+      </aside>
+
+      <div class="jm-main">
+        <div class="jm-bar">
+          <div class="jm-count"><b id="jmShown">–</b> <span id="jmShownLbl">vacancies</span></div>
+          <div class="jm-legend">
+            Fewer
+            <span class="jm-swatch">
+              <i style="background:#eef2f6"></i><i style="background:#c9dae9"></i>
+              <i style="background:#7fa0c4"></i><i style="background:#39689e"></i><i style="background:#1c3a5e"></i>
+            </span>
+            More · click a region to filter
+          </div>
+        </div>
+
+        <div class="jm-mapbox">
+          <svg id="jmMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of UK and Ireland job counts by region"></svg>
+          <div class="jm-callout" id="jmLondonCallout"></div>
+        </div>
+        <div class="jm-natnote" id="jmNatNote"></div>
+
+        <div class="jm-list" id="jmList">
+          <div class="jm-loading">Loading live vacancies…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Namespaced to .jm so nothing here leaks into the rest of the Hub page;
+     every color used is one of style.css's own tokens (--blue/--gold/
+     --purple/--border/--panel2/--dim), so the panel reads as native to
+     the site rather than a bolted-on design. */
+  #jmPanel .jm{font-size:13px;}
+  #jmPanel .h2 .src{font-weight:600;}
+  .jm-wrap{display:grid;grid-template-columns:220px 1fr;gap:0;border-top:1px solid var(--border);}
+  @media(max-width:820px){.jm-wrap{grid-template-columns:1fr;}}
+
+  .jm-filters{padding:12px 16px 16px;border-right:1px solid var(--border);}
+  @media(max-width:820px){.jm-filters{border-right:none;border-bottom:1px solid var(--border);}}
+  .jm-grp{border-bottom:1px solid #f0ece3;}
+  .jm-grp:last-of-type{border-bottom:none;}
+  .jm-grp>summary{padding:10px 2px;cursor:pointer;font-weight:600;color:var(--ink);list-style:none;
+                  display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}
+  .jm-grp>summary:hover{color:var(--gold);}
+  .jm-grp>summary::after{content:'+';color:var(--dim);font-weight:400;font-size:15px;}
+  .jm-grp[open]>summary::after{content:'\2013';}
+  .jm-opts{padding:0 2px 10px;display:flex;flex-direction:column;gap:7px;}
+  .jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;line-height:1.3;}
+  .jm-opts input{accent-color:var(--gold);flex:none;}
+  .jm-n{color:var(--dim);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;}
+  .jm-clear{width:100%;margin-top:12px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;
+            padding:8px;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--ink);
+            cursor:pointer;font-family:inherit;font-weight:600;}
+  .jm-clear:hover{border-color:var(--gold);color:var(--gold);}
+
+  .jm-main{min-width:0;}
+  .jm-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;
+          flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel2);}
+  .jm-count{font-size:13px;color:var(--ink);} .jm-count b{color:var(--gold);font-size:15px;}
+  .jm-legend{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--dim);
+             text-transform:uppercase;letter-spacing:.4px;}
+  .jm-swatch{display:flex;gap:2px;}
+  .jm-swatch i{width:14px;height:9px;display:block;border:1px solid var(--border);}
+
+  .jm-mapbox{padding:10px 16px 4px;position:relative;background:var(--panel2);}
+  .jm-mapbox svg{width:100%;height:auto;display:block;max-height:440px;margin:0 auto;}
+  .jm-region{stroke:#fff;stroke-width:1.6;cursor:pointer;transition:filter .15s;fill-rule:evenodd;}
+  .jm-region:hover{filter:brightness(1.08);}
+  .jm-region.sel{stroke:var(--gold);stroke-width:3;}
+  .jm-rlabel{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;text-anchor:middle;
+             pointer-events:none;letter-spacing:.2px;}
+  .jm-rcount{font-size:11.5px;font-weight:700;text-anchor:middle;pointer-events:none;font-variant-numeric:tabular-nums;}
+  .jm-callout{font-size:10px;color:var(--dim);text-align:right;padding:2px 4px 8px;}
+  .jm-natnote{font-size:11.5px;color:var(--dim);padding:8px 16px;border-bottom:1px solid var(--border);
+              background:var(--panel2);}
+
+  .jm-list{padding:2px 0;}
+  .jm-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:11px 16px;
+          text-decoration:none;color:inherit;border-bottom:1px solid #f0ece3;}
+  .jm-row:last-child{border-bottom:none;}
+  .jm-row:hover{background:var(--panel2);}
+  .jm-title{font-weight:600;font-size:13px;color:var(--ink);line-height:1.35;}
+  .jm-meta{font-size:11.5px;color:var(--dim);margin-top:5px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .jm-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;
+          background:var(--panel2);border:1px solid var(--border);color:var(--dim);white-space:nowrap;}
+  .jm-tag.lvl{color:var(--purple);border-color:#dcd0ec;background:#f4f0fa;}
+  .jm-tag.clin{background:var(--ink);border-color:var(--ink);color:#fff;}
+  .jm-tag.sal{color:#7a5b14;border-color:#e8d5a8;background:#fbf3df;}
+  .jm-go{color:var(--gold);font-size:15px;flex:none;font-weight:700;}
+  .jm-empty{padding:30px 20px;text-align:center;color:var(--dim);font-size:13px;line-height:1.6;}
+  .jm-empty b{display:block;color:var(--ink);font-size:14px;margin-bottom:6px;}
+  .jm-more{text-align:center;padding:14px;}
+  .jm-more button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:10px 24px;
+                  font-weight:700;font-size:12px;letter-spacing:.3px;cursor:pointer;font-family:inherit;}
+  .jm-more button:hover{background:#8f6f24;}
+  .jm-loading{padding:36px;text-align:center;color:var(--dim);font-size:13px;}
+</style>
+
+<script>
+(function(){
+  // Live feed, refreshed daily at 06:00 UTC by the msh-jobs-map GitHub Action.
+  // A push to that repo's main IS a publish — see its verify.py.
+  var JOBS_SRC = (window.JOBS_SRC_OVERRIDE)
+    || "https://raw.githubusercontent.com/louisehoult-beep/msh-jobs-map/main/data/jobs-data.json";
+  var NATIONAL = "UK-wide / field-national";
+
+  var state = { jobs: [], filters: {}, limit: 25 };
+
+  var FILTER_DEFS = [
+    { key:"category",  label:"Role type", open:true,
+      display:function(v){ return v === "sales" ? "Sales roles" : "Clinical &amp; product roles"; } },
+    { key:"region",    label:"Nation / territory", open:true },
+    { key:"level",     label:"Role level" },
+    { key:"speciality",label:"Speciality" },
+    { key:"salaryBand",label:"Salary band" },
+    { key:"postedBand",label:"Posted" },
+    { key:"recruiter", label:"Source" },
+    { key:"clinical",  label:"Clinical background", display:function(v){
+        return v === "yes" ? "Requires clinical experience" : "No clinical requirement stated"; } }
+  ];
+
+  function salaryBand(j){
+    var s = j.salary_min;
+    if (!s) return "Not stated";
+    if (s < 35000) return "Up to £35k";
+    if (s < 45000) return "£35k–£45k";
+    if (s < 60000) return "£45k–£60k";
+    return "£60k+";
+  }
+  function daysAgo(d){
+    if(!d) return null;
+    var t = Date.parse(d); if(isNaN(t)) return null;
+    return Math.floor((Date.now()-t)/86400000);
+  }
+  function postedBand(j){
+    var d = daysAgo(j.posted_date);
+    if (d === null) return "Not stated";
+    if (d <= 7) return "New this week";
+    if (d <= 30) return "Last 30 days";
+    return "Older than 30 days";
+  }
+  function fmtSalary(j){
+    if (!j.salary_min) return null;
+    var f = function(n){ return "£" + Math.round(n/1000) + "k"; };
+    return (j.salary_max && j.salary_max !== j.salary_min)
+      ? f(j.salary_min) + "–" + f(j.salary_max) : f(j.salary_min);
+  }
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+
+  // Prefer the recruiter's own stated location over the region bucket, but
+  // not a bare postcode ("YO103SJ") which means nothing to a reader.
+  var POSTCODE_ONLY = /^[A-Z]{1,2}\d[A-Z0-9]?\s*\d?[A-Z]{0,2}$/i;
+  function placeLabel(j){
+    var t = (j.location_text||"").trim();
+    if (!t || POSTCODE_ONLY.test(t)) return j.region;
+    t = t.replace(/\s*,\s*/g, ", ").replace(/\s+/g," ");
+    if (t.length > 34) t = t.slice(0,32).replace(/[,\s]+$/,"") + "…";
+    return t;
+  }
+
+  function derive(j){
+    j._salaryBand = salaryBand(j);
+    j._postedBand = postedBand(j);
+    j._clinical   = j.clinical_experience_required ? "yes" : "no";
+    j._recruiter  = j.recruiter || (j.source||"").replace("recruiter:","") || "other";
+    j._speciality = j.speciality || "Not specified";
+    return j;
+  }
+  function valueOf(j, key){
+    if (key === "salaryBand") return j._salaryBand;
+    if (key === "postedBand") return j._postedBand;
+    if (key === "clinical")   return j._clinical;
+    if (key === "recruiter")  return j._recruiter;
+    if (key === "speciality") return j._speciality;
+    return j[key];
+  }
+
+  function matching(exceptKey){
+    return state.jobs.filter(function(j){
+      for (var k in state.filters){
+        if (k === exceptKey) continue;
+        var sel = state.filters[k];
+        if (sel && sel.size && !sel.has(valueOf(j,k))) return false;
+      }
+      return true;
+    });
+  }
+  function visible(){ return matching(null); }
+
+  function buildFilters(){
+    var host = document.getElementById("jmFilters"), html = "";
+    FILTER_DEFS.forEach(function(def){
+      var pool = matching(def.key), counts = {};
+      pool.forEach(function(j){ var v = valueOf(j,def.key); if(v!=null) counts[v]=(counts[v]||0)+1; });
+      var keys = Object.keys(counts).sort(function(a,b){ return counts[b]-counts[a] || String(a).localeCompare(b); });
+      if (!keys.length) return;
+      var sel = state.filters[def.key];
+      var anyOn = sel && sel.size;
+      html += '<details class="jm-grp"'+((def.open||anyOn)?" open":"")+'><summary>'+esc(def.label)+'</summary><div class="jm-opts">';
+      keys.forEach(function(v){
+        var on = sel && sel.has(v);
+        var lbl = def.display ? def.display(v) : esc(v);
+        html += '<label><input type="checkbox" data-k="'+esc(def.key)+'" data-v="'+esc(v)+'"'+(on?" checked":"")+'>'
+             +  '<span>'+lbl+'</span><span class="jm-n">'+counts[v]+'</span></label>';
+      });
+      html += "</div></details>";
+    });
+    host.innerHTML = html;
+    host.querySelectorAll("input[type=checkbox]").forEach(function(cb){
+      cb.addEventListener("change", function(){
+        var k = cb.dataset.k, v = cb.dataset.v;
+        if (!state.filters[k]) state.filters[k] = new Set();
+        if (cb.checked) state.filters[k].add(v); else state.filters[k].delete(v);
+        state.limit = 25; render();
+      });
+    });
+  }
+
+  // Sequential blue ramp built from the site's own --blue token (#39689e),
+  // not a categorical palette — pale to deep as count rises. No brown.
+  var RAMP = ["#eef2f6", "#c9dae9", "#7fa0c4", "#39689e", "#1c3a5e"];
+  function colourFor(n, max){
+    if (!n) return "#f4f1ea";
+    var r = max ? n/max : 0;
+    if (r > .8) return RAMP[4];
+    if (r > .55) return RAMP[3];
+    if (r > .3) return RAMP[2];
+    if (r > .08) return RAMP[1];
+    return RAMP[0];
+  }
+
+  function buildMap(){
+    var geo = window.__UK_MAP__;
+    if (!geo) return;
+    var pool = matching("region"), counts = {};
+    pool.forEach(function(j){ counts[j.region] = (counts[j.region]||0)+1; });
+
+    var names = Object.keys(geo.paths);
+    var regional = names.map(function(n){ return counts[n]||0; });
+    var max = Math.max.apply(null, regional.concat([1]));
+    var sel = state.filters.region;
+
+    var svgEl = document.getElementById("jmMap");
+    svgEl.setAttribute("viewBox", geo.viewBox);
+    var svg = "";
+    names.forEach(function(name){
+      var n = counts[name]||0;
+      var isSel = sel && sel.has(name);
+      var fill = colourFor(n, max);
+      var light = (n/max) > .5;
+      svg += '<path class="jm-region'+(isSel?" sel":"")+'" d="'+geo.paths[name]+'" fill="'+fill+'" data-r="'+esc(name)+'">'
+          +  '<title>'+esc(name)+': '+n+' vacancies</title></path>';
+    });
+    // Manual label nudges for shapes too tight/collision-prone for the raw
+    // area centroid: North's waist is narrow near the Scotland border so
+    // its two-line label needs pushing south to stay inside the shape;
+    // London's true centroid sits almost on top of South & East's, so it
+    // gets pulled out to a callout point with a leader line, and South &
+    // East's own label nudges away to give it room.
+    var NUDGE = {
+      "England — North": [0, 22],
+      "England — South & East": [-14, 18]
+    };
+    var LONDON_CALLOUT = [44, -46];
+
+    // labels drawn after all fills so they always sit on top
+    names.forEach(function(name){
+      var n = counts[name]||0;
+      var c = geo.centroids[name];
+      var light = (n/max) > .5;
+      var cx = c[0], cy = c[1];
+      var isLondon = name === "London";
+      if (NUDGE[name]){ cx += NUDGE[name][0]; cy += NUDGE[name][1]; }
+      if (isLondon){ cx = c[0] + LONDON_CALLOUT[0]; cy = c[1] + LONDON_CALLOUT[1]; }
+      var short = name.replace("England — ","").toUpperCase();
+      var haloStyle = 'style="paint-order:stroke;stroke:#faf8f3;stroke-width:3px;stroke-linejoin:round;"';
+      svg += '<g style="pointer-events:none;">';
+      if (isLondon){
+        svg += '<line x1="'+c[0]+'" y1="'+c[1]+'" x2="'+cx+'" y2="'+(cy+9)+'" stroke="#8C8273" stroke-width=".9"/>';
+        svg += '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="2" fill="#8C8273"/>';
+      }
+      svg += '<text class="jm-rlabel" x="'+cx+'" y="'+cy+'" fill="'+(isLondon?"#0B1C33":(light?"#F5F1E8":"#0B1C33"))+'" '+(isLondon?haloStyle:'')+'>'+esc(short)+'</text>';
+      svg += '<text class="jm-rcount" x="'+cx+'" y="'+(cy+13)+'" fill="'+(isLondon?"#a8842c":(light?"#E0BE8E":"#a8842c"))+'" '+(isLondon?haloStyle:'')+'>'+n+'</text>';
+      svg += '</g>';
+    });
+    svgEl.innerHTML = svg;
+
+    svgEl.querySelectorAll(".jm-region").forEach(function(p){
+      p.addEventListener("click", function(){
+        var r = p.dataset.r;
+        if (!state.filters.region) state.filters.region = new Set();
+        if (state.filters.region.has(r)) state.filters.region.delete(r);
+        else state.filters.region.add(r);
+        state.limit = 25; render();
+      });
+    });
+
+    var nat = counts[NATIONAL]||0;
+    document.getElementById("jmNatNote").innerHTML = nat
+      ? nat + " further role" + (nat===1?" is":"s are") + ' advertised as UK-wide or field-based with no fixed territory — filter by "'+esc(NATIONAL)+'" under Nation / territory to see them.'
+      : "";
+  }
+
+  function buildList(){
+    var jobs = visible().slice().sort(function(a,b){
+      return (Date.parse(b.posted_date)||0) - (Date.parse(a.posted_date)||0);
+    });
+    var host = document.getElementById("jmList");
+
+    document.getElementById("jmShown").textContent = jobs.length;
+    document.getElementById("jmShownLbl").textContent = jobs.length === 1 ? "vacancy" : "vacancies";
+
+    if (!jobs.length){
+      host.innerHTML = '<div class="jm-empty"><b>No vacancies match these filters</b>'
+        + 'Nothing currently advertised fits every filter chosen. Try clearing one — territory and speciality together are the usual culprits.</div>';
+      return;
+    }
+
+    var slice = jobs.slice(0, state.limit), html = "";
+    slice.forEach(function(j){
+      var sal = fmtSalary(j), d = daysAgo(j.posted_date);
+      html += '<a class="jm-row" href="'+esc(j.url)+'" target="_blank" rel="noopener noreferrer">'
+        + '<div><div class="jm-title">'+esc(j.title)+'</div><div class="jm-meta">'
+        + '<span class="jm-tag">'+esc(placeLabel(j))+'</span>'
+        + '<span class="jm-tag lvl">'+esc(j.level)+'</span>'
+        + (sal ? '<span class="jm-tag sal">'+sal+'</span>' : "")
+        + (j.clinical_experience_required ? '<span class="jm-tag clin">Clinical background</span>' : "")
+        + (j.speciality ? '<span class="jm-tag">'+esc(j.speciality)+'</span>' : "")
+        + '<span>'+esc(j._recruiter)+(d!==null&&d<=7?" · new this week":"")+'</span>'
+        + '</div></div><span class="jm-go">›</span></a>';
+    });
+    if (jobs.length > state.limit){
+      html += '<div class="jm-more"><button id="jmMore" type="button">Show more ('+(jobs.length-state.limit)+' remaining)</button></div>';
+    }
+    host.innerHTML = html;
+    var more = document.getElementById("jmMore");
+    if (more) more.addEventListener("click", function(){ state.limit += 25; buildList(); });
+  }
+
+  function render(){ buildFilters(); buildMap(); buildList(); }
+
+  document.getElementById("jmClear").addEventListener("click", function(){
+    state.filters = {}; state.limit = 25; render();
+  });
+
+  function boot(data){
+    state.jobs = (data.jobs||[]).map(derive);
+    var when = data.generated_at ? new Date(data.generated_at) : null;
+    document.getElementById("jmStamp").textContent =
+      state.jobs.length + " live · " + (when ? when.toLocaleDateString("en-GB",{day:"2-digit",month:"short"}) : "—");
+    render();
+  }
+
+  if (window.__JOBS_DATA__){
+    boot(window.__JOBS_DATA__);
+  } else {
+    fetch(JOBS_SRC, {cache:"no-store"})
+      .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+      .then(boot)
+      .catch(function(e){
+        document.getElementById("jmList").innerHTML =
+          '<div class="jm-empty"><b>Vacancies are temporarily unavailable</b>The live jobs feed could not be loaded. Please try again shortly.</div>';
+        document.getElementById("jmStamp").textContent = "feed unavailable";
+        console.error("jobs-map feed error:", e);
+      });
+  }
+})();
+</script>
