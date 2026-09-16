@@ -1,14 +1,9 @@
 /* Medical Sales Hub — Career Centre jobs-map panel.
- * Lives in this repo, served to the live Hub page via jsDelivr.
- *
- * WHY IT IS NOT INLINE IN THE PAGE: WordPress HTML-escapes literal
- * & < > inside page content, which silently turned the esc() regex into
- * /[&#038;...]/ and stopped the whole panel parsing. Served as a real .js
- * file there is nothing for WordPress to touch, and a code change now
- * deploys with a git push instead of a page edit.
+ * Served to the live Hub page via jsDelivr; never inlined in page content,
+ * because WordPress HTML-escapes literal & < > there and breaks the script.
  */
 (function(){
-  var css = "\n  /* Namespaced to .jm so nothing here leaks into the rest of the Hub page;\n     every color used is one of style.css's own tokens (--blue/--gold/\n     --purple/--border/--panel2/--dim), so the panel reads as native to\n     the site rather than a bolted-on design. */\n  #jmPanel .jm{font-size:13px;}\n  #jmPanel .h2 .src{font-weight:600;}\n  .jm-wrap{display:grid;grid-template-columns:220px 1fr;gap:0;border-top:1px solid var(--border);}\n  @media(max-width:820px){.jm-wrap{grid-template-columns:1fr;}}\n\n  .jm-filters{padding:12px 16px 16px;border-right:1px solid var(--border);}\n  @media(max-width:820px){.jm-filters{border-right:none;border-bottom:1px solid var(--border);}}\n  .jm-grp{border-bottom:1px solid #f0ece3;}\n  .jm-grp:last-of-type{border-bottom:none;}\n  .jm-grp>summary{padding:10px 2px;cursor:pointer;font-weight:600;color:var(--ink);list-style:none;\n                  display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}\n  .jm-grp>summary:hover{color:var(--gold);}\n  .jm-grp>summary::after{content:'+';color:var(--dim);font-weight:400;font-size:15px;}\n  .jm-grp[open]>summary::after{content:'\\2013';}\n  .jm-opts{padding:0 2px 10px;display:flex;flex-direction:column;gap:7px;}\n  .jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;line-height:1.3;}\n  .jm-opts input{accent-color:var(--gold);flex:none;}\n  .jm-n{color:var(--dim);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;}\n  .jm-clear{width:100%;margin-top:12px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;\n            padding:8px;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--ink);\n            cursor:pointer;font-family:inherit;font-weight:600;}\n  .jm-clear:hover{border-color:var(--gold);color:var(--gold);}\n\n  .jm-main{min-width:0;}\n  .jm-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;\n          flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel2);}\n  .jm-count{font-size:13px;color:var(--ink);} .jm-count b{color:var(--gold);font-size:15px;}\n  .jm-legend{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--dim);\n             text-transform:uppercase;letter-spacing:.4px;}\n  .jm-swatch{display:flex;gap:2px;}\n  .jm-swatch i{width:14px;height:9px;display:block;border:1px solid var(--border);}\n\n  .jm-mapbox{padding:10px 16px 4px;position:relative;background:var(--panel2);}\n  .jm-mapbox svg{width:100%;height:auto;display:block;max-height:440px;margin:0 auto;}\n  .jm-region{stroke:#fff;stroke-width:1.6;cursor:pointer;transition:filter .15s;fill-rule:evenodd;}\n  .jm-region:hover{filter:brightness(1.08);}\n  .jm-region.sel{stroke:var(--gold);stroke-width:3;}\n  .jm-rlabel{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;text-anchor:middle;\n             pointer-events:none;letter-spacing:.2px;}\n  .jm-rcount{font-size:11.5px;font-weight:700;text-anchor:middle;pointer-events:none;font-variant-numeric:tabular-nums;}\n  .jm-callout{font-size:10px;color:var(--dim);text-align:right;padding:2px 4px 8px;}\n  .jm-natnote{font-size:11.5px;color:var(--dim);padding:8px 16px;border-bottom:1px solid var(--border);\n              background:var(--panel2);}\n\n  .jm-list{padding:2px 0;}\n  .jm-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:11px 16px;\n          text-decoration:none;color:inherit;border-bottom:1px solid #f0ece3;}\n  .jm-row:last-child{border-bottom:none;}\n  .jm-row:hover{background:var(--panel2);}\n  .jm-title{font-weight:600;font-size:13px;color:var(--ink);line-height:1.35;}\n  .jm-meta{font-size:11.5px;color:var(--dim);margin-top:5px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;}\n  .jm-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;\n          background:var(--panel2);border:1px solid var(--border);color:var(--dim);white-space:nowrap;}\n  .jm-tag.lvl{color:var(--purple);border-color:#dcd0ec;background:#f4f0fa;}\n  .jm-tag.clin{background:var(--ink);border-color:var(--ink);color:#fff;}\n  .jm-tag.sal{color:#7a5b14;border-color:#e8d5a8;background:#fbf3df;}\n  .jm-go{color:var(--gold);font-size:15px;flex:none;font-weight:700;}\n  .jm-empty{padding:30px 20px;text-align:center;color:var(--dim);font-size:13px;line-height:1.6;}\n  .jm-empty b{display:block;color:var(--ink);font-size:14px;margin-bottom:6px;}\n  .jm-more{text-align:center;padding:14px;}\n  .jm-more button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:10px 24px;\n                  font-weight:700;font-size:12px;letter-spacing:.3px;cursor:pointer;font-family:inherit;}\n  .jm-more button:hover{background:#8f6f24;}\n  .jm-loading{padding:36px;text-align:center;color:var(--dim);font-size:13px;}\n";
+  var css = "\n  /* Namespaced to .jm so nothing here leaks into the rest of the Hub page;\n     every color used is one of style.css's own tokens (--blue/--gold/\n     --purple/--border/--panel2/--dim), so the panel reads as native to\n     the site rather than a bolted-on design. */\n  #jmPanel .jm{font-size:13px;}\n  #jmPanel .h2 .src{font-weight:600;}\n  .jm-wrap{display:grid;grid-template-columns:220px 1fr;gap:0;border-top:1px solid var(--border);}\n  @media(max-width:820px){.jm-wrap{grid-template-columns:1fr;}}\n\n  .jm-filters{padding:16px 18px 20px;border-right:1px solid var(--border);}\n  @media(max-width:820px){.jm-filters{border-right:none;border-bottom:1px solid var(--border);}}\n  .jm-grp{border-bottom:1px solid #f0ece3;}\n  .jm-grp:last-of-type{border-bottom:none;}\n  .jm-grp>summary{padding:10px 2px;cursor:pointer;font-weight:600;color:var(--ink);list-style:none;\n                  display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}\n  .jm-grp>summary:hover{color:var(--gold);}\n  .jm-grp>summary::after{content:'+';color:var(--dim);font-weight:400;font-size:15px;}\n  .jm-grp[open]>summary::after{content:'\\2013';}\n  .jm-opts{padding:0 2px 10px;display:flex;flex-direction:column;gap:7px;}\n  .jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;line-height:1.3;}\n  .jm-opts input{accent-color:var(--gold);flex:none;}\n  .jm-n{color:var(--dim);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;}\n  .jm-clear{width:100%;margin-top:16px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;\n            padding:8px;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--ink);\n            cursor:pointer;font-family:inherit;font-weight:600;}\n  .jm-clear:hover{border-color:var(--gold);color:var(--gold);}\n\n  .jm-main{min-width:0;}\n  .jm-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;\n          padding:14px 20px;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel2);}\n  .jm-count{font-size:13px;color:var(--ink);} .jm-count b{color:var(--gold);font-size:16px;}\n  .jm-hint{font-size:11.5px;color:var(--dim);}\n\n  /* Map and key sit side by side so the map gets the full height available. */\n  .jm-stage{display:grid;grid-template-columns:1fr 200px;gap:22px;padding:20px 20px 18px;\n            align-items:start;background:var(--panel2);border-bottom:1px solid var(--border);}\n  @media(max-width:900px){.jm-stage{grid-template-columns:1fr;gap:16px;}}\n\n  .jm-mapbox{min-width:0;}\n  .jm-mapbox svg{width:100%;height:auto;display:block;max-height:560px;margin:0 auto;}\n  .jm-region{stroke:#fff;stroke-width:1.4;cursor:pointer;transition:filter .15s;fill-rule:evenodd;}\n  .jm-region:hover{filter:brightness(1.1);}\n  .jm-region.sel{stroke:var(--gold);stroke-width:3;}\n  .jm-rlabel{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;text-anchor:middle;\n             pointer-events:none;letter-spacing:.3px;}\n  .jm-rcount{font-size:12px;font-weight:700;text-anchor:middle;pointer-events:none;\n             font-variant-numeric:tabular-nums;}\n\n  .jm-key{font-size:11.5px;color:var(--ink);}\n  .jm-key h4{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);\n             font-weight:700;margin:0 0 10px;}\n  .jm-key .jm-scale{display:flex;flex-direction:column;gap:3px;margin-bottom:8px;}\n  .jm-key .jm-step{display:flex;align-items:center;gap:9px;}\n  .jm-key .jm-step i{width:22px;height:13px;display:block;border:1px solid var(--border);\n                     border-radius:2px;flex:none;}\n  .jm-key .jm-step span{color:var(--dim);font-size:11px;font-variant-numeric:tabular-nums;}\n  .jm-key .jm-keynote{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);\n                      color:var(--dim);line-height:1.55;font-size:11px;}\n  .jm-key .jm-keynote b{color:var(--ink);display:block;margin-bottom:3px;font-size:11.5px;}\n  .jm-key .jm-natbtn{margin-top:9px;width:100%;background:var(--panel);border:1px solid var(--border);\n                     border-radius:6px;padding:7px 9px;font-size:11px;color:var(--ink);cursor:pointer;\n                     font-family:inherit;font-weight:600;text-align:left;line-height:1.4;}\n  .jm-key .jm-natbtn:hover{border-color:var(--gold);color:var(--gold);}\n\n  .jm-list{padding:0;}\n  .jm-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px 20px;\n          text-decoration:none;color:inherit;border-bottom:1px solid #f0ece3;}\n  .jm-row:last-child{border-bottom:none;}\n  .jm-row:hover{background:var(--panel2);}\n  .jm-title{font-weight:600;font-size:13px;color:var(--ink);line-height:1.35;}\n  .jm-meta{font-size:11.5px;color:var(--dim);margin-top:7px;display:flex;gap:7px;flex-wrap:wrap;align-items:center;}\n  .jm-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;\n          background:var(--panel2);border:1px solid var(--border);color:var(--dim);white-space:nowrap;}\n  .jm-tag.lvl{color:var(--purple);border-color:#dcd0ec;background:#f4f0fa;}\n  .jm-tag.clin{background:var(--ink);border-color:var(--ink);color:#fff;}\n  .jm-tag.sal{color:#7a5b14;border-color:#e8d5a8;background:#fbf3df;}\n  .jm-go{color:var(--gold);font-size:15px;flex:none;font-weight:700;}\n  .jm-empty{padding:38px 24px;text-align:center;color:var(--dim);font-size:13px;line-height:1.6;}\n  .jm-empty b{display:block;color:var(--ink);font-size:14px;margin-bottom:6px;}\n  .jm-more{text-align:center;padding:14px;}\n  .jm-more button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:10px 24px;\n                  font-weight:700;font-size:12px;letter-spacing:.3px;cursor:pointer;font-family:inherit;}\n  .jm-more button:hover{background:#8f6f24;}\n  .jm-loading{padding:36px;text-align:center;color:var(--dim);font-size:13px;}\n";
   var tag = document.createElement('style');
   tag.setAttribute('data-jm','1');
   tag.appendChild(document.createTextNode(css));
@@ -119,6 +114,23 @@
   }
   function visible(){ return matching(null); }
 
+  // The list only appears once the reader has narrowed something — otherwise
+  // the panel opens as a map, not a 300-row dump.
+  function anyFilterActive(){
+    for (var k in state.filters){
+      if (state.filters[k] && state.filters[k].size) return true;
+    }
+    return false;
+  }
+  function activeFilterLabels(){
+    var out = [];
+    for (var k in state.filters){
+      var sel = state.filters[k];
+      if (sel && sel.size) sel.forEach(function(v){ out.push(v); });
+    }
+    return out;
+  }
+
   function buildFilters(){
     var host = document.getElementById("jmFilters"), html = "";
     FILTER_DEFS.forEach(function(def){
@@ -227,10 +239,46 @@
       });
     });
 
-    var nat = counts[NATIONAL]||0;
-    document.getElementById("jmNatNote").innerHTML = nat
-      ? nat + " further role" + (nat===1?" is":"s are") + ' advertised as UK-wide or field-based with no fixed territory — filter by "'+esc(NATIONAL)+'" under Nation / territory to see them.'
-      : "";
+    buildKey(counts, max);
+  }
+
+  // The key sits beside the map rather than above it, so the map gets the
+  // full height of the block.
+  function buildKey(counts, max){
+    var host = document.getElementById("jmKey");
+    if (!host) return;
+    var bands = [
+      {c: RAMP[4], lo: Math.ceil(max*0.8)},
+      {c: RAMP[3], lo: Math.ceil(max*0.55)},
+      {c: RAMP[2], lo: Math.ceil(max*0.3)},
+      {c: RAMP[1], lo: Math.ceil(max*0.08)},
+      {c: RAMP[0], lo: 1}
+    ];
+    var html = '<h4>Vacancies by region</h4><div class="jm-scale">';
+    bands.forEach(function(b, i){
+      var hi = i === 0 ? max : bands[i-1].lo - 1;
+      var label = (b.lo >= hi) ? String(b.lo) : b.lo + "\u2013" + hi;
+      html += '<div class="jm-step"><i style="background:' + b.c + '"></i><span>' + label + '</span></div>';
+    });
+    html += '<div class="jm-step"><i style="background:#f4f1ea"></i><span>0</span></div></div>';
+
+    var nat = counts[NATIONAL] || 0;
+    if (nat){
+      html += '<div class="jm-keynote"><b>Not on the map</b>'
+           +  nat + ' role' + (nat===1?' is':'s are') + ' advertised as UK-wide or field-based, '
+           +  'with no fixed territory.'
+           +  '<button type="button" class="jm-natbtn" id="jmNatBtn">Show these ' + nat + ' roles</button>'
+           +  '</div>';
+    }
+    host.innerHTML = html;
+
+    var nb = document.getElementById("jmNatBtn");
+    if (nb) nb.addEventListener("click", function(){
+      if (!state.filters.region) state.filters.region = new Set();
+      state.filters.region.clear();
+      state.filters.region.add(NATIONAL);
+      state.limit = 25; render();
+    });
   }
 
   function buildList(){
@@ -241,6 +289,24 @@
 
     document.getElementById("jmShown").textContent = jobs.length;
     document.getElementById("jmShownLbl").textContent = jobs.length === 1 ? "vacancy" : "vacancies";
+
+    var hintEl = document.getElementById("jmHint");
+
+    if (!anyFilterActive()){
+      // Opening state: the map is the interface, not a 300-row list.
+      host.innerHTML = '<div class="jm-empty"><b>Pick a region or a filter to see the roles</b>'
+        + 'Click any region on the map, or use the filters on the left, and the matching '
+        + 'vacancies will be listed here.</div>';
+      if (hintEl) hintEl.textContent = "Click a region on the map, or use the filters, to list the roles";
+      return;
+    }
+
+    if (hintEl){
+      var labels = activeFilterLabels();
+      hintEl.textContent = labels.length === 1
+        ? "Showing: " + labels[0]
+        : "Showing " + labels.length + " filters \u00b7 use Clear all to reset";
+    }
 
     if (!jobs.length){
       host.innerHTML = '<div class="jm-empty"><b>No vacancies match these filters</b>'

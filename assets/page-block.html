@@ -29,21 +29,15 @@
       <div class="jm-main">
         <div class="jm-bar">
           <div class="jm-count"><b id="jmShown">–</b> <span id="jmShownLbl">vacancies</span></div>
-          <div class="jm-legend">
-            Fewer
-            <span class="jm-swatch">
-              <i style="background:#eef2f6"></i><i style="background:#c9dae9"></i>
-              <i style="background:#7fa0c4"></i><i style="background:#39689e"></i><i style="background:#1c3a5e"></i>
-            </span>
-            More · click a region to filter
-          </div>
+          <div class="jm-hint" id="jmHint">Click a region on the map, or use the filters, to list the roles</div>
         </div>
 
-        <div class="jm-mapbox">
-          <svg id="jmMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of UK and Ireland job counts by region"></svg>
-          <div class="jm-callout" id="jmLondonCallout"></div>
+        <div class="jm-stage">
+          <div class="jm-mapbox">
+            <svg id="jmMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of UK and Ireland vacancy counts by region"></svg>
+          </div>
+          <aside class="jm-key" id="jmKey"></aside>
         </div>
-        <div class="jm-natnote" id="jmNatNote"></div>
 
         <div class="jm-list" id="jmList">
           <div class="jm-loading">Loading live vacancies…</div>
