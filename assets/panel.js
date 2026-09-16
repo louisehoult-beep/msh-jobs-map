@@ -1,130 +1,20 @@
-<!-- ============================================================
-  Sales Jobs Map — drop-in panel for careers.html
-  Matches the live Hub's own style.css tokens (Inter, cream/white,
-  --blue/--gold/--purple accents) — no separate design system.
-  Data: jobs-map-pipeline/data/jobs-data.json, refreshed daily.
-  Paste this whole block into the careers.html grid, above the
-  existing "UK MEDICAL SALES RECRUITERS" panel. Also paste
-  jobs-map-pipeline/assets/uk-region-geometry.js as its own WPCode
-  snippet/script tag before this block — it is real UK/Ireland
-  coastline geometry (ONS regional boundaries + a simplified Ireland
-  outline), not decoration, and rarely needs touching once live.
-============================================================= -->
-<div class="panel b-blue" id="jmPanel" style="grid-column:1/-1;">
-  <h2>
-    <span class="ht"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>LIVE SALES JOBS MAP</span>
-    <span class="src" id="jmStamp">loading…</span>
-  </h2>
-  <div class="body" style="padding-bottom:4px;">
-    <p style="margin-bottom:14px;">Medical sales and clinical/product vacancies gathered automatically each day from Reed, Adzuna and specialist medical-sales recruiters. Filter by territory, level, speciality or clinical background, then click through to the live vacancy. The verified agency directory and external search links below remain the place for wider, manual coverage.</p>
-  </div>
+/* Medical Sales Hub — Career Centre jobs-map panel.
+ * Lives in this repo, served to the live Hub page via jsDelivr.
+ *
+ * WHY IT IS NOT INLINE IN THE PAGE: WordPress HTML-escapes literal
+ * & < > inside page content, which silently turned the esc() regex into
+ * /[&#038;...]/ and stopped the whole panel parsing. Served as a real .js
+ * file there is nothing for WordPress to touch, and a code change now
+ * deploys with a git push instead of a page edit.
+ */
+(function(){
+  var css = "\n  /* Namespaced to .jm so nothing here leaks into the rest of the Hub page;\n     every color used is one of style.css's own tokens (--blue/--gold/\n     --purple/--border/--panel2/--dim), so the panel reads as native to\n     the site rather than a bolted-on design. */\n  #jmPanel .jm{font-size:13px;}\n  #jmPanel .h2 .src{font-weight:600;}\n  .jm-wrap{display:grid;grid-template-columns:220px 1fr;gap:0;border-top:1px solid var(--border);}\n  @media(max-width:820px){.jm-wrap{grid-template-columns:1fr;}}\n\n  .jm-filters{padding:12px 16px 16px;border-right:1px solid var(--border);}\n  @media(max-width:820px){.jm-filters{border-right:none;border-bottom:1px solid var(--border);}}\n  .jm-grp{border-bottom:1px solid #f0ece3;}\n  .jm-grp:last-of-type{border-bottom:none;}\n  .jm-grp>summary{padding:10px 2px;cursor:pointer;font-weight:600;color:var(--ink);list-style:none;\n                  display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}\n  .jm-grp>summary:hover{color:var(--gold);}\n  .jm-grp>summary::after{content:'+';color:var(--dim);font-weight:400;font-size:15px;}\n  .jm-grp[open]>summary::after{content:'\\2013';}\n  .jm-opts{padding:0 2px 10px;display:flex;flex-direction:column;gap:7px;}\n  .jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;line-height:1.3;}\n  .jm-opts input{accent-color:var(--gold);flex:none;}\n  .jm-n{color:var(--dim);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;}\n  .jm-clear{width:100%;margin-top:12px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;\n            padding:8px;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--ink);\n            cursor:pointer;font-family:inherit;font-weight:600;}\n  .jm-clear:hover{border-color:var(--gold);color:var(--gold);}\n\n  .jm-main{min-width:0;}\n  .jm-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;\n          flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel2);}\n  .jm-count{font-size:13px;color:var(--ink);} .jm-count b{color:var(--gold);font-size:15px;}\n  .jm-legend{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--dim);\n             text-transform:uppercase;letter-spacing:.4px;}\n  .jm-swatch{display:flex;gap:2px;}\n  .jm-swatch i{width:14px;height:9px;display:block;border:1px solid var(--border);}\n\n  .jm-mapbox{padding:10px 16px 4px;position:relative;background:var(--panel2);}\n  .jm-mapbox svg{width:100%;height:auto;display:block;max-height:440px;margin:0 auto;}\n  .jm-region{stroke:#fff;stroke-width:1.6;cursor:pointer;transition:filter .15s;fill-rule:evenodd;}\n  .jm-region:hover{filter:brightness(1.08);}\n  .jm-region.sel{stroke:var(--gold);stroke-width:3;}\n  .jm-rlabel{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;text-anchor:middle;\n             pointer-events:none;letter-spacing:.2px;}\n  .jm-rcount{font-size:11.5px;font-weight:700;text-anchor:middle;pointer-events:none;font-variant-numeric:tabular-nums;}\n  .jm-callout{font-size:10px;color:var(--dim);text-align:right;padding:2px 4px 8px;}\n  .jm-natnote{font-size:11.5px;color:var(--dim);padding:8px 16px;border-bottom:1px solid var(--border);\n              background:var(--panel2);}\n\n  .jm-list{padding:2px 0;}\n  .jm-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:11px 16px;\n          text-decoration:none;color:inherit;border-bottom:1px solid #f0ece3;}\n  .jm-row:last-child{border-bottom:none;}\n  .jm-row:hover{background:var(--panel2);}\n  .jm-title{font-weight:600;font-size:13px;color:var(--ink);line-height:1.35;}\n  .jm-meta{font-size:11.5px;color:var(--dim);margin-top:5px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;}\n  .jm-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;\n          background:var(--panel2);border:1px solid var(--border);color:var(--dim);white-space:nowrap;}\n  .jm-tag.lvl{color:var(--purple);border-color:#dcd0ec;background:#f4f0fa;}\n  .jm-tag.clin{background:var(--ink);border-color:var(--ink);color:#fff;}\n  .jm-tag.sal{color:#7a5b14;border-color:#e8d5a8;background:#fbf3df;}\n  .jm-go{color:var(--gold);font-size:15px;flex:none;font-weight:700;}\n  .jm-empty{padding:30px 20px;text-align:center;color:var(--dim);font-size:13px;line-height:1.6;}\n  .jm-empty b{display:block;color:var(--ink);font-size:14px;margin-bottom:6px;}\n  .jm-more{text-align:center;padding:14px;}\n  .jm-more button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:10px 24px;\n                  font-weight:700;font-size:12px;letter-spacing:.3px;cursor:pointer;font-family:inherit;}\n  .jm-more button:hover{background:#8f6f24;}\n  .jm-loading{padding:36px;text-align:center;color:var(--dim);font-size:13px;}\n";
+  var tag = document.createElement('style');
+  tag.setAttribute('data-jm','1');
+  tag.appendChild(document.createTextNode(css));
+  document.head.appendChild(tag);
+})();
 
-  <div class="jm">
-    <div class="jm-wrap">
-      <aside class="jm-filters">
-        <div id="jmFilters"></div>
-        <button class="jm-clear" id="jmClear" type="button">Clear all filters</button>
-      </aside>
-
-      <div class="jm-main">
-        <div class="jm-bar">
-          <div class="jm-count"><b id="jmShown">–</b> <span id="jmShownLbl">vacancies</span></div>
-          <div class="jm-legend">
-            Fewer
-            <span class="jm-swatch">
-              <i style="background:#eef2f6"></i><i style="background:#c9dae9"></i>
-              <i style="background:#7fa0c4"></i><i style="background:#39689e"></i><i style="background:#1c3a5e"></i>
-            </span>
-            More · click a region to filter
-          </div>
-        </div>
-
-        <div class="jm-mapbox">
-          <svg id="jmMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of UK and Ireland job counts by region"></svg>
-          <div class="jm-callout" id="jmLondonCallout"></div>
-        </div>
-        <div class="jm-natnote" id="jmNatNote"></div>
-
-        <div class="jm-list" id="jmList">
-          <div class="jm-loading">Loading live vacancies…</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* Namespaced to .jm so nothing here leaks into the rest of the Hub page;
-     every color used is one of style.css's own tokens (--blue/--gold/
-     --purple/--border/--panel2/--dim), so the panel reads as native to
-     the site rather than a bolted-on design. */
-  #jmPanel .jm{font-size:13px;}
-  #jmPanel .h2 .src{font-weight:600;}
-  .jm-wrap{display:grid;grid-template-columns:220px 1fr;gap:0;border-top:1px solid var(--border);}
-  @media(max-width:820px){.jm-wrap{grid-template-columns:1fr;}}
-
-  .jm-filters{padding:12px 16px 16px;border-right:1px solid var(--border);}
-  @media(max-width:820px){.jm-filters{border-right:none;border-bottom:1px solid var(--border);}}
-  .jm-grp{border-bottom:1px solid #f0ece3;}
-  .jm-grp:last-of-type{border-bottom:none;}
-  .jm-grp>summary{padding:10px 2px;cursor:pointer;font-weight:600;color:var(--ink);list-style:none;
-                  display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}
-  .jm-grp>summary:hover{color:var(--gold);}
-  .jm-grp>summary::after{content:'+';color:var(--dim);font-weight:400;font-size:15px;}
-  .jm-grp[open]>summary::after{content:'\2013';}
-  .jm-opts{padding:0 2px 10px;display:flex;flex-direction:column;gap:7px;}
-  .jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;line-height:1.3;}
-  .jm-opts input{accent-color:var(--gold);flex:none;}
-  .jm-n{color:var(--dim);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;}
-  .jm-clear{width:100%;margin-top:12px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;
-            padding:8px;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--ink);
-            cursor:pointer;font-family:inherit;font-weight:600;}
-  .jm-clear:hover{border-color:var(--gold);color:var(--gold);}
-
-  .jm-main{min-width:0;}
-  .jm-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;
-          flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel2);}
-  .jm-count{font-size:13px;color:var(--ink);} .jm-count b{color:var(--gold);font-size:15px;}
-  .jm-legend{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--dim);
-             text-transform:uppercase;letter-spacing:.4px;}
-  .jm-swatch{display:flex;gap:2px;}
-  .jm-swatch i{width:14px;height:9px;display:block;border:1px solid var(--border);}
-
-  .jm-mapbox{padding:10px 16px 4px;position:relative;background:var(--panel2);}
-  .jm-mapbox svg{width:100%;height:auto;display:block;max-height:440px;margin:0 auto;}
-  .jm-region{stroke:#fff;stroke-width:1.6;cursor:pointer;transition:filter .15s;fill-rule:evenodd;}
-  .jm-region:hover{filter:brightness(1.08);}
-  .jm-region.sel{stroke:var(--gold);stroke-width:3;}
-  .jm-rlabel{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;text-anchor:middle;
-             pointer-events:none;letter-spacing:.2px;}
-  .jm-rcount{font-size:11.5px;font-weight:700;text-anchor:middle;pointer-events:none;font-variant-numeric:tabular-nums;}
-  .jm-callout{font-size:10px;color:var(--dim);text-align:right;padding:2px 4px 8px;}
-  .jm-natnote{font-size:11.5px;color:var(--dim);padding:8px 16px;border-bottom:1px solid var(--border);
-              background:var(--panel2);}
-
-  .jm-list{padding:2px 0;}
-  .jm-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:11px 16px;
-          text-decoration:none;color:inherit;border-bottom:1px solid #f0ece3;}
-  .jm-row:last-child{border-bottom:none;}
-  .jm-row:hover{background:var(--panel2);}
-  .jm-title{font-weight:600;font-size:13px;color:var(--ink);line-height:1.35;}
-  .jm-meta{font-size:11.5px;color:var(--dim);margin-top:5px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
-  .jm-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;
-          background:var(--panel2);border:1px solid var(--border);color:var(--dim);white-space:nowrap;}
-  .jm-tag.lvl{color:var(--purple);border-color:#dcd0ec;background:#f4f0fa;}
-  .jm-tag.clin{background:var(--ink);border-color:var(--ink);color:#fff;}
-  .jm-tag.sal{color:#7a5b14;border-color:#e8d5a8;background:#fbf3df;}
-  .jm-go{color:var(--gold);font-size:15px;flex:none;font-weight:700;}
-  .jm-empty{padding:30px 20px;text-align:center;color:var(--dim);font-size:13px;line-height:1.6;}
-  .jm-empty b{display:block;color:var(--ink);font-size:14px;margin-bottom:6px;}
-  .jm-more{text-align:center;padding:14px;}
-  .jm-more button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:10px 24px;
-                  font-weight:700;font-size:12px;letter-spacing:.3px;cursor:pointer;font-family:inherit;}
-  .jm-more button:hover{background:#8f6f24;}
-  .jm-loading{padding:36px;text-align:center;color:var(--dim);font-size:13px;}
-</style>
-
-<script>
 (function(){
   // Live feed, refreshed daily at 06:00 UTC by the msh-jobs-map GitHub Action.
   // A push to that repo's main IS a publish — see its verify.py.
@@ -407,4 +297,3 @@
       });
   }
 })();
-</script>

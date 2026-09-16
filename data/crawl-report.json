@@ -7,6 +7,7 @@
     "fetched": 54,
     "from_cache": 0,
     "blocked_by_robots": 0,
+    "empty_jsonld": 0,
     "listings": 27
   },
   {
@@ -16,16 +17,18 @@
     "fetched": 5,
     "from_cache": 40,
     "blocked_by_robots": 0,
+    "empty_jsonld": 0,
     "listings": 40
   },
   {
     "recruiter": "BMS Performance",
     "domain": "bmsperformance.com",
-    "job_urls_in_sitemap": 386,
-    "fetched": 29,
+    "job_urls_in_sitemap": 387,
+    "fetched": 30,
     "from_cache": 357,
     "blocked_by_robots": 0,
-    "listings": 357
+    "empty_jsonld": 0,
+    "listings": 358
   },
   {
     "recruiter": "TRS Consulting",
@@ -34,6 +37,7 @@
     "fetched": 0,
     "from_cache": 0,
     "blocked_by_robots": 0,
+    "empty_jsonld": 0,
     "listings": 0
   },
   {
@@ -41,9 +45,10 @@
     "domain": "www.barringtonjames.com",
     "job_urls_in_sitemap": 93,
     "job_urls_from_listing_pages": 0,
-    "fetched": 93,
-    "from_cache": 0,
+    "fetched": 72,
+    "from_cache": 21,
     "blocked_by_robots": 0,
+    "empty_jsonld": 0,
     "listings": 21
   },
   {
@@ -54,24 +59,17 @@
     "fetched": 61,
     "from_cache": 0,
     "blocked_by_robots": 0,
+    "empty_jsonld": 0,
     "listings": 31
   },
   {
     "recruiter": "Network Scientific",
     "domain": "www.networkscientificrecruitment.com",
     "job_urls_in_sitemap": 37,
-    "fetched": 37,
-    "from_cache": 0,
+    "fetched": 18,
+    "from_cache": 19,
     "blocked_by_robots": 0,
+    "empty_jsonld": 0,
     "listings": 19
-  },
-  {
-    "recruiter": "Mediplacements",
-    "domain": "www.mediplacements.com",
-    "job_urls_in_sitemap": 162,
-    "fetched": 162,
-    "from_cache": 0,
-    "blocked_by_robots": 0,
-    "listings": 0
   }
 ]

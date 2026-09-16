@@ -1,0 +1,56 @@
+<!-- ============================================================
+  Sales Jobs Map — drop-in panel for careers.html
+  Matches the live Hub's own style.css tokens (Inter, cream/white,
+  --blue/--gold/--purple accents) — no separate design system.
+  Data: jobs-map-pipeline/data/jobs-data.json, refreshed daily.
+  Paste this whole block into the careers.html grid, above the
+  existing "UK MEDICAL SALES RECRUITERS" panel. Also paste
+  jobs-map-pipeline/assets/uk-region-geometry.js as its own WPCode
+  snippet/script tag before this block — it is real UK/Ireland
+  coastline geometry (ONS regional boundaries + a simplified Ireland
+  outline), not decoration, and rarely needs touching once live.
+============================================================= -->
+<div class="panel b-blue" id="jmPanel" style="grid-column:1/-1;">
+  <h2>
+    <span class="ht"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>LIVE SALES JOBS MAP</span>
+    <span class="src" id="jmStamp">loading…</span>
+  </h2>
+  <div class="body" style="padding-bottom:4px;">
+    <p style="margin-bottom:14px;">Medical sales and clinical/product vacancies gathered automatically each day from Reed, Adzuna and specialist medical-sales recruiters. Filter by territory, level, speciality or clinical background, then click through to the live vacancy. The verified agency directory and external search links below remain the place for wider, manual coverage.</p>
+  </div>
+
+  <div class="jm">
+    <div class="jm-wrap">
+      <aside class="jm-filters">
+        <div id="jmFilters"></div>
+        <button class="jm-clear" id="jmClear" type="button">Clear all filters</button>
+      </aside>
+
+      <div class="jm-main">
+        <div class="jm-bar">
+          <div class="jm-count"><b id="jmShown">–</b> <span id="jmShownLbl">vacancies</span></div>
+          <div class="jm-legend">
+            Fewer
+            <span class="jm-swatch">
+              <i style="background:#eef2f6"></i><i style="background:#c9dae9"></i>
+              <i style="background:#7fa0c4"></i><i style="background:#39689e"></i><i style="background:#1c3a5e"></i>
+            </span>
+            More · click a region to filter
+          </div>
+        </div>
+
+        <div class="jm-mapbox">
+          <svg id="jmMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of UK and Ireland job counts by region"></svg>
+          <div class="jm-callout" id="jmLondonCallout"></div>
+        </div>
+        <div class="jm-natnote" id="jmNatNote"></div>
+
+        <div class="jm-list" id="jmList">
+          <div class="jm-loading">Loading live vacancies…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/louisehoult-beep/msh-jobs-map@main/assets/uk-region-geometry.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/louisehoult-beep/msh-jobs-map@main/assets/panel.js"></script>
