@@ -238,17 +238,36 @@ def classify_speciality(text: str) -> str | None:
 # ---------------------------------------------------------------------------
 # Clinical-experience-required filter.
 #
-# Only evaluated for clinical/product roles (Lou's call, 16/09/2026): a sales
-# advert saying "RGN desirable" is a nice-to-have, whereas on a clinical role
-# the registration is the actual entry requirement, and mixing the two made
-# the filter mean two different things depending on the row.
+# Lou's original rule (16/09/2026) was right in spirit — a sales advert
+# mentioning "RGN desirable" in passing shouldn't be flagged the same as a
+# role where a clinical registration is the actual entry requirement. But
+# gating the check on category=="clinical_support" threw out real matches:
+# a coverage sweep on 746 live jobs found 16 ads stating a clinical
+# background as essential/required, and 10 of them were titled as SALES
+# roles ("Account Manager - Patient handling solutions... Clinical
+# background essential", "Business Development Manager... experienced
+# Theatre Nurse, ODP/ODA"). The category label describes the TITLE taxonomy;
+# it is not evidence of whether that specific ad requires clinical
+# experience. So this checks every job's own wording, not its category.
+#
+# Kept deliberately precise, not broad: matches a named registration/
+# qualification (RGN, NMC, HCPC, ODP, paramedic, a named "qualified X"), or
+# the phrase "clinical background/experience" sitting next to essential/
+# required/must-have language. Bare "nurse" or "healthcare professional"
+# are NOT matched alone — most hits for those are ads selling TO clinicians
+# ("healthcare professionals across the country"), not requiring one.
 # ---------------------------------------------------------------------------
 
 CLINICAL_REQUIRED_PATTERNS = [
     r"\brgn\b", r"\bregistered\s*nurse\b", r"\bnmc\s*pin\b", r"\bnmc\s*registration\b",
-    r"\bodp\b", r"\bparamedic\b", r"\bclinical\s*background\s*(is\s*)?(essential|required|desirable)\b",
-    r"\bhealthcare\s*professional\b", r"\bnursing\s*qualification\b", r"\bregistered\s*with\s*the\s*nmc\b",
-    r"\bhcpc\s*registrat", r"\bradiograph", r"\bphysiotherapist\b",
+    r"\bregistered\s*with\s*the\s*nmc\b",
+    r"\bhcpc\s*(registration|registered)\b",
+    r"\bodp\b", r"\boperating\s*department\s*practitioner\b",
+    r"\bparamedic\b",
+    r"\bqualified\s*(nurse|physiotherapist|radiographer|pharmacist|dietitian|podiatrist|biomedical\s*scientist)\b",
+    r"\bclinical\s*qualification\b", r"\bnursing\s*qualification\b",
+    r"clinical\s*(background|experience)\s*(is\s*)?(essential|required|a\s*must|mandatory)\b",
+    r"(essential|required|must\s*have)\D{0,25}clinical\s*(background|experience)",
 ]
 _CLINICAL_REQUIRED_RE = re.compile("|".join(CLINICAL_REQUIRED_PATTERNS), re.IGNORECASE)
 
@@ -275,8 +294,5 @@ def classify_job(title: str, company: str, description: str) -> dict | None:
         "category": category,
         "level": "Clinical / product" if category == "clinical_support" else classify_level(title),
         "speciality": classify_speciality(f"{title} {description}"),
-        "clinical_experience_required": (
-            bool(_CLINICAL_REQUIRED_RE.search(description))
-            if category == "clinical_support" else False
-        ),
+        "clinical_experience_required": bool(_CLINICAL_REQUIRED_RE.search(description)),
     }

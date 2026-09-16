@@ -86,17 +86,66 @@ def test_regional_and_territory_business_manager_titles():
         assert r is not None, t
 
 
-def test_clinical_flag_only_set_on_clinical_roles():
-    """Lou's rule 16/09/2026: the flag is a clinical-role requirement only."""
-    sales = classify_job("Territory Manager", "Acme Devices",
-                         "Medical device sales. RGN or registered nurse background desirable.")
-    assert sales["category"] == "sales"
-    assert sales["clinical_experience_required"] is False
-
+def test_clinical_flag_checks_wording_not_category():
+    """
+    Revised 16/09/2026 after a coverage sweep on 746 live jobs found 16 ads
+    stating a clinical background as essential/required, 10 of them titled as
+    SALES roles ("Account Manager - Patient handling solutions... Clinical
+    background essential"). Gating the flag on category=="clinical_support"
+    silently dropped every one of those. The flag now checks the ad's own
+    wording on every job, regardless of title-derived category.
+    """
     clin = classify_job("Clinical Nurse Advisor", "Acme Devices",
                         "Wound care product training. RGN with NMC registration required.")
     assert clin["category"] == "clinical_support"
     assert clin["clinical_experience_required"] is True
+
+    sales_required = classify_job(
+        "Account Manager", "Acme Rehab",
+        "Patient handling solutions. REQUIREMENTS: Clinical background essential "
+        "- Nurse, Physio, OT, Tissue Viability, MSK Therapist or similar.",
+    )
+    assert sales_required["category"] == "sales"
+    assert sales_required["clinical_experience_required"] is True
+
+
+def test_clinical_flag_not_set_on_passing_mention():
+    """
+    A sales ad that merely welcomes clinical applicants ("Are you a
+    Physiotherapist... looking to move into sales?") is not the same as one
+    that requires a clinical background — this must stay unflagged, or the
+    filter becomes noise. Bare "nurse" / "healthcare professional" are
+    deliberately NOT matched; most real hits for those describe who the
+    product is sold TO, not a requirement of the candidate.
+    """
+    r = classify_job(
+        "Territory Sales Executive", "MedTech Ltd",
+        "Are you a Physiotherapist, Occupational Therapist, Personal Trainer or "
+        "healthcare professional looking to move into medical device sales?",
+    )
+    assert r["clinical_experience_required"] is False
+
+    r2 = classify_job(
+        "Pharmaceutical Key Account Manager", "Pharma Co",
+        "You'll build strong partnerships with healthcare professionals and "
+        "shape local market access for patients.",
+    )
+    assert r2["clinical_experience_required"] is False
+
+
+def test_clinical_flag_catches_qualification_without_essential_wording():
+    """
+    'Must have a hip/knee clinical background' has no 'essential/required' -
+    it's implied by 'must have'. This was found still unflagged by the old
+    pattern despite being a clinical_support role.
+    """
+    r = classify_job(
+        "Hip + Knee Clinical Specialist", "Ortho Devices Ltd",
+        "Support innovative implant technology. Must have a hip/knee clinical "
+        "background. Full driving licence. Commercially minded.",
+    )
+    assert r["category"] == "clinical_support"
+    assert r["clinical_experience_required"] is True
 
 
 def test_speciality_names_match_hub_taxonomy():
