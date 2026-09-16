@@ -1,0 +1,54 @@
+[
+  {
+    "source": "reed",
+    "source_id": "1001",
+    "title": "Territory Manager - Vascular Access",
+    "company": "Fresenius Kabi",
+    "location_text": "EH12, Edinburgh",
+    "description": "Territory Manager covering Central Scotland selling vascular access devices to NHS trusts. RGN or clinical background desirable but not essential.",
+    "salary_min": 38000,
+    "salary_max": 44000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-12",
+    "url": "https://www.reed.co.uk/jobs/example-1001"
+  },
+  {
+    "source": "reed",
+    "source_id": "1002",
+    "title": "Key Account Manager - Tissue Viability",
+    "company": "Smith+Nephew",
+    "location_text": "LS1, Leeds",
+    "description": "Key Account Manager for our wound care and tissue viability portfolio across Yorkshire and Humber NHS accounts.",
+    "salary_min": 46000,
+    "salary_max": 52000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-10",
+    "url": "https://www.reed.co.uk/jobs/example-1002"
+  },
+  {
+    "source": "reed",
+    "source_id": "1003",
+    "title": "Account Manager",
+    "company": "Generic Software Solutions Ltd",
+    "location_text": "MK9, Milton Keynes",
+    "description": "SaaS account manager for our CRM platform, managing a portfolio of enterprise retail clients.",
+    "salary_min": 35000,
+    "salary_max": 40000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-09",
+    "url": "https://www.reed.co.uk/jobs/example-1003"
+  },
+  {
+    "source": "reed",
+    "source_id": "1004",
+    "title": "Clinical Nurse Advisor",
+    "company": "Coloplast",
+    "location_text": "BT1, Belfast",
+    "description": "Clinical Nurse Advisor supporting continence and urology product training across Northern Ireland. RGN registration with the NMC required.",
+    "salary_min": 40000,
+    "salary_max": 48000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-14",
+    "url": "https://www.reed.co.uk/jobs/example-1004"
+  }
+]

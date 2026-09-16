@@ -1,0 +1,72 @@
+name: Daily jobs-map refresh
+
+on:
+  schedule:
+    - cron: "0 6 * * *"     # 06:00 UTC daily
+  workflow_dispatch: {}
+
+concurrency:
+  group: jobs-map-pipeline-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # The crawl cache drives incremental fetching (sitemap lastmod), so a
+      # daily run only re-fetches what changed. It is ~1.6MB and would churn
+      # every single day, so it lives in the Actions cache rather than in the
+      # repo history.
+      - name: Restore crawl cache
+        uses: actions/cache@v4
+        with:
+          path: data/crawl-cache.json
+          key: jobs-crawl-cache-${{ github.run_id }}
+          restore-keys: |
+            jobs-crawl-cache-
+
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: Run the test suites (gate, classification, dedupe, regions)
+        run: python3 -m pytest test_verify.py test_classify.py test_dedupe.py test_regions.py -q
+
+      - name: Build jobs-data.json
+        env:
+          REED_API_KEY: ${{ secrets.REED_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python3 scripts/build_jobs_data.py
+
+      - name: Verify the built data before publishing
+        run: python3 verify.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "hub-jobs-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/jobs-data.json
+          git diff --cached --quiet && exit 0
+          git commit -m "daily jobs-map refresh $(date -u +'%F')"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push rejected, rebasing and retrying ($attempt/3)"
+            git pull --rebase -X theirs --autostash
+            python3 verify.py
+          done
+          echo "push failed after 3 attempts"
+          exit 1

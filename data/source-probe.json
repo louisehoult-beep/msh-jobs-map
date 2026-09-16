@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Zenopa",
+    "domain": "zenopa.com",
+    "jobs_path": "/job-search/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": [
+        "/*?modal=yes",
+        "/*?popup=",
+        "/*?countries=",
+        "/wp-admin/",
+        "/job-search/?*",
+        "https://staging.zenopa.com/",
+        "/staging.zenopa.com/",
+        "/testimonial-item/"
+      ]
+    },
+    "jobs_page": {
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 564878
+    },
+    "job_links_found": 54,
+    "sample_job_links": [
+      "https://zenopa.com/job-post/ruminant-account-manager-animal-health/75934/",
+      "https://zenopa.com/job-post/area-account-manager-life-science/75913/",
+      "https://zenopa.com/job-post/installation-technician-medical-devices-equipment/75912/"
+    ],
+    "jsonld_jobposting": true,
+    "jsonld_fields": [
+      "@context",
+      "@type",
+      "baseSalary",
+      "datePosted",
+      "description",
+      "employmentType",
+      "hiringOrganization",
+      "industry",
+      "jobLocation",
+      "title"
+    ],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "jsonld"
+  },
+  {
+    "name": "Evolve Selection",
+    "domain": "evolveselection.com",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": [
+        "/administrator/",
+        "/cli/",
+        "/includes/",
+        "/installation/",
+        "/language/",
+        "/logs/",
+        "/tmp/"
+      ]
+    },
+    "jobs_page": {
+      "status": 404,
+      "content_type": "",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "BMS Performance",
+    "domain": "bmsperformance.com",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": [
+        "/wp/wp-admin/",
+        "*?sort_order=",
+        "*?_sft_wpbb_job_type=",
+        "*?_sft_wpbb_remote_option=",
+        "*?_sft_wpbb_job_industry=",
+        "*?_sft_wpbb_job_industry_parent=",
+        "*?_sf_s=",
+        "*&",
+        "*?sf_paged=",
+        "*job_industry=",
+        "*keyword=",
+        "*/?noredirect"
+      ]
+    },
+    "jobs_page": {
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 113381
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [
+      {
+        "path": "/feed/",
+        "items": 1
+      },
+      {
+        "path": "/jobs/feed/",
+        "items": 0
+      }
+    ],
+    "json_apis": [],
+    "recommended_route": "rss"
+  },
+  {
+    "name": "On Target Recruitment",
+    "domain": "www.otrsales.co.uk",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": []
+    },
+    "jobs_page": {
+      "status": 404,
+      "content_type": "",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "Advance Recruitment",
+    "domain": "advancerecruitment.net",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": [
+        "/admin",
+        "/candidate/job_alert_form"
+      ]
+    },
+    "jobs_page": {
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 58369
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "CHASE",
+    "domain": "chasepeople.com",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": []
+    },
+    "jobs_page": {
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 155774
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "ID Search & Selection",
+    "domain": "idsearchandselection.com",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": null,
+      "jobs_path_allowed": null,
+      "note": "no robots.txt"
+    },
+    "jobs_page": {
+      "status": null,
+      "content_type": "ERR:URLError",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "TRS Consulting",
+    "domain": "www.trsconsulting.com",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": []
+    },
+    "jobs_page": {
+      "status": 404,
+      "content_type": "",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [
+      {
+        "path": "/feed/",
+        "items": 0
+      }
+    ],
+    "json_apis": [],
+    "recommended_route": "rss"
+  },
+  {
+    "name": "Cranleigh STEM",
+    "domain": "cranleighstem.com",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 404,
+      "jobs_path_allowed": null,
+      "note": "no robots.txt"
+    },
+    "jobs_page": {
+      "status": 404,
+      "content_type": "",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "Clinical Professionals",
+    "domain": "www.clinicalprofessionals.co.uk",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": [
+        "/ss2016.php",
+        "/thank-you.php",
+        "/wp-admin/",
+        "/wp-content/uploads/2020/02/Survey-FINAL.pdf"
+      ]
+    },
+    "jobs_page": {
+      "status": 403,
+      "content_type": "",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "Coburg Banks",
+    "domain": "www.coburgbanks.co.uk",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": [
+        "/*wtime",
+        "/*seek_to_second_number",
+        "/*source=post_page"
+      ]
+    },
+    "jobs_page": {
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 213343
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  },
+  {
+    "name": "Star Medical",
+    "domain": "starmedical.co.uk",
+    "jobs_path": "/jobs/",
+    "robots": {
+      "status": 200,
+      "jobs_path_allowed": true,
+      "disallow_rules": []
+    },
+    "jobs_page": {
+      "status": 404,
+      "content_type": "",
+      "bytes": 0
+    },
+    "job_links_found": 0,
+    "sample_job_links": [],
+    "jsonld_jobposting": false,
+    "jsonld_fields": [],
+    "feeds": [],
+    "json_apis": [],
+    "recommended_route": "none_found"
+  }
+]

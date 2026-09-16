@@ -1,0 +1,67 @@
+[
+  {
+    "source": "adzuna",
+    "source_id": "2001",
+    "title": "Regional Sales Manager - Orthopaedics",
+    "company": "Stryker",
+    "location_text": "B1, Birmingham",
+    "description": "Regional Sales Manager leading a team selling orthopaedic implants across the Midlands, working closely with NHS theatre teams.",
+    "salary_min": 58000,
+    "salary_max": 65000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-11",
+    "url": "https://www.adzuna.co.uk/jobs/example-2001"
+  },
+  {
+    "source": "adzuna",
+    "source_id": "2002",
+    "title": "Clinical Sales Specialist - Cardiology",
+    "company": "Boston Scientific",
+    "location_text": "SW1, London",
+    "description": "Clinical Sales Specialist supporting cardiology device implants in theatre across London teaching hospitals.",
+    "salary_min": null,
+    "salary_max": null,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-15",
+    "url": "https://www.adzuna.co.uk/jobs/example-2002"
+  },
+  {
+    "source": "adzuna",
+    "source_id": "2003",
+    "title": "Territory Manager - Vascular Access",
+    "company": "Fresenius Kabi",
+    "location_text": "EH12, Edinburgh",
+    "description": "Territory Manager covering Central Scotland selling vascular access devices to NHS trusts.",
+    "salary_min": 38000,
+    "salary_max": 44000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-12",
+    "url": "https://www.adzuna.co.uk/jobs/example-2003"
+  },
+  {
+    "source": "adzuna",
+    "source_id": "2004",
+    "title": "Product Manager - Diagnostics",
+    "company": "Roche Diagnostics",
+    "location_text": "Field-based, UK-wide",
+    "description": "Product Manager for our in vitro diagnostics portfolio, working with pathology and diagnostics teams across the UK.",
+    "salary_min": 55000,
+    "salary_max": 62000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-08",
+    "url": "https://www.adzuna.co.uk/jobs/example-2004"
+  },
+  {
+    "source": "adzuna",
+    "source_id": "2005",
+    "title": "Regional Manager",
+    "company": "National Insurance Brokers Ltd",
+    "location_text": "M1, Manchester",
+    "description": "Regional Manager for our commercial insurance broking team covering the North West.",
+    "salary_min": 45000,
+    "salary_max": 50000,
+    "contract_type": "Permanent",
+    "posted_date": "2026-09-07",
+    "url": "https://www.adzuna.co.uk/jobs/example-2005"
+  }
+]

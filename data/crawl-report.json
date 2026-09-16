@@ -1,0 +1,77 @@
+[
+  {
+    "recruiter": "Zenopa",
+    "domain": "zenopa.com",
+    "job_urls_in_sitemap": 0,
+    "job_urls_from_listing_pages": 54,
+    "fetched": 54,
+    "from_cache": 0,
+    "blocked_by_robots": 0,
+    "listings": 27
+  },
+  {
+    "recruiter": "CHASE",
+    "domain": "www.chasepeople.com",
+    "job_urls_in_sitemap": 57,
+    "fetched": 5,
+    "from_cache": 40,
+    "blocked_by_robots": 0,
+    "listings": 40
+  },
+  {
+    "recruiter": "BMS Performance",
+    "domain": "bmsperformance.com",
+    "job_urls_in_sitemap": 386,
+    "fetched": 29,
+    "from_cache": 357,
+    "blocked_by_robots": 0,
+    "listings": 357
+  },
+  {
+    "recruiter": "TRS Consulting",
+    "domain": "www.trsconsulting.com",
+    "job_urls_in_sitemap": 0,
+    "fetched": 0,
+    "from_cache": 0,
+    "blocked_by_robots": 0,
+    "listings": 0
+  },
+  {
+    "recruiter": "Barrington James",
+    "domain": "www.barringtonjames.com",
+    "job_urls_in_sitemap": 93,
+    "job_urls_from_listing_pages": 0,
+    "fetched": 93,
+    "from_cache": 0,
+    "blocked_by_robots": 0,
+    "listings": 21
+  },
+  {
+    "recruiter": "Carrot Recruitment",
+    "domain": "www.carrotrecruitment.com",
+    "job_urls_in_sitemap": 61,
+    "job_urls_from_listing_pages": 20,
+    "fetched": 61,
+    "from_cache": 0,
+    "blocked_by_robots": 0,
+    "listings": 31
+  },
+  {
+    "recruiter": "Network Scientific",
+    "domain": "www.networkscientificrecruitment.com",
+    "job_urls_in_sitemap": 37,
+    "fetched": 37,
+    "from_cache": 0,
+    "blocked_by_robots": 0,
+    "listings": 19
+  },
+  {
+    "recruiter": "Mediplacements",
+    "domain": "www.mediplacements.com",
+    "job_urls_in_sitemap": 162,
+    "fetched": 162,
+    "from_cache": 0,
+    "blocked_by_robots": 0,
+    "listings": 0
+  }
+]

@@ -1,0 +1,16 @@
+#!/bin/sh
+# Installed via: git config core.hooksPath hooks
+# A push to main IS a publish (see verify.py docstring) — this blocks a
+# broken build from ever reaching the live Hub page.
+
+python3 verify.py
+status=$?
+
+if [ $status -ne 0 ]; then
+    echo ""
+    echo "PUSH BLOCKED: verify.py failed. Fix the data/pipeline before pushing."
+    echo "Override only if you are certain: git push --no-verify"
+    exit 1
+fi
+
+exit 0
