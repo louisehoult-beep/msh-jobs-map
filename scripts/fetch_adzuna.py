@@ -16,7 +16,12 @@ import urllib.parse
 import urllib.request
 
 BASE_URL = "https://api.adzuna.com/v1/api/jobs/gb/search"
-MAX_PAGES_PER_KEYWORD = 3
+# This one IS capped, and not by choice: the free tier allows 1,000 calls a
+# MONTH. 8 keywords x 4 pages = 32 calls/day = 960/month, which is the most
+# we can take without the source cutting out entirely partway through a month.
+# Reed (uncapped) and the recruiter sites (uncapped) carry the volume; Adzuna
+# overlaps them heavily anyway, so dedupe removes most of what it adds.
+MAX_PAGES_PER_KEYWORD = 4
 RESULTS_PER_PAGE = 50
 
 # Budget note: the free tier allows 1,000 calls/month ~= 33/day. At 3 pages a

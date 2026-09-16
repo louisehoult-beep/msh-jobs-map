@@ -44,7 +44,10 @@ def _api_key() -> str | None:
 # 754 and we saw 100 of them. Page until exhausted, bounded per keyword so a
 # broad term cannot run away with the whole job.
 PAGE_SIZE = 100
-MAX_PER_KEYWORD = 400
+# No cap (Lou, 16/09/2026): page until Reed runs out. A matching role is not
+# dropped because it happened to sit on page 5. HARD_STOP only exists so a
+# pathological term cannot loop forever.
+HARD_STOP = 5000
 
 
 def _request(keyword: str) -> list[dict]:
@@ -55,7 +58,7 @@ def _request(keyword: str) -> list[dict]:
 
     collected: list[dict] = []
     skip = 0
-    while skip < MAX_PER_KEYWORD:
+    while skip < HARD_STOP:
         params = {
             "keywords": keyword,
             "resultsToTake": str(PAGE_SIZE),

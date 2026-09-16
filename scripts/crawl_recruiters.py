@@ -38,8 +38,11 @@ CACHE = ROOT / "data" / "crawl-cache.json"
 UA = "MedSalesHubBot/1.0 (+https://medsalesintelligencehub.co.uk; jobs aggregation for Hub members)"
 TIMEOUT = 20
 DELAY_SECONDS = 1.5          # between requests to the same host
-MAX_JOBS_PER_SITE = 400      # safety cap per run
-MAX_AGE_DAYS = 120           # ignore stale postings
+# No per-site cap (Lou, 16/09/2026): if a recruiter role matches the gates it
+# goes on the page. We crawl every job URL a site publishes. Politeness is
+# handled by the 1.5s per-host delay, not by throwing matching roles away.
+MAX_JOBS_PER_SITE = None
+MAX_AGE_DAYS = 120           # a 4-month-old posting is almost always filled
 
 
 def _get(url: str, accept: str = "*/*") -> tuple[int | None, str]:
@@ -103,7 +106,7 @@ class Host:
         return _get(url, accept)
 
 
-def collect_sitemap_urls(host: Host, max_child_maps: int = 25) -> list[dict]:
+def collect_sitemap_urls(host: Host, max_child_maps: int = 200) -> list[dict]:
     """Return [{loc, lastmod}] from the host's sitemap(s), descending one level."""
     seeds = host.sitemaps or [
         f"https://{host.domain}/sitemap.xml",
@@ -320,7 +323,7 @@ def crawl_recruiter(rec: dict, cache: dict) -> tuple[list[dict], dict]:
     site_cache = cache.setdefault(domain, {})
     listings, fetched, skipped, blocked, empty = [], 0, 0, 0, 0
 
-    for entry in job_entries[:MAX_JOBS_PER_SITE]:
+    for entry in (job_entries if MAX_JOBS_PER_SITE is None else job_entries[:MAX_JOBS_PER_SITE]):
         url, lastmod = entry["loc"], entry["lastmod"]
         cached = site_cache.get(url)
 
