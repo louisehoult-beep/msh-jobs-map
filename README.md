@@ -169,3 +169,7 @@ python3 -m pytest test_verify.py -q
 5. Once steps 1–4 are done and confirmed live, record this as a process
    doc in `Process flows for all brands/` per root CLAUDE.md rule 17, and
    run `build-reference-pack.py`.
+
+## Clinical Hub feeds (added 15/10/2026)
+
+`clinical/` and `data/clinical/` hold the Clinical Hub's weekly news and NHS-roles feeds, moved here from the retired `clinicalhub.elevateandthrive.uk` repo. Workflow: `.github/workflows/clinical-feeds.yml` (Mondays 06:35 UTC). Hub pages 710 and 4263 fetch `data/clinical/*.json` from `raw.githubusercontent.com`. The `clinical-hub-weekly` routine adds RCNi items (`clinical/rcni-inbox.json`). Gate: `python3 clinical/tools/clinical_verify.py`. Detail: Cowork-OS `Process flows for all brands/clinical-section-one-nav-bar.md`.

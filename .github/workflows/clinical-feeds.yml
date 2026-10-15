@@ -1,0 +1,70 @@
+name: Clinical Hub feeds (weekly)
+
+# Moved here 15/10/2026 from the retired clinicalhub.elevateandthrive.uk repo.
+# Writes the JSON the Hub's Clinical Desk (page 710) and Jobs (page 4263) fetch
+# client-side from raw.githubusercontent.com:
+#   data/clinical/stay-current-data.json
+#   data/clinical/clinical-roles-shown.json   (the 120 shown on the Jobs page)
+#   data/clinical/clinical-roles-all.json     (every matched role, for Browse all)
+#   data/clinical/clinical-roles-data.json
+# RCNi cannot be read from a runner (Akamai 403s non-browser clients): its items come
+# from the clinical-hub-weekly routine, which commits clinical/rcni-inbox.json.
+# A source that stops parsing keeps its previous items and turns this run red.
+
+on:
+  schedule:
+    - cron: '35 6 * * 1'
+  workflow_dispatch: {}
+
+concurrency:
+  group: clinical-feeds-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild Stay Current feed
+        id: news
+        continue-on-error: true
+        run: python3 clinical/tools/refresh_stay_current.py
+
+      - name: Rebuild Live Clinical Roles feeds
+        id: roles
+        continue-on-error: true
+        run: python3 clinical/tools/refresh_clinical_roles.py
+
+      - name: Gate
+        run: python3 clinical/tools/clinical_verify.py
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          git add data/clinical
+          if git diff --cached --quiet; then echo "No change this week."; exit 0; fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Weekly refresh: Clinical Hub feeds"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - name: Surface parser failures
+        if: steps.news.outcome == 'failure' || steps.roles.outcome == 'failure'
+        run: |
+          echo "One or more sources did not parse; the feed kept its previous entries."
+          exit 1
