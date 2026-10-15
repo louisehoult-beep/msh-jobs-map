@@ -399,15 +399,6 @@
           "specialty": "Renal"
         },
         {
-          "title": "Community Clinical Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Durham/Stockton/North_Tees_Hartlepool_NHS_Foundation_Trust/Community/Community-v8217325",
-          "source": "NHS Jobs",
-          "county": "Durham",
-          "town": "Stockton",
-          "employer": "North Tees Hartlepool NHS Foundation Trust",
-          "specialty": "Community"
-        },
-        {
           "title": "(**) Healthcare Assistant - Emergency Department",
           "url": "https://www.healthjobsuk.com/job/UK/Essex/Westcliff_on_Sea/Mid_South_Essex_NHS_Foundation_Trust/Emergency_Department/Emergency_Department-v8250254",
           "source": "NHS Jobs",
@@ -730,6 +721,15 @@
           "town": "Blackpool",
           "employer": "Blackpool Teaching Hospitals NHS Foundation Trust",
           "specialty": "Healthcare Assistant"
+        },
+        {
+          "title": "(**) Healthcare Assistant - Benfleet Ward",
+          "url": "https://www.healthjobsuk.com/job/UK/Essex/Westcliff_on_Sea/Mid_South_Essex_NHS_Foundation_Trust/stroke_services/stroke_services-v8128032",
+          "source": "NHS Jobs",
+          "county": "Essex",
+          "town": "Westcliff on Sea",
+          "employer": "Mid South Essex NHS Foundation Trust",
+          "specialty": "stroke services"
         }
       ]
     },
