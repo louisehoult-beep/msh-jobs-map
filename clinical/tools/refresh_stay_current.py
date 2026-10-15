@@ -354,6 +354,9 @@ def main():
             failed.append(s['label'])
             collected += kept
 
+    import html as _html
+    for _i in collected:
+        _i['title'] = _html.unescape(_i['title'])
     collected.sort(key=lambda i: i.get('iso') or '', reverse=True)
     # The same story can come back from two sources (e.g. two GOV.UK organisations);
     # keep the first so the page never lists one link twice.
