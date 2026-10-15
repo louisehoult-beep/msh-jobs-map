@@ -36,6 +36,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Adzuna tests
+        run: python3 -m pip install pytest -q && python3 -m pytest clinical/tools/test_adzuna_clinical.py -q
+
       - name: Rebuild Stay Current feed
         id: news
         continue-on-error: true
@@ -44,6 +47,9 @@ jobs:
       - name: Rebuild Live Clinical Roles feeds
         id: roles
         continue-on-error: true
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
         run: python3 clinical/tools/refresh_clinical_roles.py
 
       - name: Gate

@@ -179,6 +179,12 @@ def main():
         print('  Job-alert emails: %d role(s)' % len(extra))
     roles += extra
 
+    # Private care, domiciliary and agency roles (needs the Adzuna keys; skipped without them).
+    import adzuna_clinical
+    roles, n_adz = adzuna_clinical.merge(roles, adzuna_clinical.fetch())
+    if n_adz:
+        print('  Adzuna: %d new role(s) added after de-duplication.' % n_adz)
+
     if not roles:
         print('ERROR: no roles from any source; leaving the page untouched.')
         return 1
@@ -217,7 +223,7 @@ def main():
                'groups': {k: l.replace('&amp;', 'and') for k, l, _r in GROUPS},
                'items': [{'t': r['title'], 'u': r['url'], 'e': r.get('employer', ''),
                           'w': r.get('town', ''), 'c': r.get('county', ''),
-                          'g': group_of(r)} for r in roles]},
+                          'g': group_of(r), 's': r.get('source', 'NHS Jobs')} for r in roles]},
               open(ALL, 'w', encoding='utf-8'), separators=(',', ':'), ensure_ascii=False)
 
     print('Matched %d role(s), showing %d, refreshed %s' % (len(roles), shown, stamp))
