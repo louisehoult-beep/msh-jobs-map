@@ -62,6 +62,18 @@ SOURCES = [
 # items dated December 2024 as the "top" result. Left as a periodic check in
 # sources-registry.json instead of a live scrape until a better pattern is found.
 
+# RSS/Atom feeds published by the organisations themselves (added 15/10/2026). Only the
+# headline, link and date are used; every item links out to the publisher.
+RSS_SOURCES = [
+    {'key': 'nt', 'label': 'Nursing Times', 'feed': 'https://www.nursingtimes.net/feed/'},
+    {'key': 'nip', 'label': 'Nursing in Practice', 'feed': 'https://www.nursinginpractice.com/category/latest-news/feed/'},
+    {'key': 'nhse', 'label': 'NHS England', 'feed': 'https://www.england.nhs.uk/feed/'},
+    {'key': 'careeng', 'label': 'Care England', 'feed': 'https://www.careengland.org.uk/feed/'},
+    {'key': 'rcm', 'label': 'RCM', 'feed': 'https://rcm.org.uk/category/media-releases/feed/'},
+    {'key': 'scie', 'label': 'SCIE', 'feed': 'https://www.scie.org.uk/news/feed/'},
+    {'key': 'fnf', 'label': 'Florence Nightingale Foundation', 'feed': 'https://florence-nightingale-foundation.org.uk/news/feed'},
+]
+
 # GOV.UK Search API sources — structured JSON, no HTML parsing needed. Added 28/08/2026
 # as part of the source registry expansion (sources-registry.json). Each entry filters
 # gov.uk's own search index to one organisation's news-and-communications output.
@@ -201,6 +213,59 @@ def scrape_govuk_api(source):
     return out[:PER_SOURCE]
 
 
+def scrape_rss(source):
+    import xml.etree.ElementTree as ET
+    from email.utils import parsedate_to_datetime
+    root = ET.fromstring(fetch(source['feed']).encode('utf-8'))
+    out = []
+    for e in root.iter():
+        if e.tag.split('}')[-1] not in ('item', 'entry'):
+            continue
+        title = re.sub(r'\s+', ' ', (e.findtext('{*}title') or '')).strip()
+        link = (e.findtext('{*}link') or '').strip()
+        if not link:
+            for l in e.findall('{*}link'):
+                link = l.get('href') or link
+        link = re.sub(r'[?&]utm_[^&]*', '', link).replace('http://', 'https://')
+        raw = e.findtext('{*}pubDate') or e.findtext('{*}published') or e.findtext('{*}updated') or ''
+        try:
+            dt = parsedate_to_datetime(raw).date() if raw and not raw[:4].isdigit() else datetime.date.fromisoformat(raw[:10])
+        except Exception:
+            dt = None
+        if title and link.startswith('https://') and dt:
+            out.append({'url': link, 'title': title, 'src': source['key'], 'label': source['label'],
+                        'iso': dt.isoformat(), 'date': dt.strftime('%d %b')})
+    out.sort(key=lambda i: i['iso'], reverse=True)
+    return out[:PER_SOURCE]
+
+
+MAIL = os.path.join(HERE, 'mail-news.json')
+
+
+def load_mail():
+    """Items the clinical-hub-weekly routine verified from Lou's intelligence folders
+    (mail-news.json). Absent is normal on an Action run."""
+    if not os.path.exists(MAIL):
+        return []
+    try:
+        raw = json.load(open(MAIL, encoding='utf-8')).get('items', [])
+    except Exception as e:
+        print('  Mail: mail-news.json unreadable (%s)' % e)
+        return []
+    out = []
+    for r in raw:
+        try:
+            dt = datetime.date.fromisoformat(r.get('iso', ''))
+        except ValueError:
+            continue
+        if (datetime.date.today() - dt).days > 45 or not str(r.get('url', '')).startswith('https://'):
+            continue
+        out.append({'url': r['url'], 'title': r.get('title', '').strip(), 'src': 'mail',
+                    'label': r.get('label') or 'Sector news', 'iso': dt.isoformat(),
+                    'date': dt.strftime('%d %b')})
+    return out[:PER_SOURCE * 2]
+
+
 def load_rcni():
     """RCNi items staged from Outlook. Absent is normal on an Action run — the
     Action has no mailbox — so it is not treated as a failure here; the previous
@@ -239,6 +304,29 @@ def main():
     for s in SOURCES:
         try:
             got = scrape(s)
+        except Exception as e:
+            print('  %s: FETCH FAILED (%s)' % (s['label'], e))
+            got = []
+        if got:
+            print('  %s: %d items' % (s['label'], len(got)))
+            collected += got
+        else:
+            kept = [i for i in prev_items if i.get('src') == s['key']]
+            print('  %s: nothing parsed, keeping %d previous item(s)' % (s['label'], len(kept)))
+            failed.append(s['label'])
+            collected += kept
+
+    mail = load_mail()
+    if mail:
+        print('  Mail: %d verified item(s) from the intelligence folders' % len(mail))
+        collected += mail
+    else:
+        collected += [i for i in prev_items if i.get('src') == 'mail' and
+                      (datetime.date.today() - datetime.date.fromisoformat(i['iso'])).days <= 45]
+
+    for s in RSS_SOURCES:
+        try:
+            got = scrape_rss(s)
         except Exception as e:
             print('  %s: FETCH FAILED (%s)' % (s['label'], e))
             got = []

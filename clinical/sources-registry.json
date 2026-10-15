@@ -1,83 +1,444 @@
 {
   "_about": "The Clinical Hub's full source registry, replacing the 4-source setup (NMC/RCN/CQC/RCNi). Built from Clinical-Hub-Source-Deep-Dive.md (27/08/2026). Every source has an id, name, panel, url, kind and cadence. kind='listing' or 'govuk_api' sources are live-scraped into stay-current-data.json by tools/refresh_stay_current.py. kind='periodic' sources publish on a schedule (annual reports, statistical releases, pay circulars) rather than a news listing, so they are checked manually against the cadence rather than auto-scraped for items; each still has a working url so the check is one click. A source with no panel is not supposed to happen — everything here has been placed against one of the panels below.",
-  "_last_reviewed": "2026-08-28",
+  "_last_reviewed": "2026-10-15",
   "panels": [
     {
-      "id": "nmc-regulation", "label": "NMC & Regulation",
+      "id": "nmc-regulation",
+      "label": "NMC & Regulation",
       "sources": [
-        {"id": "nmc-news", "name": "NMC news and updates", "kind": "listing", "cadence": "daily", "url": "https://www.nmc.org.uk/news/news-and-updates/", "status": "live", "scraperKey": "nmc"},
-        {"id": "nmc-reg-data", "name": "NMC registration data reports", "kind": "periodic", "cadence": "twice yearly + mid-year", "url": "https://www.nmc.org.uk/about-us/reports-and-accounts/registration-statistics/", "status": "registered"},
-        {"id": "nmc-ftp", "name": "NMC fitness to practise reports", "kind": "periodic", "cadence": "monthly", "url": "https://www.nmc.org.uk/about-us/our-committees/fitness-to-practise-committee/", "status": "registered"},
-        {"id": "nmc-associate", "name": "Nursing associate register updates", "kind": "periodic", "cadence": "monthly", "url": "https://www.nmc.org.uk/nursing-associates/", "status": "registered"}
+        {
+          "id": "nmc-news",
+          "name": "NMC news and updates",
+          "kind": "listing",
+          "cadence": "daily",
+          "url": "https://www.nmc.org.uk/news/news-and-updates/",
+          "status": "live",
+          "scraperKey": "nmc"
+        },
+        {
+          "id": "nmc-reg-data",
+          "name": "NMC registration data reports",
+          "kind": "periodic",
+          "cadence": "twice yearly + mid-year",
+          "url": "https://www.nmc.org.uk/about-us/reports-and-accounts/registration-statistics/",
+          "status": "registered"
+        },
+        {
+          "id": "nmc-ftp",
+          "name": "NMC fitness to practise reports",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://www.nmc.org.uk/about-us/our-committees/fitness-to-practise-committee/",
+          "status": "registered"
+        },
+        {
+          "id": "nmc-associate",
+          "name": "Nursing associate register updates",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://www.nmc.org.uk/nursing-associates/",
+          "status": "registered"
+        }
       ]
     },
     {
-      "id": "cqc-inspection", "label": "CQC & Inspection",
+      "id": "cqc-inspection",
+      "label": "CQC & Inspection",
       "sources": [
-        {"id": "cqc-news", "name": "CQC news and releases", "kind": "listing", "cadence": "daily", "url": "https://www.cqc.org.uk/news", "status": "live", "scraperKey": "cqc"},
-        {"id": "cqc-soc", "name": "CQC State of Care", "kind": "periodic", "cadence": "annual", "url": "https://www.cqc.org.uk/publications/major-report/state-care", "status": "registered"},
-        {"id": "ci-scotland", "name": "Care Inspectorate (Scotland)", "kind": "periodic", "cadence": "weekly", "url": "https://www.careinspectorate.com/news-and-media", "status": "registered", "note": "Listing found 28/08/2026 (index.php/news was wrong); item pattern not yet built."},
-        {"id": "ciw-wales", "name": "Care Inspectorate Wales (CIW)", "kind": "listing", "cadence": "weekly", "url": "https://www.careinspectorate.wales/news", "status": "live", "scraperKey": "ciw"},
-        {"id": "rqia-ni", "name": "RQIA (Northern Ireland)", "kind": "listing", "cadence": "weekly", "url": "https://www.rqia.org.uk/category/news/", "status": "live", "scraperKey": "rqia"}
+        {
+          "id": "cqc-news",
+          "name": "CQC news and releases",
+          "kind": "listing",
+          "cadence": "daily",
+          "url": "https://www.cqc.org.uk/news",
+          "status": "live",
+          "scraperKey": "cqc"
+        },
+        {
+          "id": "cqc-soc",
+          "name": "CQC State of Care",
+          "kind": "periodic",
+          "cadence": "annual",
+          "url": "https://www.cqc.org.uk/publications/major-report/state-care",
+          "status": "registered"
+        },
+        {
+          "id": "ci-scotland",
+          "name": "Care Inspectorate (Scotland)",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://www.careinspectorate.com/news-and-media",
+          "status": "registered",
+          "note": "Listing found 28/08/2026 (index.php/news was wrong); item pattern not yet built."
+        },
+        {
+          "id": "ciw-wales",
+          "name": "Care Inspectorate Wales (CIW)",
+          "kind": "listing",
+          "cadence": "weekly",
+          "url": "https://www.careinspectorate.wales/news",
+          "status": "live",
+          "scraperKey": "ciw"
+        },
+        {
+          "id": "rqia-ni",
+          "name": "RQIA (Northern Ireland)",
+          "kind": "listing",
+          "cadence": "weekly",
+          "url": "https://www.rqia.org.uk/category/news/",
+          "status": "live",
+          "scraperKey": "rqia"
+        }
       ]
     },
     {
-      "id": "pay-conditions", "label": "Pay & Conditions",
+      "id": "pay-conditions",
+      "label": "Pay & Conditions",
       "sources": [
-        {"id": "afc-payscales", "name": "NHS Employers Agenda for Change pay scales", "kind": "periodic", "cadence": "on change", "url": "https://www.nhsemployers.org/system/files/2026-02/2026%20AfC%20pay%20scales.pdf", "status": "registered"},
-        {"id": "nhs-prb", "name": "NHS Pay Review Body reports", "kind": "periodic", "cadence": "annual", "url": "https://www.gov.uk/government/organisations/nhs-pay-review-body", "status": "registered"},
-        {"id": "nhsemp-circulars", "name": "NHS Employers pay circulars", "kind": "listing", "cadence": "weekly", "url": "https://www.nhsemployers.org/news", "status": "live", "scraperKey": "nhsemp"},
-        {"id": "rcn-news", "name": "RCN news and events", "kind": "listing", "cadence": "daily", "url": "https://www.rcn.org.uk/news-and-events/news", "status": "live", "scraperKey": "rcn", "note": "The college's own news listing \u2014 pay campaigning, workforce and professional stories. Live-scraped since the 4-source setup; registered here 28/08/2026, having been published on Stay Current without a registry entry."},
-        {"id": "rcn-pay", "name": "RCN pay campaigning and reward", "kind": "periodic", "cadence": "daily", "url": "https://www.rcn.org.uk/get-help/rcn-advice/agenda-for-change", "status": "registered"}
+        {
+          "id": "afc-payscales",
+          "name": "NHS Employers Agenda for Change pay scales",
+          "kind": "periodic",
+          "cadence": "on change",
+          "url": "https://www.nhsemployers.org/system/files/2026-02/2026%20AfC%20pay%20scales.pdf",
+          "status": "registered"
+        },
+        {
+          "id": "nhs-prb",
+          "name": "NHS Pay Review Body reports",
+          "kind": "periodic",
+          "cadence": "annual",
+          "url": "https://www.gov.uk/government/organisations/nhs-pay-review-body",
+          "status": "registered"
+        },
+        {
+          "id": "nhsemp-circulars",
+          "name": "NHS Employers pay circulars",
+          "kind": "listing",
+          "cadence": "weekly",
+          "url": "https://www.nhsemployers.org/news",
+          "status": "live",
+          "scraperKey": "nhsemp"
+        },
+        {
+          "id": "rcn-news",
+          "name": "RCN news and events",
+          "kind": "listing",
+          "cadence": "daily",
+          "url": "https://www.rcn.org.uk/news-and-events/news",
+          "status": "live",
+          "scraperKey": "rcn",
+          "note": "The college's own news listing — pay campaigning, workforce and professional stories. Live-scraped since the 4-source setup; registered here 28/08/2026, having been published on Stay Current without a registry entry."
+        },
+        {
+          "id": "rcn-pay",
+          "name": "RCN pay campaigning and reward",
+          "kind": "periodic",
+          "cadence": "daily",
+          "url": "https://www.rcn.org.uk/get-help/rcn-advice/agenda-for-change",
+          "status": "registered"
+        }
       ]
     },
     {
-      "id": "clinical-guidance", "label": "Clinical Guidance",
+      "id": "clinical-guidance",
+      "label": "Clinical Guidance",
       "sources": [
-        {"id": "nice-news", "name": "NICE published guidance and quality standards", "kind": "listing", "cadence": "daily", "url": "https://www.nice.org.uk/news/articles", "status": "live", "scraperKey": "nice"},
-        {"id": "nice-consult", "name": "NICE in development and consultations", "kind": "periodic", "cadence": "weekly", "url": "https://www.nice.org.uk/guidance/inconsultation", "status": "registered"},
-        {"id": "ukhsa-news", "name": "UKHSA", "kind": "govuk_api", "cadence": "daily", "url": "https://www.gov.uk/government/organisations/uk-health-security-agency", "status": "live", "scraperKey": "ukhsa"},
-        {"id": "specialty-colleges", "name": "Specialty college guidance", "kind": "periodic", "cadence": "weekly", "url": "https://www.rcplondon.ac.uk/news", "status": "registered", "note": "Placeholder college (RCP); no single listing covers every specialty college."}
+        {
+          "id": "nice-news",
+          "name": "NICE published guidance and quality standards",
+          "kind": "listing",
+          "cadence": "daily",
+          "url": "https://www.nice.org.uk/news/articles",
+          "status": "live",
+          "scraperKey": "nice"
+        },
+        {
+          "id": "nice-consult",
+          "name": "NICE in development and consultations",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://www.nice.org.uk/guidance/inconsultation",
+          "status": "registered"
+        },
+        {
+          "id": "ukhsa-news",
+          "name": "UKHSA",
+          "kind": "govuk_api",
+          "cadence": "daily",
+          "url": "https://www.gov.uk/government/organisations/uk-health-security-agency",
+          "status": "live",
+          "scraperKey": "ukhsa"
+        },
+        {
+          "id": "specialty-colleges",
+          "name": "Specialty college guidance",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://www.rcplondon.ac.uk/news",
+          "status": "registered",
+          "note": "Placeholder college (RCP); no single listing covers every specialty college."
+        },
+        {
+          "id": "scie",
+          "name": "Social Care Institute for Excellence (SCIE)",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://www.scie.org.uk/news/feed/",
+          "status": "live",
+          "scraperKey": "scie",
+          "note": "Added 15/10/2026. Own RSS feed, headline and link only."
+        }
       ]
     },
     {
-      "id": "workforce-policy", "label": "Workforce & Policy",
+      "id": "workforce-policy",
+      "label": "Workforce & Policy",
       "sources": [
-        {"id": "nhsed-workforce", "name": "NHS England Digital, NHS Workforce Statistics", "kind": "periodic", "cadence": "monthly", "url": "https://digital.nhs.uk/data-and-information/publications/statistical/nhs-workforce-statistics", "status": "registered", "note": "Nothing on the Hub used this before 28/08/2026."},
-        {"id": "govuk-workforce", "name": "GOV.UK NHS Workforce Statistics", "kind": "periodic", "cadence": "monthly", "url": "https://www.gov.uk/government/collections/nhs-workforce-statistics", "status": "registered"},
-        {"id": "hoc-library", "name": "House of Commons Library research briefings", "kind": "periodic", "cadence": "on publication", "url": "https://commonslibrary.parliament.uk/nhs-workforce/", "status": "registered"},
-        {"id": "dhsc-news", "name": "DHSC", "kind": "govuk_api", "cadence": "daily", "url": "https://www.gov.uk/government/organisations/department-of-health-and-social-care", "status": "live", "scraperKey": "dhsc"},
-        {"id": "skillsforcare", "name": "Skills for Care", "kind": "periodic", "cadence": "weekly", "url": "https://www.skillsforcare.org.uk/news", "status": "registered"},
-        {"id": "nhsemployers-home", "name": "NHS Employers", "kind": "listing", "cadence": "daily", "url": "https://www.nhsemployers.org/news", "status": "live", "scraperKey": "nhsemp", "note": "Same source as nhsemp-circulars above; one scraper feeds both."}
+        {
+          "id": "nhsed-workforce",
+          "name": "NHS England Digital, NHS Workforce Statistics",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://digital.nhs.uk/data-and-information/publications/statistical/nhs-workforce-statistics",
+          "status": "registered",
+          "note": "Nothing on the Hub used this before 28/08/2026."
+        },
+        {
+          "id": "govuk-workforce",
+          "name": "GOV.UK NHS Workforce Statistics",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://www.gov.uk/government/collections/nhs-workforce-statistics",
+          "status": "registered"
+        },
+        {
+          "id": "hoc-library",
+          "name": "House of Commons Library research briefings",
+          "kind": "periodic",
+          "cadence": "on publication",
+          "url": "https://commonslibrary.parliament.uk/nhs-workforce/",
+          "status": "registered"
+        },
+        {
+          "id": "dhsc-news",
+          "name": "DHSC",
+          "kind": "govuk_api",
+          "cadence": "daily",
+          "url": "https://www.gov.uk/government/organisations/department-of-health-and-social-care",
+          "status": "live",
+          "scraperKey": "dhsc"
+        },
+        {
+          "id": "skillsforcare",
+          "name": "Skills for Care",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://www.skillsforcare.org.uk/news",
+          "status": "registered"
+        },
+        {
+          "id": "nhsemployers-home",
+          "name": "NHS Employers",
+          "kind": "listing",
+          "cadence": "daily",
+          "url": "https://www.nhsemployers.org/news",
+          "status": "live",
+          "scraperKey": "nhsemp",
+          "note": "Same source as nhsemp-circulars above; one scraper feeds both."
+        },
+        {
+          "id": "nhse",
+          "name": "NHS England news",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://www.england.nhs.uk/feed/",
+          "status": "live",
+          "scraperKey": "nhse",
+          "note": "Added 15/10/2026. Own RSS feed, headline and link only."
+        },
+        {
+          "id": "careeng",
+          "name": "Care England",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://www.careengland.org.uk/feed/",
+          "status": "live",
+          "scraperKey": "careeng",
+          "note": "Added 15/10/2026. Own RSS feed, headline and link only."
+        }
       ]
     },
     {
-      "id": "your-nation", "label": "Your Nation",
+      "id": "your-nation",
+      "label": "Your Nation",
       "sources": [
-        {"id": "sssc-scotland", "name": "SSSC (Scotland)", "kind": "periodic", "cadence": "weekly", "url": "https://news.sssc.uk.com", "status": "registered", "note": "news.sssc.uk.com is JS-rendered — raw HTML has almost no links. Needs a JS-aware fetch, not a plain scrape."},
-        {"id": "scw-wales", "name": "Social Care Wales", "kind": "listing", "cadence": "weekly", "url": "https://socialcare.wales/news-stories", "status": "live", "scraperKey": "scw"},
-        {"id": "niscc-ni", "name": "NISCC (Northern Ireland)", "kind": "periodic", "cadence": "weekly", "url": "https://niscc.info/news/", "status": "registered", "note": "Tried 28/08/2026 and reverted: URLs are flat (no /news/ path segment), so the item pattern that works for RQIA pulled in old archived pages — a dry run returned items dated December 2024 as the \"top\" result. Needs a different pattern before it can go live."},
-        {"id": "nhs-scotland-workforce", "name": "NHS Scotland workforce statistics", "kind": "periodic", "cadence": "monthly", "url": "https://publichealthscotland.scot/publications/", "status": "registered"},
-        {"id": "nhs-wales-workforce", "name": "NHS Wales workforce statistics", "kind": "periodic", "cadence": "monthly", "url": "https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Staff", "status": "registered"},
-        {"id": "hsc-ni-workforce", "name": "HSC NI workforce statistics", "kind": "periodic", "cadence": "monthly", "url": "https://www.health-ni.gov.uk/topics/health-and-social-care-workforce", "status": "registered"}
+        {
+          "id": "sssc-scotland",
+          "name": "SSSC (Scotland)",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://news.sssc.uk.com",
+          "status": "registered",
+          "note": "news.sssc.uk.com is JS-rendered — raw HTML has almost no links. Needs a JS-aware fetch, not a plain scrape."
+        },
+        {
+          "id": "scw-wales",
+          "name": "Social Care Wales",
+          "kind": "listing",
+          "cadence": "weekly",
+          "url": "https://socialcare.wales/news-stories",
+          "status": "live",
+          "scraperKey": "scw"
+        },
+        {
+          "id": "niscc-ni",
+          "name": "NISCC (Northern Ireland)",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://niscc.info/news/",
+          "status": "registered",
+          "note": "Tried 28/08/2026 and reverted: URLs are flat (no /news/ path segment), so the item pattern that works for RQIA pulled in old archived pages — a dry run returned items dated December 2024 as the \"top\" result. Needs a different pattern before it can go live."
+        },
+        {
+          "id": "nhs-scotland-workforce",
+          "name": "NHS Scotland workforce statistics",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://publichealthscotland.scot/publications/",
+          "status": "registered"
+        },
+        {
+          "id": "nhs-wales-workforce",
+          "name": "NHS Wales workforce statistics",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Staff",
+          "status": "registered"
+        },
+        {
+          "id": "hsc-ni-workforce",
+          "name": "HSC NI workforce statistics",
+          "kind": "periodic",
+          "cadence": "monthly",
+          "url": "https://www.health-ni.gov.uk/topics/health-and-social-care-workforce",
+          "status": "registered"
+        }
       ]
     },
     {
-      "id": "nursing-press", "label": "Nursing Press",
+      "id": "nursing-press",
+      "label": "Nursing Press",
       "sources": [
-        {"id": "rcni", "name": "RCNi / Nursing Standard", "kind": "outlook", "cadence": "weekly", "url": "https://rcni.com/", "status": "live", "scraperKey": "rcni", "note": "rcni.com blocks non-browser clients (Akamai). Read from Lou's Outlook briefing by tools/rcni_from_outlook.py, staged in rcni-inbox.json."},
-        {"id": "nursing-times", "name": "Nursing Times", "kind": "periodic", "cadence": "daily", "url": "https://www.nursingtimes.net/news/", "status": "registered", "note": "News listing is client-rendered; article links did not resolve from raw HTML on 28/08/2026 — needs a JS-aware fetch, not a plain scrape."},
-        {"id": "nursing-in-practice", "name": "Nursing in Practice", "kind": "periodic", "cadence": "daily", "url": "https://www.nursinginpractice.com/latest-news/", "status": "registered", "note": "Same client-rendered-listing issue as Nursing Times."}
+        {
+          "id": "rcni",
+          "name": "RCNi / Nursing Standard",
+          "kind": "outlook",
+          "cadence": "weekly",
+          "url": "https://rcni.com/",
+          "status": "live",
+          "scraperKey": "rcni",
+          "note": "rcni.com blocks non-browser clients (Akamai). Read from Lou's Outlook briefing by tools/rcni_from_outlook.py, staged in rcni-inbox.json."
+        },
+        {
+          "id": "nursing-times",
+          "name": "Nursing Times",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://www.nursingtimes.net/feed/",
+          "status": "live",
+          "note": "Own RSS feed, headline and link only (probed 15/10/2026).",
+          "scraperKey": "nt"
+        },
+        {
+          "id": "nursing-in-practice",
+          "name": "Nursing in Practice",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://www.nursinginpractice.com/category/latest-news/feed/",
+          "status": "live",
+          "note": "Own RSS feed, headline and link only (probed 15/10/2026).",
+          "scraperKey": "nip"
+        },
+        {
+          "id": "rcm",
+          "name": "Royal College of Midwives media releases",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://rcm.org.uk/category/media-releases/feed/",
+          "status": "live",
+          "scraperKey": "rcm",
+          "note": "Added 15/10/2026. Own RSS feed, headline and link only."
+        },
+        {
+          "id": "fnf",
+          "name": "Florence Nightingale Foundation",
+          "kind": "rss",
+          "cadence": "weekly",
+          "url": "https://florence-nightingale-foundation.org.uk/news/feed",
+          "status": "live",
+          "scraperKey": "fnf",
+          "note": "Added 15/10/2026. Own RSS feed, headline and link only."
+        },
+        {
+          "id": "mail",
+          "name": "Sector news from Lou's intelligence folders",
+          "kind": "outlook",
+          "cadence": "weekly",
+          "url": "https://medsalesintelligencehub.co.uk/",
+          "status": "live",
+          "scraperKey": "mail",
+          "note": "Added 15/10/2026. Verified items staged in mail-news.json by clinical-hub-weekly from the Hub Intelligence folders (read only). May legitimately be empty in a given week."
+        }
       ]
     },
     {
-      "id": "beyond-the-ward", "label": "Beyond the Ward",
+      "id": "beyond-the-ward",
+      "label": "Beyond the Ward",
       "sources": [
-        {"id": "nihr-careers", "name": "NIHR career development and research roles", "kind": "periodic", "cadence": "weekly", "url": "https://www.nihr.ac.uk/career-development/support-by-profession/nurses-and-midwives/research-roles", "status": "registered"},
-        {"id": "nihr-rdn", "name": "NIHR Research Delivery Network", "kind": "periodic", "cadence": "weekly", "url": "https://local.nihr.ac.uk/", "status": "registered"},
-        {"id": "recruiters", "name": "Industry recruiters (Xcellin, CHASE, Evolve, Star OUTiCO, Prospect Health, Phrec, eMedCareers)", "kind": "periodic", "cadence": "weekly", "url": "https://www.xcellin.co.uk/nurse-advisor-talent-pool/", "status": "registered", "note": "Already published as a static list on Careers & Pay; see section 3 of the deep-dive for all seven."},
-        {"id": "ihpn", "name": "Independent Healthcare Provider Network", "kind": "listing", "cadence": "weekly", "url": "https://www.ihpn.org.uk/news/", "status": "live", "scraperKey": "ihpn", "note": "Correct current name is \"Provider\", singular, not \"Providers\" as in the original deep-dive."},
-        {"id": "hmrc-p87", "name": "HMRC employment income manual and P87 guidance", "kind": "periodic", "cadence": "on change", "url": "https://www.gov.uk/tax-relief-for-employees/professional-fees-and-subscriptions", "status": "registered"}
+        {
+          "id": "nihr-careers",
+          "name": "NIHR career development and research roles",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://www.nihr.ac.uk/career-development/support-by-profession/nurses-and-midwives/research-roles",
+          "status": "registered"
+        },
+        {
+          "id": "nihr-rdn",
+          "name": "NIHR Research Delivery Network",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://local.nihr.ac.uk/",
+          "status": "registered"
+        },
+        {
+          "id": "recruiters",
+          "name": "Industry recruiters (Xcellin, CHASE, Evolve, Star OUTiCO, Prospect Health, Phrec, eMedCareers)",
+          "kind": "periodic",
+          "cadence": "weekly",
+          "url": "https://www.xcellin.co.uk/nurse-advisor-talent-pool/",
+          "status": "registered",
+          "note": "Already published as a static list on Careers & Pay; see section 3 of the deep-dive for all seven."
+        },
+        {
+          "id": "ihpn",
+          "name": "Independent Healthcare Provider Network",
+          "kind": "listing",
+          "cadence": "weekly",
+          "url": "https://www.ihpn.org.uk/news/",
+          "status": "live",
+          "scraperKey": "ihpn",
+          "note": "Correct current name is \"Provider\", singular, not \"Providers\" as in the original deep-dive."
+        },
+        {
+          "id": "hmrc-p87",
+          "name": "HMRC employment income manual and P87 guidance",
+          "kind": "periodic",
+          "cadence": "on change",
+          "url": "https://www.gov.uk/tax-relief-for-employees/professional-fees-and-subscriptions",
+          "status": "registered"
+        }
       ]
     }
   ]

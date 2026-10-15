@@ -39,7 +39,7 @@ STAY = os.path.join(os.path.dirname(HERE), 'data', 'clinical', 'stay-current-dat
 REFRESHER = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                          'refresh_stay_current.py')
 
-KINDS = ('listing', 'govuk_api', 'periodic', 'outlook')
+KINDS = ('listing', 'govuk_api', 'periodic', 'outlook', 'rss')
 STATUSES = ('live', 'registered')
 
 # How old Stay Current may get before it is a finding rather than a note. The
@@ -205,6 +205,8 @@ def scraper_keys():
     # SOURCES list, so it is read from the constant that names it.
     if "RCNI = " in src or 'rcni-inbox.json' in src:
         keys.add('rcni')
+    if 'mail-news.json' in src:
+        keys.add('mail')
     return keys
 
 
@@ -294,6 +296,8 @@ def check_stay_current(stay, by_key):
                                  'the Hub does not say it watches.'
                                  % (len(per_src[src]), src))
     for key in sorted(by_key):
+        if key == 'mail' and key not in per_src:
+            continue  # optional: a week with nothing verified from the mail folders is normal
         if key not in per_src:
             FAIL('stay-current', 'registry source(s) %s are marked live under scraperKey '
                                  '%r, but nothing from them is on the page. The refresher '

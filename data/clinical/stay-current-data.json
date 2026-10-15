@@ -34,6 +34,102 @@
       "date": "15 Oct"
     },
     {
+      "url": "https://www.nmc.org.uk/news/",
+      "title": "Test item",
+      "src": "mail",
+      "label": "Test",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/policies-and-guidance/nhs-england-issues-new-guidance-on-single-sex-spaces-15-10-2026/",
+      "title": "NHS England issues new guidance on single-sex spaces",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/professional-regulation/chief-regulator-at-nmc-steps-down-amid-fitness-to-practise-criticisms-15-10-2026/",
+      "title": "Key NMC leader steps down amid ongoing FtP backlog struggles",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/diabetes/antipsychotic-diabetes-risk-peaks-in-first-90-days-15-10-2026/",
+      "title": "Antipsychotic diabetes risk ‘peaks in first 90 days’",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/newly-registered-nurses/who-to-be-advised-by-early-career-nursing-group-15-10-2026/",
+      "title": "WHO to be advised by early career nursing group",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/infection-prevention-and-control/nurses-central-to-tackling-c-difficile-15-10-2026/",
+      "title": "Nurses central to tackling C difficile",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/mental-health-nurses-to-vote-on-strike-action-over-alleged-job-cut-plans/",
+      "title": "Mental health nurses to vote on strike action over alleged job cut plans",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/immigration-reform-could-put-thousands-of-healthcare-staff-at-risk/",
+      "title": "Immigration reform could put thousands of healthcare staff ‘at risk’",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/district-nursing-at-heart-of-welsh-governments-winter-nhs-plans-minister-says/",
+      "title": "District nursing at heart of Welsh Government’s winter NHS plans, minister says",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/elderly-care/government-announces-33m-investment-in-dementia-research-initiative/",
+      "title": "Government announces £33m investment in dementia research initiative",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/mental-health-and-addiction/mhra-announces-measures-to-improve-messaging-on-antidepressant-risks/",
+      "title": "MHRA announces measures to improve messaging on antidepressant risks",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
+      "url": "https://www.careengland.org.uk/balancing-work-and-unpaid-care-a-critical-issue-carers-uk-report/",
+      "title": "Balancing work and unpaid care: a critical issue – Carers UK Report",
+      "src": "careeng",
+      "label": "Care England",
+      "iso": "2026-10-15",
+      "date": "15 Oct"
+    },
+    {
       "url": "https://www.gov.uk/government/news/data-shows-almost-half-of-people-with-flu-like-symptoms-miss-work-or-school",
       "title": "Data shows almost half of people with flu-like symptoms miss work or school",
       "src": "ukhsa",
@@ -74,6 +170,38 @@
       "date": "14 Oct"
     },
     {
+      "url": "https://www.careengland.org.uk/care-england-says-new-workforce-figures-highlight-urgent-need-to-invest-in-pay-retention-and-experienced-leadership/",
+      "title": "Care England says new workforce figures highlight urgent need to invest in pay, retention and experienced leadership",
+      "src": "careeng",
+      "label": "Care England",
+      "iso": "2026-10-14",
+      "date": "14 Oct"
+    },
+    {
+      "url": "https://rcm.org.uk/media-releases/2026/10/graduate-midwives-are-being-left-on-the-sidelines-rcm-cymru-launches-petition-calling-for-end-to-job-crisis/",
+      "title": "‘Graduate midwives are being left on the sidelines’: RCM Cymru launches petition calling for end to job crisis",
+      "src": "rcm",
+      "label": "RCM",
+      "iso": "2026-10-14",
+      "date": "14 Oct"
+    },
+    {
+      "url": "https://www.scie.org.uk/news/25-years-of-scie/",
+      "title": "25 years of SCIE",
+      "src": "scie",
+      "label": "SCIE",
+      "iso": "2026-10-14",
+      "date": "14 Oct"
+    },
+    {
+      "url": "https://www.scie.org.uk/news/scie-responds-to-new-skills-for-care-data/",
+      "title": "SCIE responds to new Skills for Care data",
+      "src": "scie",
+      "label": "SCIE",
+      "iso": "2026-10-14",
+      "date": "14 Oct"
+    },
+    {
       "url": "https://www.nmc.org.uk/news/news-and-updates/lesley-maslen-to-step-down-as-executive-director-of-professional-regulation/",
       "title": "Lesley Maslen to step down as Executive Director of Professional Regulation",
       "src": "nmc",
@@ -102,6 +230,14 @@
       "title": "High morale and strong sense of purpose by the social care workforce, but retention challenges remain",
       "src": "scw",
       "label": "Social Care Wales",
+      "iso": "2026-10-13",
+      "date": "13 Oct"
+    },
+    {
+      "url": "https://rcm.org.uk/media-releases/2026/10/basildon-midwives-win-almost-750000-after-exposure-to-dangerous-levels-of-nitrous-oxide/",
+      "title": "Basildon midwives win almost £750,000 after exposure to dangerous levels of nitrous oxide",
+      "src": "rcm",
+      "label": "RCM",
       "iso": "2026-10-13",
       "date": "13 Oct"
     },
@@ -138,6 +274,46 @@
       "date": "12 Oct"
     },
     {
+      "url": "https://www.careengland.org.uk/making-sense-of-digital-care-why-ctrl-care-is-worth-a-listen/",
+      "title": "Making sense of digital care: why CTRL + Care is worth a listen",
+      "src": "careeng",
+      "label": "Care England",
+      "iso": "2026-10-12",
+      "date": "12 Oct"
+    },
+    {
+      "url": "https://www.careengland.org.uk/halliwell-care-assistant-sky-dives-for-charity/",
+      "title": "Halliwell Care Assistant skydives for charity",
+      "src": "careeng",
+      "label": "Care England",
+      "iso": "2026-10-12",
+      "date": "12 Oct"
+    },
+    {
+      "url": "https://www.scie.org.uk/news/scie-and-tlap-support-the-kings-fund-proposals-for-a-fairer-system-of-social-care/",
+      "title": "SCIE and TLAP support The King’s Fund proposals for a fairer system of social care",
+      "src": "scie",
+      "label": "SCIE",
+      "iso": "2026-10-12",
+      "date": "12 Oct"
+    },
+    {
+      "url": "https://florence-nightingale-foundation.org.uk/baroness-audrey-emerton-dbe-memorial-service/",
+      "title": "A Service of Thanksgiving for the Life and Work of Baroness Emerton DBE",
+      "src": "fnf",
+      "label": "Florence Nightingale Foundation",
+      "iso": "2026-10-12",
+      "date": "12 Oct"
+    },
+    {
+      "url": "https://www.england.nhs.uk/2026/10/nhs-rolls-out-prescription-ready-alerts-on-smartwatches-and-mobiles/",
+      "title": "NHS rolls out prescription ready alerts on smartwatches and mobiles",
+      "src": "nhse",
+      "label": "NHS England",
+      "iso": "2026-10-11",
+      "date": "11 Oct"
+    },
+    {
       "url": "https://www.careinspectorate.wales/261009-we-would-hear-your-views-pembrokeshire-county-councils-childrens-social-services",
       "title": "We would like to hear your views on Pembrokeshire County Council's children’s social services During November, we will be carrying out an improvement check of Pembrokeshire County Council's children’s social services",
       "src": "ciw",
@@ -150,6 +326,14 @@
       "title": "We would like to hear your views on Swansea Council's adult social services During November, we will be carrying out an improvement check of Swansea Council's adult social services.",
       "src": "ciw",
       "label": "CIW",
+      "iso": "2026-10-09",
+      "date": "09 Oct"
+    },
+    {
+      "url": "https://www.careengland.org.uk/care-england-ambassador-bailey-greetham-clark-meets-the-prime-minister-to-talk-prevention-and-the-power-of-movement-in-care/",
+      "title": "Care England Ambassador Bailey Greetham-Clark meets the Prime Minister to talk prevention and the power of movement in care",
+      "src": "careeng",
+      "label": "Care England",
       "iso": "2026-10-09",
       "date": "09 Oct"
     },
@@ -178,6 +362,14 @@
       "date": "09 Oct"
     },
     {
+      "url": "https://www.england.nhs.uk/2026/10/ominous-signs-of-winter-pressure-growing-as-aes-and-ambulances-see-record-september/",
+      "title": "Ominous signs of winter pressure growing as A&Es and ambulances see record September",
+      "src": "nhse",
+      "label": "NHS England",
+      "iso": "2026-10-08",
+      "date": "08 Oct"
+    },
+    {
       "url": "https://www.gov.uk/government/news/332m-to-protect-public-from-future-epidemics-and-pandemics",
       "title": "£33.2 million to protect public from future epidemics and pandemics",
       "src": "ukhsa",
@@ -192,6 +384,22 @@
       "label": "UKHSA",
       "iso": "2026-10-08",
       "date": "08 Oct"
+    },
+    {
+      "url": "https://florence-nightingale-foundation.org.uk/southampton-half-marathon/",
+      "title": "FNF CEO Completes Southampton Half Marathon for FNF",
+      "src": "fnf",
+      "label": "Florence Nightingale Foundation",
+      "iso": "2026-10-07",
+      "date": "07 Oct"
+    },
+    {
+      "url": "https://florence-nightingale-foundation.org.uk/a-year-of-leadership-in-action/",
+      "title": "Leadership in Action – FNF’s Impact Report 2025-26",
+      "src": "fnf",
+      "label": "Florence Nightingale Foundation",
+      "iso": "2026-10-06",
+      "date": "06 Oct"
     },
     {
       "url": "https://www.gov.uk/government/news/ukhsa-appoints-chief-medical-advisor-and-chief-scientific-officer",
@@ -226,6 +434,14 @@
       "date": "04 Oct"
     },
     {
+      "url": "https://www.england.nhs.uk/2026/10/nhs-cuts-british-forces-waiting-times-by-a-month-in-targeted-campaign/",
+      "title": "NHS cuts British forces’ waiting times by a month in targeted campaign",
+      "src": "nhse",
+      "label": "NHS England",
+      "iso": "2026-10-03",
+      "date": "03 Oct"
+    },
+    {
       "url": "https://www.nmc.org.uk/news/news-and-updates/nmc-listening-to-families-affected-by-maternity-failings-in-leeds/",
       "title": "NMC listening to families affected by maternity failings in Leeds",
       "src": "nmc",
@@ -238,6 +454,14 @@
       "title": "Celebrating 25 years of social work regulation",
       "src": "scw",
       "label": "Social Care Wales",
+      "iso": "2026-10-01",
+      "date": "01 Oct"
+    },
+    {
+      "url": "https://www.england.nhs.uk/2026/10/nhs-protects-thousands-of-rough-sleepers-ahead-of-winter-with-vital-vaccines/",
+      "title": "NHS protects thousands of rough sleepers ahead of winter with vital vaccines",
+      "src": "nhse",
+      "label": "NHS England",
       "iso": "2026-10-01",
       "date": "01 Oct"
     },
@@ -266,6 +490,14 @@
       "date": "30 Sep"
     },
     {
+      "url": "https://www.scie.org.uk/news/new-workforce-measures-could-be-transformative-for-social-care-says-scie/",
+      "title": "New workforce measures could be transformative for social care, says SCIE",
+      "src": "scie",
+      "label": "SCIE",
+      "iso": "2026-09-30",
+      "date": "30 Sep"
+    },
+    {
       "url": "https://www.rcn.org.uk/news-and-events/news/uk-get-set-to-celebrate-as-rcn-nursing-support-workers-day-returns-290926",
       "title": "Get set to celebrate as RCN Nursing Support Workers' Day returns",
       "src": "rcn",
@@ -288,6 +520,22 @@
       "label": "CIW",
       "iso": "2026-09-28",
       "date": "28 Sep"
+    },
+    {
+      "url": "https://www.scie.org.uk/news/care-equity-must-be-at-heart-of-social-care-reform-labour-conference-panel-hears/",
+      "title": "Care equity must be at heart of social care reform, Labour conference panel hears",
+      "src": "scie",
+      "label": "SCIE",
+      "iso": "2026-09-28",
+      "date": "28 Sep"
+    },
+    {
+      "url": "https://www.england.nhs.uk/2026/09/nhs-staff-suspected-snooping-patient-records-immediately-suspended/",
+      "title": "NHS staff suspected of snooping on patient records to be immediately suspended",
+      "src": "nhse",
+      "label": "NHS England",
+      "iso": "2026-09-25",
+      "date": "25 Sep"
     },
     {
       "url": "https://www.careinspectorate.wales/monmouthshire-county-council-adult-services-improvement-check-ciw-findings-published",
@@ -330,6 +578,14 @@
       "date": "17 Sep"
     },
     {
+      "url": "https://florence-nightingale-foundation.org.uk/finding-my-voice/",
+      "title": "Finding My Voice Through the FNF Journey",
+      "src": "fnf",
+      "label": "Florence Nightingale Foundation",
+      "iso": "2026-09-17",
+      "date": "17 Sep"
+    },
+    {
       "url": "https://www.nice.org.uk/news/articles/nice-recommends-weekly-insulin-jab-that-could-cut-injections-from-365-a-year-to-just-52",
       "title": "Weekly insulin jab could cut injections from 365 a year to just 52",
       "src": "nice",
@@ -346,12 +602,44 @@
       "date": "15 Sep"
     },
     {
+      "url": "https://rcm.org.uk/media-releases/2026/09/rcm-urges-health-secretary-to-restart-nhs-pay-talks-or-risk-losing-more-midwives/",
+      "title": "RCM urges Health Secretary to restart NHS pay talks or risk losing more midwives",
+      "src": "rcm",
+      "label": "RCM",
+      "iso": "2026-09-11",
+      "date": "11 Sep"
+    },
+    {
       "url": "https://www.rqia.org.uk/muckamore-abbey-hospital-inquiry-report-rqia-statement",
       "title": "Muckamore Abbey Hospital Inquiry Report &#8211; RQIA statement",
       "src": "rqia",
       "label": "RQIA",
       "iso": "2026-09-10",
       "date": "10 Sep"
+    },
+    {
+      "url": "https://florence-nightingale-foundation.org.uk/remember-a-charity-week-2026/",
+      "title": "Remember A Charity Week: What Will You Be Remembered For?",
+      "src": "fnf",
+      "label": "Florence Nightingale Foundation",
+      "iso": "2026-09-07",
+      "date": "07 Sep"
+    },
+    {
+      "url": "https://rcm.org.uk/media-releases/2026/09/rcm-scotland-the-problem-was-never-the-number-of-health-boards-its-the-lack-of-priority-given-to-maternity-care/",
+      "title": "RCM Scotland: “The problem was never the number of health boards – it’s the lack of priority given to maternity care”",
+      "src": "rcm",
+      "label": "RCM",
+      "iso": "2026-09-02",
+      "date": "02 Sep"
+    },
+    {
+      "url": "https://rcm.org.uk/media-releases/2026/08/63-newly-qualified-midwives-still-without-jobs-despite-desperate-need-for-maternity-staff-says-rcm-cymru/",
+      "title": "63 newly qualified midwives still without jobs despite “desperate need for maternity staff”, says RCM Cymru",
+      "src": "rcm",
+      "label": "RCM",
+      "iso": "2026-08-25",
+      "date": "25 Aug"
     },
     {
       "url": "https://www.nice.org.uk/news/articles/hundreds-of-people-are-set-to-benefit-from-new-treatment-option-for-newly-diagnosed-mantle-cell-lymphoma-and-chronic-lymphocytic-leukaemia",
