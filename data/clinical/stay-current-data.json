@@ -1,6 +1,118 @@
 {
-  "refreshed": "2026-10-15",
+  "refreshed": "2026-10-19",
   "items": [
+    {
+      "url": "https://www.careinspectorate.wales/261019-we-would-hear-your-views-cardiff-councils-adult-social-services",
+      "title": "We would like to hear your views on Cardiff Council's adult social services During November 2026, we will be carrying out a Performance Evaluation Inspection (PEI) of Cardiff Council's adult social services",
+      "src": "ciw",
+      "label": "CIW",
+      "iso": "2026-10-19",
+      "date": "19 Oct"
+    },
+    {
+      "url": "https://www.careinspectorate.wales/261009-we-would-hear-your-views-pembrokeshire-county-councils-childrens-social-services",
+      "title": "We would like to hear your views on Pembrokeshire County Council's children’s social services During November, we will be carrying out an improvement check of Pembrokeshire County Council's children’s social services",
+      "src": "ciw",
+      "label": "CIW",
+      "iso": "2026-10-19",
+      "date": "19 Oct"
+    },
+    {
+      "url": "https://socialcare.wales/news-stories/pum-rheswm-i-ymgeisio-neu-enwebu-gweithiwr-ar-gyfer-gwobrau-2027",
+      "title": "Five reasons to enter or nominate a worker for the 2027 Accolades",
+      "src": "scw",
+      "label": "Social Care Wales",
+      "iso": "2026-10-19",
+      "date": "19 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/public-health/chlamydia-factsheet-on-sexually-transmitted-infections-19-10-2026/",
+      "title": "Chlamydia: factsheet on sexually transmitted infections",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-19",
+      "date": "19 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/newly-registered-nurses/jobs-now-available-for-all-graduate-nurses-in-wales-says-minister-19-10-2026/",
+      "title": "Jobs now available for all graduate nurses in Wales, says minister",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-19",
+      "date": "19 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/respiratory/plague-what-do-nurses-need-to-know/",
+      "title": "Plague: what do nurses need to know?",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-19",
+      "date": "19 Oct"
+    },
+    {
+      "url": "https://www.careengland.org.uk/123-respiratory-infection-incidents-in-care-homes-in-just-one-week-how-confident-are-you-that-your-staff-are-prepared/",
+      "title": "123 respiratory infection incidents in care homes in just one week. How confident are you that your staff are prepared?",
+      "src": "careeng",
+      "label": "Care England",
+      "iso": "2026-10-17",
+      "date": "17 Oct"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/140-million-boost-to-urgent-care-to-ease-winter-pressures-on-nhs",
+      "title": "£140 million boost to urgent care to ease winter pressures on NHS",
+      "src": "dhsc",
+      "label": "DHSC",
+      "iso": "2026-10-17",
+      "date": "17 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/emergency-and-critical-care/nurse-understaffing-linked-with-corridor-care-16-10-2026/",
+      "title": "Nurse understaffing linked with corridor care",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-16",
+      "date": "16 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/midwifery-and-neonatal/petition-demands-action-over-jobless-graduate-midwives-16-10-2026/",
+      "title": "Petition demands action over jobless graduate midwives",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-16",
+      "date": "16 Oct"
+    },
+    {
+      "url": "https://www.nursingtimes.net/research-and-innovation/norfolk-nurse-among-selectees-for-research-leadership-scheme-16-10-2026/",
+      "title": "Norfolk nurse among selectees for research leadership scheme",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-10-16",
+      "date": "16 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/dermatology-and-wound-care/nursing-in-practice-north-event-to-explore-managing-complex-wounds-alongside-skin-conditions/",
+      "title": "Nursing in Practice North event to explore managing complex wounds alongside skin conditions",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-16",
+      "date": "16 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/counterfeit-weight-loss-jabs-worth-2m-seized-in-birmingham-raid/",
+      "title": "Counterfeit weight loss jabs worth £2m seized in Birmingham raid",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-16",
+      "date": "16 Oct"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/respiratory/almost-half-with-flu-like-symptoms-miss-work-or-school-ukhsa-finds/",
+      "title": "Almost half with flu-like symptoms miss work or school, UKHSA finds",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-10-16",
+      "date": "16 Oct"
+    },
     {
       "url": "https://www.cqc.org.uk/news/cqc-publishes-equality-objectives-annual-report-202526",
       "title": "CQC publishes equality objectives annual report 2025/26",
@@ -42,80 +154,8 @@
       "date": "15 Oct"
     },
     {
-      "url": "https://www.nursingtimes.net/policies-and-guidance/nhs-england-issues-new-guidance-on-single-sex-spaces-15-10-2026/",
-      "title": "NHS England issues new guidance on single-sex spaces",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursingtimes.net/professional-regulation/chief-regulator-at-nmc-steps-down-amid-fitness-to-practise-criticisms-15-10-2026/",
-      "title": "Key NMC leader steps down amid ongoing FtP backlog struggles",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursingtimes.net/diabetes/antipsychotic-diabetes-risk-peaks-in-first-90-days-15-10-2026/",
-      "title": "Antipsychotic diabetes risk ‘peaks in first 90 days’",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursingtimes.net/newly-registered-nurses/who-to-be-advised-by-early-career-nursing-group-15-10-2026/",
-      "title": "WHO to be advised by early career nursing group",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursingtimes.net/infection-prevention-and-control/nurses-central-to-tackling-c-difficile-15-10-2026/",
-      "title": "Nurses central to tackling C difficile",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
       "url": "https://www.nursinginpractice.com/latest-news/mental-health-nurses-to-vote-on-strike-action-over-alleged-job-cut-plans/",
       "title": "Mental health nurses to vote on strike action over alleged job cut plans",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/immigration-reform-could-put-thousands-of-healthcare-staff-at-risk/",
-      "title": "Immigration reform could put thousands of healthcare staff ‘at risk’",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/district-nursing-at-heart-of-welsh-governments-winter-nhs-plans-minister-says/",
-      "title": "District nursing at heart of Welsh Government’s winter NHS plans, minister says",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/clinical/elderly-care/government-announces-33m-investment-in-dementia-research-initiative/",
-      "title": "Government announces £33m investment in dementia research initiative",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/clinical/mental-health-and-addiction/mhra-announces-measures-to-improve-messaging-on-antidepressant-risks/",
-      "title": "MHRA announces measures to improve messaging on antidepressant risks",
       "src": "nip",
       "label": "Nursing in Practice",
       "iso": "2026-10-15",
@@ -314,26 +354,10 @@
       "date": "11 Oct"
     },
     {
-      "url": "https://www.careinspectorate.wales/261009-we-would-hear-your-views-pembrokeshire-county-councils-childrens-social-services",
-      "title": "We would like to hear your views on Pembrokeshire County Council's children’s social services During November, we will be carrying out an improvement check of Pembrokeshire County Council's children’s social services",
-      "src": "ciw",
-      "label": "CIW",
-      "iso": "2026-10-09",
-      "date": "09 Oct"
-    },
-    {
       "url": "https://www.careinspectorate.wales/we-would-hear-your-views-swansea-councils-adult-social-services",
       "title": "We would like to hear your views on Swansea Council's adult social services During November, we will be carrying out an improvement check of Swansea Council's adult social services.",
       "src": "ciw",
       "label": "CIW",
-      "iso": "2026-10-09",
-      "date": "09 Oct"
-    },
-    {
-      "url": "https://www.careengland.org.uk/care-england-ambassador-bailey-greetham-clark-meets-the-prime-minister-to-talk-prevention-and-the-power-of-movement-in-care/",
-      "title": "Care England Ambassador Bailey Greetham-Clark meets the Prime Minister to talk prevention and the power of movement in care",
-      "src": "careeng",
-      "label": "Care England",
       "iso": "2026-10-09",
       "date": "09 Oct"
     },
@@ -434,14 +458,6 @@
       "date": "05 Oct"
     },
     {
-      "url": "https://www.gov.uk/government/news/government-joins-forces-with-breast-cancer-now",
-      "title": "Government joins forces with Breast Cancer Now",
-      "src": "dhsc",
-      "label": "DHSC",
-      "iso": "2026-10-04",
-      "date": "04 Oct"
-    },
-    {
       "url": "https://www.england.nhs.uk/2026/10/nhs-cuts-british-forces-waiting-times-by-a-month-in-targeted-campaign/",
       "title": "NHS cuts British forces’ waiting times by a month in targeted campaign",
       "src": "nhse",
@@ -484,14 +500,6 @@
     {
       "url": "https://socialcare.wales/news-stories/have-you-tried-using-values-to-find-the-best-candidates-for-your-roles",
       "title": "Have you tried using values to find the best candidates for your roles?",
-      "src": "scw",
-      "label": "Social Care Wales",
-      "iso": "2026-09-30",
-      "date": "30 Sep"
-    },
-    {
-      "url": "https://socialcare.wales/news-stories/care-worker-card-coming-to-an-end",
-      "title": "Care worker card coming to an end",
       "src": "scw",
       "label": "Social Care Wales",
       "iso": "2026-09-30",
@@ -552,14 +560,6 @@
       "label": "CIW",
       "iso": "2026-09-23",
       "date": "23 Sep"
-    },
-    {
-      "url": "https://www.careinspectorate.wales/260917-national-thematic-review-adoption-services-published",
-      "title": "National thematic review of adoption services published National review of adoption services in Wales finds strong foundations across the system, and outlines where consistency needs to improve to ensure the best outcomes for every child and family",
-      "src": "ciw",
-      "label": "CIW",
-      "iso": "2026-09-22",
-      "date": "22 Sep"
     },
     {
       "url": "https://www.nice.org.uk/news/articles/nice-recommends-enhertu-for-people-with-her2-low-advanced-breast-cancer",
