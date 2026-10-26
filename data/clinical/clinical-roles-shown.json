@@ -1,130 +1,49 @@
 {
-  "refreshed": "2026-10-19",
+  "refreshed": "2026-10-26",
   "groups": [
     {
       "key": "nurse",
       "label": "Nursing roles",
       "items": [
         {
-          "title": "Lead Nurse in Dementia Rapid Response Team",
-          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Derbyshire/Derbyshire_Healthcare_NHS_Foundation_Trust/Lead_Nurse_Crisis_Practitioner_Older_Peoples_Mental_Health/Lead_Nurse_Crisis_Practitioner_Older_Peoples_Mental_Health-v8145884",
+          "title": "Registered Nurse - Ward 6 FGH",
+          "url": "https://www.healthjobsuk.com/job/UK/Cumbria/Barrow_Furness/University_Hospitals_Morecambe_Bay_NHS_Foundation_Trust/Stroke_frail_elderly/Stroke_frail_elderly-v8232730",
           "source": "NHS Jobs",
-          "county": "Derbyshire",
-          "town": "Derbyshire",
-          "employer": "Derbyshire Healthcare NHS Foundation Trust",
-          "specialty": "Lead Nurse Crisis Practitioner Older Peoples Mental Health"
+          "county": "Cumbria",
+          "town": "Barrow Furness",
+          "employer": "University Hospitals Morecambe Bay NHS Foundation Trust",
+          "specialty": "Stroke frail elderly"
         },
         {
-          "title": "Staff Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/Hull/Hull_University_Teaching_Hospitals_NHS_Trust/Gynaecology/Gynaecology-v8155118",
+          "title": "Registered Nurse -  Ward 10B",
+          "url": "https://www.healthjobsuk.com/job/UK/Hertfordshire/Stevenage/East_North_Hertfordshire_Teaching_NHS_Trust/Nursing/Nursing-v8288250",
           "source": "NHS Jobs",
-          "county": "East Yorkshire",
-          "town": "Hull",
-          "employer": "Hull University Teaching Hospitals NHS Trust",
-          "specialty": "Gynaecology"
+          "county": "Hertfordshire",
+          "town": "Stevenage",
+          "employer": "East North Hertfordshire Teaching NHS Trust",
+          "specialty": "Nursing"
         },
         {
-          "title": "Registered Mental Health Nurse - Acute Perinatal Ward",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Beckenham_Kent/South_London_Maudsley_NHS_Foundation_Trust/Psychological_Medicine_Older_Adults/Psychological_Medicine_Older_Adults-v8205347",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Beckenham Kent",
-          "employer": "South London Maudsley NHS Foundation Trust",
-          "specialty": "Psychological Medicine Older Adults"
-        },
-        {
-          "title": "Staff Nurse - Roding Ward",
-          "url": "https://www.healthjobsuk.com/job/UK/Essex/Basildon/Mid_South_Essex_NHS_Foundation_Trust/Cardiac_Nursing/Cardiac_Nursing-v8207725",
-          "source": "NHS Jobs",
-          "county": "Essex",
-          "town": "Basildon",
-          "employer": "Mid South Essex NHS Foundation Trust",
-          "specialty": "Cardiac Nursing"
-        },
-        {
-          "title": "Registered Nurse - Peterborough",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Peterborough/North_West_Anglia_NHS_Foundation_Trust/acute_stroke/acute_stroke-v8215698",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Peterborough",
-          "employer": "North West Anglia NHS Foundation Trust",
-          "specialty": "acute stroke"
-        },
-        {
-          "title": "Band 7 Neonatal Ward Manager",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Barnet/Royal_Free_London_NHS_Foundation_Trust/Neonatal_Medicine/Neonatal_Medicine-v8227519",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Barnet",
-          "employer": "Royal Free London NHS Foundation Trust",
-          "specialty": "Neonatal Medicine"
-        },
-        {
-          "title": "Band 7 Neonatal Ward Manager",
-          "url": "https://www.healthjobsuk.com/job/UK/London/London/Royal_Free_London_NHS_Foundation_Trust/Neonatal_Unit/Neonatal_Unit-v8227636",
+          "title": "Staff Nurse PICU",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/St_Georges_University_Hospitals_NHS_Foundation_Trust/Band_Staff_Nurse_PICU/Band_Staff_Nurse_PICU-v8291914",
           "source": "NHS Jobs",
           "county": "London",
           "town": "London",
-          "employer": "Royal Free London NHS Foundation Trust",
-          "specialty": "Neonatal Unit"
+          "employer": "St Georges University Hospitals NHS Foundation Trust",
+          "specialty": "Band Staff Nurse PICU"
         },
         {
-          "title": "Community Addictions Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Erith_Bexley/South_London_Maudsley_NHS_Foundation_Trust/Addictions_Nursing/Addictions_Nursing-v8230688",
+          "title": "Registered Nurse - VIU",
+          "url": "https://www.healthjobsuk.com/job/UK/North_Yorkshire/York/York_Scarborough_Teaching_Hospitals_NHS_Foundation_Trust/Vascular_Imaging_Interventional_Radiology/Vascular_Imaging_Interventional_Radiology-v8295212",
           "source": "NHS Jobs",
-          "county": "London",
-          "town": "Erith Bexley",
-          "employer": "South London Maudsley NHS Foundation Trust",
-          "specialty": "Addictions Nursing"
-        },
-        {
-          "title": "Paediatric Nurse - Paediatric Outpatients Department - Hinchingbrooke",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Huntingdon/North_West_Anglia_NHS_Foundation_Trust/Childrens_outpatients/Childrens_outpatients-v8232302",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Huntingdon",
-          "employer": "North West Anglia NHS Foundation Trust",
-          "specialty": "Childrens outpatients"
-        },
-        {
-          "title": "Clinical Nurse Specialist",
-          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Derby/University_Hospitals_Derby_Burton_NHS_Foundation_Trust/Ophthalmology/Ophthalmology-v8243029",
-          "source": "NHS Jobs",
-          "county": "Derbyshire",
-          "town": "Derby",
-          "employer": "University Hospitals Derby Burton NHS Foundation Trust",
-          "specialty": "Ophthalmology"
-        },
-        {
-          "title": "Skin Cancer Nurse Specialist",
-          "url": "https://www.healthjobsuk.com/job/UK/Dorset/PooleChristchurch/University_Hospitals_Dorset_NHS_Foundation_Trust/Dermatology_Oncology/Dermatology_Oncology-v8243353",
-          "source": "NHS Jobs",
-          "county": "Dorset",
-          "town": "PooleChristchurch",
-          "employer": "University Hospitals Dorset NHS Foundation Trust",
-          "specialty": "Dermatology Oncology"
-        },
-        {
-          "title": "Community Psychiatric Nurse - Broxtowe CMHT",
-          "url": "https://www.healthjobsuk.com/job/UK/Nottinghamshire/Nottingham/Nottinghamshire_Healthcare_NHS_Foundation_Trust/Mental_Health_Services_Older_People/Mental_Health_Services_Older_People-v8274505",
-          "source": "NHS Jobs",
-          "county": "Nottinghamshire",
-          "town": "Nottingham",
-          "employer": "Nottinghamshire Healthcare NHS Foundation Trust",
-          "specialty": "Mental Health Services Older People"
-        },
-        {
-          "title": "Associate Specialist Bereavement Midwife - 15 hpw",
-          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Bradford/Bradford_Teaching_Hospitals_NHS_Foundation_Trust/Maternity/Maternity-v8292041",
-          "source": "NHS Jobs",
-          "county": "West Yorkshire",
-          "town": "Bradford",
-          "employer": "Bradford Teaching Hospitals NHS Foundation Trust",
-          "specialty": "Maternity"
+          "county": "North Yorkshire",
+          "town": "York",
+          "employer": "York Scarborough Teaching Hospitals NHS Foundation Trust",
+          "specialty": "Vascular Imaging Interventional Radiology"
         },
         {
           "title": "Health Visitor",
-          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/Wolverhampton/The_Royal_Wolverhampton_NHS_Trust/Health_Visiting/Health_Visiting-v8295876",
+          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/Wolverhampton/The_Royal_Wolverhampton_NHS_Trust/Health_Visiting/Health_Visiting-v8320619",
           "source": "NHS Jobs",
           "county": "Birmingham Black Country",
           "town": "Wolverhampton",
@@ -132,238 +51,319 @@
           "specialty": "Health Visiting"
         },
         {
-          "title": "Deputy Divisional Nursing Director - UEC - NWAFT",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Peterborough/North_West_Anglia_NHS_Foundation_Trust/Urgent_Emergency_Care/Urgent_Emergency_Care-v8301379",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Peterborough",
-          "employer": "North West Anglia NHS Foundation Trust",
-          "specialty": "Urgent Emergency Care"
-        },
-        {
-          "title": "Primary Care Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/Northamptonshire/Perry_Huntingdon_Cambs/Northamptonshire_Healthcare_NHS_Foundation_Trust/Secured_Services/Secured_Services-v8309668",
-          "source": "NHS Jobs",
-          "county": "Northamptonshire",
-          "town": "Perry Huntingdon Cambs",
-          "employer": "Northamptonshire Healthcare NHS Foundation Trust",
-          "specialty": "Secured Services"
-        },
-        {
-          "title": "Band 5 Registered Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Harrow/London_North_West_University_Healthcare_NHS_Trust/Infectious_Diseases/Infectious_Diseases-v8318340",
+          "title": "Senior Registered Nurse - Critical care",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/Imperial_College_Healthcare_NHS_Trust/Critical_Care/Critical_Care-v8335445",
           "source": "NHS Jobs",
           "county": "London",
-          "town": "Harrow",
-          "employer": "London North West University Healthcare NHS Trust",
-          "specialty": "Infectious Diseases"
-        },
-        {
-          "title": "Adult Sister/Charge Nurse - GICU",
-          "url": "https://www.healthjobsuk.com/job/UK/Bristol/Bristol/Bristol_NHS_Foundation_Trust/Critical_Care/Critical_Care-v8321070",
-          "source": "NHS Jobs",
-          "county": "Bristol",
-          "town": "Bristol",
-          "employer": "Bristol NHS Foundation Trust",
+          "town": "London",
+          "employer": "Imperial College Healthcare NHS Trust",
           "specialty": "Critical Care"
         },
         {
-          "title": "Staff Nurse - Frailty Bevan Court 1",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Prescot/Mersey_West_Lancashire_Teaching_Hospitals_NHS_Trust/Frailty/Frailty-v8321720",
+          "title": "Sister/Charge Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/South_Yorkshire/Sheffield/Sheffield_Teaching_Hospitals_NHS_Foundation_Trust/Specialised_Cancer_services/Specialised_Cancer_services-v8336609",
           "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Prescot",
-          "employer": "Mersey West Lancashire Teaching Hospitals NHS Trust",
-          "specialty": "Frailty"
+          "county": "South Yorkshire",
+          "town": "Sheffield",
+          "employer": "Sheffield Teaching Hospitals NHS Foundation Trust",
+          "specialty": "Specialised Cancer services"
         },
         {
-          "title": "Mid Notts Care Home Nurse Specialist",
-          "url": "https://www.healthjobsuk.com/job/UK/Nottinghamshire/Mansfield/Nottinghamshire_Healthcare_NHS_Foundation_Trust/Specialist_Nursing/Specialist_Nursing-v8321770",
+          "title": "Inpatient Matron",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/South_London_Maudsley_NHS_Foundation_Trust/Mental_Health/Mental_Health-v8344374",
           "source": "NHS Jobs",
-          "county": "Nottinghamshire",
-          "town": "Mansfield",
-          "employer": "Nottinghamshire Healthcare NHS Foundation Trust",
-          "specialty": "Specialist Nursing"
+          "county": "London",
+          "town": "London",
+          "employer": "South London Maudsley NHS Foundation Trust",
+          "specialty": "Mental Health"
         },
         {
-          "title": "Nurse Practitioner (MIU)",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Wallasey/Wirral_Community_Health_Care_NHS_Foundation_Trust/Nurse_Practitioner_MIU/Nurse_Practitioner_MIU-v8327205",
+          "title": "Clinical Ward Manager",
+          "url": "https://www.healthjobsuk.com/job/UK/Cheshire/Chester/Cheshire_Wirral_Partnership_NHS_FoundationTrust/Clinical_Manager/Clinical_Manager-v8353792",
           "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Wallasey",
-          "employer": "Wirral Community Health Care NHS Foundation Trust",
-          "specialty": "Nurse Practitioner MIU"
+          "county": "Cheshire",
+          "town": "Chester",
+          "employer": "Cheshire Wirral Partnership NHS FoundationTrust",
+          "specialty": "Clinical Manager"
         },
         {
-          "title": "Staff Nurse, Band 5 Outpatients",
-          "url": "https://www.healthjobsuk.com/job/UK/Gloucestershire/Gloucestershire/Gloucestershire_Hospitals_NHS_Foundation_Trust/General_Outpatients/General_Outpatients-v8331112",
+          "title": "Oncology Clinical Nurse Specialist",
+          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Derby/University_Hospitals_Derby_Burton_NHS_Foundation_Trust/Cancer_Services_Oncology/Cancer_Services_Oncology-v8366021",
           "source": "NHS Jobs",
-          "county": "Gloucestershire",
-          "town": "Gloucestershire",
-          "employer": "Gloucestershire Hospitals NHS Foundation Trust",
-          "specialty": "General Outpatients"
+          "county": "Derbyshire",
+          "town": "Derby",
+          "employer": "University Hospitals Derby Burton NHS Foundation Trust",
+          "specialty": "Cancer Services Oncology"
         },
         {
-          "title": "Immunisation Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/Hertfordshire/Epping_Grays_LeighonSea/Hertfordshire_Community_NHS_Trust/Community_SchoolAge_Immunisation_Service/Community_SchoolAge_Immunisation_Service-v8331393",
+          "title": "BBV Specialist Nurse (Community)",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/Central_North_West_London_NHS_Foundation_Trust/HIV_Hepatitis/HIV_Hepatitis-v8366674",
           "source": "NHS Jobs",
-          "county": "Hertfordshire",
-          "town": "Epping Grays LeighonSea",
-          "employer": "Hertfordshire Community NHS Trust",
-          "specialty": "Community SchoolAge Immunisation Service"
+          "county": "London",
+          "town": "London",
+          "employer": "Central North West London NHS Foundation Trust",
+          "specialty": "HIV Hepatitis"
         },
         {
-          "title": "Band 5 Research Practitioner / Nurse - Bristol",
-          "url": "https://www.healthjobsuk.com/job/UK/Somerset/Research_Development/Avon_Wiltshire_Mental_Health_Partnership_NHS_Trust/Research/Research-v8332533",
+          "title": "Clinical Nurse Specialist / Practitioner - Respiratory",
+          "url": "https://www.healthjobsuk.com/job/UK/Surrey/Farnham/Frimley_Health_NHS_Foundation_Trust/Respiratory/Respiratory-v8371324",
           "source": "NHS Jobs",
-          "county": "Somerset",
-          "town": "Research Development",
-          "employer": "Avon Wiltshire Mental Health Partnership NHS Trust",
-          "specialty": "Research"
+          "county": "Surrey",
+          "town": "Farnham",
+          "employer": "Frimley Health NHS Foundation Trust",
+          "specialty": "Respiratory"
         },
         {
-          "title": "Registered Nurse - Woodlands Centre - Huntingdon",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Peterborough/North_West_Anglia_NHS_Foundation_Trust/HaematologyOncology/HaematologyOncology-v8333818",
+          "title": "Dental Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/University_College_London_Hospitals_NHS_Foundation_Trust/Dental_Services/Dental_Services-v8380300",
           "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Peterborough",
-          "employer": "North West Anglia NHS Foundation Trust",
-          "specialty": "HaematologyOncology"
+          "county": "London",
+          "town": "London",
+          "employer": "University College London Hospitals NHS Foundation Trust",
+          "specialty": "Dental Services"
         },
         {
-          "title": "Band 5 Specialist Dental Nurse (requires IV/IHS)",
-          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/Birmingham/Birmingham_Community_Healthcare_NHS_Foundation_Trust/Dental_Nursing/Dental_Nursing-v8336837",
+          "title": "Band 6 Children in care Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/Birmingham/Birmingham_Community_Healthcare_NHS_Foundation_Trust/Children_care/Children_care-v8385087",
           "source": "NHS Jobs",
           "county": "Birmingham Black Country",
           "town": "Birmingham",
           "employer": "Birmingham Community Healthcare NHS Foundation Trust",
-          "specialty": "Dental Nursing"
+          "specialty": "Children care"
         },
         {
-          "title": "Band 5 Theatre Scrub Nurse/ODP - Trauma &amp; Orthopaedics/Major Trauma",
-          "url": "https://www.healthjobsuk.com/job/UK/London/London/St_Georges_University_Hospitals_NHS_Foundation_Trust/Trauma_OrthopaedicsMajor_Trauma/Trauma_OrthopaedicsMajor_Trauma-v8339082",
+          "title": "Bank Registered Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/Bristol/Bristol/Bristol_NHS_Foundation_Trust/Registered_Nurse/Registered_Nurse-v8387544",
+          "source": "NHS Jobs",
+          "county": "Bristol",
+          "town": "Bristol",
+          "employer": "Bristol NHS Foundation Trust",
+          "specialty": "Registered Nurse"
+        },
+        {
+          "title": "Clinical Nurse Specialist in Neuromuscular Diseases (Peripheral Nerve)",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/University_College_London_Hospitals_NHS_Foundation_Trust/Neurology/Neurology-v8387928",
           "source": "NHS Jobs",
           "county": "London",
           "town": "London",
-          "employer": "St Georges University Hospitals NHS Foundation Trust",
-          "specialty": "Trauma OrthopaedicsMajor Trauma"
+          "employer": "University College London Hospitals NHS Foundation Trust",
+          "specialty": "Neurology"
         },
         {
-          "title": "Sister/Charge Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/Carmarthenshire/Haverfordwest/Hywel_Dda_University_Health_Board/Unscheduled_care/Unscheduled_care-v8339241",
+          "title": "Child Death Review Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/West_North_London_ICB/Paediatrics/Paediatrics-v8389523",
           "source": "NHS Jobs",
-          "county": "Carmarthenshire",
-          "town": "Haverfordwest",
-          "employer": "Hywel Dda University Health Board",
-          "specialty": "Unscheduled care"
+          "county": "London",
+          "town": "London",
+          "employer": "West North London ICB",
+          "specialty": "Paediatrics"
+        },
+        {
+          "title": "Senior Manager Nurse (CDR)",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/West_North_London_ICB/Paedriacts/Paedriacts-v8391284",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "London",
+          "employer": "West North London ICB",
+          "specialty": "Paedriacts"
+        },
+        {
+          "title": "Registered Nursing Associate",
+          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Ashton_Under_Lynne/Pennine_Care_NHS_Foundation_Trust/Adult_mental_health/Adult_mental_health-v8392478",
+          "source": "NHS Jobs",
+          "county": "Manchester",
+          "town": "Ashton Under Lynne",
+          "employer": "Pennine Care NHS Foundation Trust",
+          "specialty": "Adult mental health"
+        },
+        {
+          "title": "Paediatric Charge Nurse Children&#039;s Emergency Department",
+          "url": "https://www.healthjobsuk.com/job/UK/Essex/Basildon/Mid_South_Essex_NHS_Foundation_Trust/Paediatrics/Paediatrics-v8392584",
+          "source": "NHS Jobs",
+          "county": "Essex",
+          "town": "Basildon",
+          "employer": "Mid South Essex NHS Foundation Trust",
+          "specialty": "Paediatrics"
+        },
+        {
+          "title": "Senior Staff Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/London/Abbey_Wood_London/Oxleas_NHS_Foundation_Trust/Adult_Community_Physical_Health_Services/Adult_Community_Physical_Health_Services-v8392724",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "Abbey Wood London",
+          "employer": "Oxleas NHS Foundation Trust",
+          "specialty": "Adult Community Physical Health Services"
+        },
+        {
+          "title": "Emergency Care Practitioner/Emergency Nurse Practitioner",
+          "url": "https://www.healthjobsuk.com/job/UK/East_Sussex/Crowborough/Sussex_Community_NHS_Foundation_Trust/ECPENP/ECPENP-v8392742",
+          "source": "NHS Jobs",
+          "county": "East Sussex",
+          "town": "Crowborough",
+          "employer": "Sussex Community NHS Foundation Trust",
+          "specialty": "ECPENP"
+        },
+        {
+          "title": "SACT Nurse  / Clinical Trials Nurse (part time)",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/Barts_Health_NHS_Trust/SBH_CANCER_CENTRE/SBH_CANCER_CENTRE-v8392888",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "London",
+          "employer": "Barts Health NHS Trust",
+          "specialty": "SBH CANCER CENTRE"
+        },
+        {
+          "title": "Nursing Assistant",
+          "url": "https://www.healthjobsuk.com/job/UK/Tyne_Wear/Newcastle_upon_Tyne/Cumbria_Northumberland_Tyne_Wear_NHS_Foundation_Trust/Nursing/Nursing-v8392892",
+          "source": "NHS Jobs",
+          "county": "Tyne Wear",
+          "town": "Newcastle upon Tyne",
+          "employer": "Cumbria Northumberland Tyne Wear NHS Foundation Trust",
+          "specialty": "Nursing"
+        },
+        {
+          "title": "Specialist Community Public Health Nurse - Health Visiting (student)",
+          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Bury/Northern_Care_Alliance_NHS_Foundation_Trust/Health_Visiting/Health_Visiting-v8392923",
+          "source": "NHS Jobs",
+          "county": "Manchester",
+          "town": "Bury",
+          "employer": "Northern Care Alliance NHS Foundation Trust",
+          "specialty": "Health Visiting"
+        },
+        {
+          "title": "Registered Nurse - HMP Northumberland",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Morpeth/Spectrum_Community_Health_CIC/Primary_Care_Nurse/Primary_Care_Nurse-v8359208",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "Morpeth",
+          "employer": "Spectrum Community Health CIC",
+          "specialty": "Primary Care Nurse"
+        },
+        {
+          "title": "Registered Nurse - HMP Liverpool",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Liverpool/Spectrum_Community_Health_CIC/Registered_Nurse/Registered_Nurse-v8361440",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "Liverpool",
+          "employer": "Spectrum Community Health CIC",
+          "specialty": "Registered Nurse"
+        },
+        {
+          "title": "Lead Nurse - HMP Liverpool",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Liverpool/Spectrum_Community_Health_CIC/Prison_Nursing/Prison_Nursing-v8361719",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "Liverpool",
+          "employer": "Spectrum Community Health CIC",
+          "specialty": "Prison Nursing"
+        },
+        {
+          "title": "staff Nurse Acute Stroke Unit",
+          "url": "https://www.healthjobsuk.com/job/UK/Berkshire/reading/Royal_Berkshire_NHS_Foundation_Trust/Acute_Stroke/Acute_Stroke-v8328070",
+          "source": "NHS Jobs",
+          "county": "Berkshire",
+          "town": "reading",
+          "employer": "Royal Berkshire NHS Foundation Trust",
+          "specialty": "Acute Stroke"
         },
         {
           "title": "Staff Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/Hull/Hull_University_Teaching_Hospitals_NHS_Trust/Cardiovascular/Cardiovascular-v8340352",
+          "url": "https://www.healthjobsuk.com/job/UK/Berkshire/Reading/Royal_Berkshire_NHS_Foundation_Trust/Acute_Medical_Unit/Acute_Medical_Unit-v8330470",
           "source": "NHS Jobs",
-          "county": "East Yorkshire",
-          "town": "Hull",
-          "employer": "Hull University Teaching Hospitals NHS Trust",
-          "specialty": "Cardiovascular"
+          "county": "Berkshire",
+          "town": "Reading",
+          "employer": "Royal Berkshire NHS Foundation Trust",
+          "specialty": "Acute Medical Unit"
         },
         {
-          "title": "Flexible Healthcare Assistant (Student Nurse)",
-          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Derby/Derby_Health_Staffing/Derby_Health_Staffing/Derby_Health_Staffing-v8341731",
+          "title": "Registered Nurse - HMP/YOI Deerbolt + £1500 Welcome Payment",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Barnard_Castle/Spectrum_Community_Health_CIC/Prison_Nursing/Prison_Nursing-v8362387",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "Barnard Castle",
+          "employer": "Spectrum Community Health CIC",
+          "specialty": "Prison Nursing"
+        },
+        {
+          "title": "Registered Nursing Associate",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Liverpool/Mersey_Care_NHS_Foundation_Trust/Registered_Nurse_Associate_Prison_Mental_Health_Services/Registered_Nurse_Associate_Prison_Mental_Health_Services-v8390737",
+          "source": "NHS Jobs",
+          "county": "Merseyside",
+          "town": "Liverpool",
+          "employer": "Mersey Care NHS Foundation Trust",
+          "specialty": "Registered Nurse Associate Prison Mental Health Services"
+        },
+        {
+          "title": "Multi-Agency Child Protection Team (MACPT) Lead Nurse - Sandwell",
+          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/West_Bromwich/Sandwell_West_Birmingham_NHS_Trust/Safeguarding/Safeguarding-v8132488",
+          "source": "NHS Jobs",
+          "county": "Birmingham Black Country",
+          "town": "West Bromwich",
+          "employer": "Sandwell West Birmingham NHS Trust",
+          "specialty": "Safeguarding"
+        },
+        {
+          "title": "Junior Sister - Outpatients",
+          "url": "https://www.healthjobsuk.com/job/UK/London/Tooting_London/St_Georges_University_Hospitals_NHS_Foundation_Trust/Outpatients_St_Georges_Hospital/Outpatients_St_Georges_Hospital-v8166085",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "Tooting London",
+          "employer": "St Georges University Hospitals NHS Foundation Trust",
+          "specialty": "Outpatients St Georges Hospital"
+        },
+        {
+          "title": "Paediatric Staff Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Chesterfield/Chesterfield_Royal_Hospital_NHS_Foundation_Trust/Paediatrics/Paediatrics-v8205477",
+          "source": "NHS Jobs",
+          "county": "Derbyshire",
+          "town": "Chesterfield",
+          "employer": "Chesterfield Royal Hospital NHS Foundation Trust",
+          "specialty": "Paediatrics"
+        },
+        {
+          "title": "Critical Care Staff Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/Hampshire/Aldermaston/Hampshire_Hospitals_NHS_Foundation_Trust/Critical_Care/Critical_Care-v8250472",
+          "source": "NHS Jobs",
+          "county": "Hampshire",
+          "town": "Aldermaston",
+          "employer": "Hampshire Hospitals NHS Foundation Trust",
+          "specialty": "Critical Care"
+        },
+        {
+          "title": "Registered Nurse",
+          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Derby/University_Hospitals_Derby_Burton_NHS_Foundation_Trust/CardiologyMedicine/CardiologyMedicine-v8257551",
           "source": "NHS Jobs",
           "county": "Derbyshire",
           "town": "Derby",
-          "employer": "Derby Health Staffing",
-          "specialty": "Derby Health Staffing"
+          "employer": "University Hospitals Derby Burton NHS Foundation Trust",
+          "specialty": "CardiologyMedicine"
         },
         {
-          "title": "Staff Nurse or ODP - Interventional Radiology",
-          "url": "https://www.healthjobsuk.com/job/UK/Dorset/Bournemouth/University_Hospitals_Dorset_NHS_Foundation_Trust/Interventional_Radiology/Interventional_Radiology-v8342672",
+          "title": "Haematology Clinical Nurse Specialist",
+          "url": "https://www.healthjobsuk.com/job/UK/Devon/Torquay/Torbay_South_Devon_NHS_Foundation_Trust/Haematology_nursingcancer_nursing/Haematology_nursingcancer_nursing-v8263979",
           "source": "NHS Jobs",
-          "county": "Dorset",
-          "town": "Bournemouth",
-          "employer": "University Hospitals Dorset NHS Foundation Trust",
-          "specialty": "Interventional Radiology"
+          "county": "Devon",
+          "town": "Torquay",
+          "employer": "Torbay South Devon NHS Foundation Trust",
+          "specialty": "Haematology nursingcancer nursing"
         },
         {
-          "title": "Nursing Support Worker (Mental Health)",
-          "url": "https://www.healthjobsuk.com/job/UK/Carmarthenshire/Aberystwyth/Hywel_Dda_University_Health_Board/Community_Mental_Health/Community_Mental_Health-v8342966",
-          "source": "NHS Jobs",
-          "county": "Carmarthenshire",
-          "town": "Aberystwyth",
-          "employer": "Hywel Dda University Health Board",
-          "specialty": "Community Mental Health"
-        },
-        {
-          "title": "Senior Mental Health Nurse",
-          "url": "https://www.healthjobsuk.com/job/UK/Norfolk/Bury_St_Edmunds/Norfolk_Suffolk_NHS_Foundation_Trust/Mental_Health_Nurse/Mental_Health_Nurse-v8343513",
-          "source": "NHS Jobs",
-          "county": "Norfolk",
-          "town": "Bury St Edmunds",
-          "employer": "Norfolk Suffolk NHS Foundation Trust",
-          "specialty": "Mental Health Nurse"
-        },
-        {
-          "title": "Clinical Nurse Specialist - BBV",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/liverpool/Liverpool_University_Hospitals_NHS_Foundation_Trust/BBV_service_HIV_Hepatitis/BBV_service_HIV_Hepatitis-v8344672",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "liverpool",
-          "employer": "Liverpool University Hospitals NHS Foundation Trust",
-          "specialty": "BBV service HIV Hepatitis"
-        },
-        {
-          "title": "Staff Nurse - Haematology/Oncology Unit",
-          "url": "https://www.healthjobsuk.com/job/UK/Dorset/Bournemouth/University_Hospitals_Dorset_NHS_Foundation_Trust/Cancer_Care/Cancer_Care-v8345382",
-          "source": "NHS Jobs",
-          "county": "Dorset",
-          "town": "Bournemouth",
-          "employer": "University Hospitals Dorset NHS Foundation Trust",
-          "specialty": "Cancer Care"
-        },
-        {
-          "title": "Staff Nurse: Willows ward - Older Persons Inpatient",
-          "url": "https://www.healthjobsuk.com/job/UK/Norfolk/IPSWICH/Norfolk_Suffolk_NHS_Foundation_Trust/Older_Persons_Mental_Health/Older_Persons_Mental_Health-v8347761",
-          "source": "NHS Jobs",
-          "county": "Norfolk",
-          "town": "IPSWICH",
-          "employer": "Norfolk Suffolk NHS Foundation Trust",
-          "specialty": "Older Persons Mental Health"
-        },
-        {
-          "title": "Registered Nurse Outpatients",
-          "url": "https://www.healthjobsuk.com/job/UK/Lancashire/Bolton/Bolton_NHS_Foundation_Trust/General_Outpatients/General_Outpatients-v8347803",
-          "source": "NHS Jobs",
-          "county": "Lancashire",
-          "town": "Bolton",
-          "employer": "Bolton NHS Foundation Trust",
-          "specialty": "General Outpatients"
-        },
-        {
-          "title": "Registered Nurse Outpatients",
-          "url": "https://www.healthjobsuk.com/job/UK/Lancashire/Bolton/Bolton_NHS_Foundation_Trust/Surgery_Division/Surgery_Division-v8347844",
-          "source": "NHS Jobs",
-          "county": "Lancashire",
-          "town": "Bolton",
-          "employer": "Bolton NHS Foundation Trust",
-          "specialty": "Surgery Division"
-        },
-        {
-          "title": "Community Nursing Deputy Team Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Hemel_Hempstead/Central_London_Community_Healthcare_NHS_Trust/Community_Nursing/Community_Nursing-v8349268",
+          "title": "Paediatric Staff Nurse - Emergency Department",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/Lewisham_Greenwich_NHS_Trust/Children_Young_People/Children_Young_People-v8268776",
           "source": "NHS Jobs",
           "county": "London",
-          "town": "Hemel Hempstead",
-          "employer": "Central London Community Healthcare NHS Trust",
-          "specialty": "Community Nursing"
+          "town": "London",
+          "employer": "Lewisham Greenwich NHS Trust",
+          "specialty": "Children Young People"
         },
         {
-          "title": "Nursing Associate",
-          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Rochdale/Pennine_Care_NHS_Foundation_Trust/Adult_mental_health/Adult_mental_health-v8351030",
+          "title": "Inherited Cardiac Conditions Clinical Nurse Specialist",
+          "url": "https://www.healthjobsuk.com/job/UK/Staffordshire/Stoke_on_Trent/University_Hospitals_North_Midlands_NHS_Trust/Inherited_Cardiac_Conditions_Clinical_Nurse_Specialist/Inherited_Cardiac_Conditions_Clinical_Nurse_Specialist-v8277909",
           "source": "NHS Jobs",
-          "county": "Manchester",
-          "town": "Rochdale",
-          "employer": "Pennine Care NHS Foundation Trust",
-          "specialty": "Adult mental health"
+          "county": "Staffordshire",
+          "town": "Stoke on Trent",
+          "employer": "University Hospitals North Midlands NHS Trust",
+          "specialty": "Inherited Cardiac Conditions Clinical Nurse Specialist"
         }
       ]
     },
@@ -372,224 +372,98 @@
       "label": "Care &amp; support roles",
       "items": [
         {
-          "title": "Community Healthcare Assistant Out of Hours District Nurses",
-          "url": "https://www.healthjobsuk.com/job/UK/Cheshire/Victoria_Road_Macclesfield/East_Cheshire_NHS_Trust/Community_Nursing/Community_Nursing-v8224255",
-          "source": "NHS Jobs",
-          "county": "Cheshire",
-          "town": "Victoria Road Macclesfield",
-          "employer": "East Cheshire NHS Trust",
-          "specialty": "Community Nursing"
-        },
-        {
-          "title": "Senior Healthcare Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/Hull/Hull_University_Teaching_Hospitals_NHS_Trust/Trauma_Orthopaedics/Trauma_Orthopaedics-v8258296",
-          "source": "NHS Jobs",
-          "county": "East Yorkshire",
-          "town": "Hull",
-          "employer": "Hull University Teaching Hospitals NHS Trust",
-          "specialty": "Trauma Orthopaedics"
-        },
-        {
-          "title": "Band 3 OPD IIRMS Support Worker - Bath &amp; North Somerset",
-          "url": "https://www.healthjobsuk.com/job/UK/Somerset/WestonSuperMare/Avon_Wiltshire_Mental_Health_Partnership_NHS_Trust/Support_services/Support_services-v8313927",
-          "source": "NHS Jobs",
-          "county": "Somerset",
-          "town": "WestonSuperMare",
-          "employer": "Avon Wiltshire Mental Health Partnership NHS Trust",
-          "specialty": "Support services"
-        },
-        {
-          "title": "Clinical Support Worker - Diagnostic Imaging - Huntingdon",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Huntingdon/North_West_Anglia_NHS_Foundation_Trust/Diagnostic_Imaging/Diagnostic_Imaging-v8316481",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Huntingdon",
-          "employer": "North West Anglia NHS Foundation Trust",
-          "specialty": "Diagnostic Imaging"
-        },
-        {
-          "title": "IPC/Healthcare Assistant",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Liverpool/Liverpool_University_Hospitals_NHS_Foundation_Trust/Emergency_Department/Emergency_Department-v8319021",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Liverpool",
-          "employer": "Liverpool University Hospitals NHS Foundation Trust",
-          "specialty": "Emergency Department"
-        },
-        {
-          "title": "Healthcare Assistant",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Liverpool/Liverpool_University_Hospitals_NHS_Foundation_Trust/Cardiology/Cardiology-v8319533",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Liverpool",
-          "employer": "Liverpool University Hospitals NHS Foundation Trust",
-          "specialty": "Cardiology"
-        },
-        {
-          "title": "Healthcare Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Bristol/BRISTOL/Bristol_NHS_Foundation_Trust_BFT/Surgery/Surgery-v8329358",
-          "source": "NHS Jobs",
-          "county": "Bristol",
-          "town": "BRISTOL",
-          "employer": "Bristol NHS Foundation Trust BFT",
-          "specialty": "Surgery"
-        },
-        {
-          "title": "Outpatients- Health Care assistant- Band 3",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Fazakerley/The_Walton_Centre_NHS_Foundation_Trust/Additional_Clinical_Services/Additional_Clinical_Services-v8336744",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Fazakerley",
-          "employer": "The Walton Centre NHS Foundation Trust",
-          "specialty": "Additional Clinical Services"
-        },
-        {
-          "title": "Physiotherapy Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Carmarthenshire/Aberystwyth/Hywel_Dda_University_Health_Board/Physiotherapy/Physiotherapy-v8336781",
-          "source": "NHS Jobs",
-          "county": "Carmarthenshire",
-          "town": "Aberystwyth",
-          "employer": "Hywel Dda University Health Board",
-          "specialty": "Physiotherapy"
-        },
-        {
-          "title": "Band 3 Health care assistant  - Pre-Operative assessment",
-          "url": "https://www.healthjobsuk.com/job/UK/London/London/St_Georges_University_Hospitals_NHS_Foundation_Trust/PreOperative_Assessment_Central/PreOperative_Assessment_Central-v8339587",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "London",
-          "employer": "St Georges University Hospitals NHS Foundation Trust",
-          "specialty": "PreOperative Assessment Central"
-        },
-        {
-          "title": "Healthcare Assistant - Ward 8b",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Liverpool/Liverpool_University_Hospitals_NHS_Foundation_Trust/Mixed_Palliative_care_Haematology_General_medicine/Mixed_Palliative_care_Haematology_General_medicine-v8341343",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Liverpool",
-          "employer": "Liverpool University Hospitals NHS Foundation Trust",
-          "specialty": "Mixed Palliative care Haematology General medicine"
-        },
-        {
-          "title": "Healthcare Assistant - Ward 8b",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Liverpool/Liverpool_University_Hospitals_NHS_Foundation_Trust/Mixed_Palliative_care_Haematology_General_medicine/Mixed_Palliative_care_Haematology_General_medicine-v8341344",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Liverpool",
-          "employer": "Liverpool University Hospitals NHS Foundation Trust",
-          "specialty": "Mixed Palliative care Haematology General medicine"
-        },
-        {
-          "title": "Maternity Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Bristol/Bristol/Bristol_NHS_Foundation_Trust_BFT/Maternity_Services/Maternity_Services-v8341514",
-          "source": "NHS Jobs",
-          "county": "Bristol",
-          "town": "Bristol",
-          "employer": "Bristol NHS Foundation Trust BFT",
-          "specialty": "Maternity Services"
-        },
-        {
-          "title": "Healthcare Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Bristol/Bristol/Bristol_NHS_Foundation_Trust_BFT/Frailty/Frailty-v8341685",
-          "source": "NHS Jobs",
-          "county": "Bristol",
-          "town": "Bristol",
-          "employer": "Bristol NHS Foundation Trust BFT",
-          "specialty": "Frailty"
-        },
-        {
-          "title": "Flexible Healthcare Assistant",
-          "url": "https://www.healthjobsuk.com/job/UK/Derbyshire/Derby/Derby_Health_Staffing/Derby_Health_Staffing/Derby_Health_Staffing-v8341713",
-          "source": "NHS Jobs",
-          "county": "Derbyshire",
-          "town": "Derby",
-          "employer": "Derby Health Staffing",
-          "specialty": "Derby Health Staffing"
-        },
-        {
-          "title": "Health Care Assistant - Mackellar &amp; Sedgewick Wards",
-          "url": "https://www.healthjobsuk.com/job/UK/London/London/Moorfields_Eye_Hospital_NHS_Foundation_Trust/Healthcare/Healthcare-v8347297",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "London",
-          "employer": "Moorfields Eye Hospital NHS Foundation Trust",
-          "specialty": "Healthcare"
-        },
-        {
-          "title": "Healthcare Assistant - Tiptree Ward",
-          "url": "https://www.healthjobsuk.com/job/UK/Essex/Chelmsford/Mid_South_Essex_NHS_Foundation_Trust/Health_Care_General_Medicine/Health_Care_General_Medicine-v8347946",
-          "source": "NHS Jobs",
-          "county": "Essex",
-          "town": "Chelmsford",
-          "employer": "Mid South Essex NHS Foundation Trust",
-          "specialty": "Health Care General Medicine"
-        },
-        {
-          "title": "ADHD Clinical Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Manchester/Manchester_University_NHS_Foundation_Trust/General_Staffing/General_Staffing-v8348144",
-          "source": "NHS Jobs",
-          "county": "Manchester",
-          "town": "Manchester",
-          "employer": "Manchester University NHS Foundation Trust",
-          "specialty": "General Staffing"
-        },
-        {
-          "title": "Vascular Lab Clinical Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Cumbria/Whitehaven/North_Cumbria_Integrated_Care_NHS_Foundation_Trust/Vascular_Med_Staff/Vascular_Med_Staff-v8351283",
+          "title": "Clinical Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Cumbria/Lancaster/University_Hospitals_Morecambe_Bay_NHS_Foundation_Trust/Endoscopy_CSW/Endoscopy_CSW-v8232352",
           "source": "NHS Jobs",
           "county": "Cumbria",
-          "town": "Whitehaven",
-          "employer": "North Cumbria Integrated Care NHS Foundation Trust",
-          "specialty": "Vascular Med Staff"
+          "town": "Lancaster",
+          "employer": "University Hospitals Morecambe Bay NHS Foundation Trust",
+          "specialty": "Endoscopy CSW"
         },
         {
-          "title": "Band 3 Health Care Support Worker - Bristol",
-          "url": "https://www.healthjobsuk.com/job/UK/Somerset/Bristol/Avon_Wiltshire_Mental_Health_Partnership_NHS_Trust/Mental_Health/Mental_Health-v8352599",
+          "title": "Support Worker - Core 24 St Helens and Knowsley",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Prescot/Mersey_Care_NHS_Foundation_Trust/Urgent_Care_Mental_Health_Services/Urgent_Care_Mental_Health_Services-v8306616",
           "source": "NHS Jobs",
-          "county": "Somerset",
-          "town": "Bristol",
-          "employer": "Avon Wiltshire Mental Health Partnership NHS Trust",
-          "specialty": "Mental Health"
+          "county": "Merseyside",
+          "town": "Prescot",
+          "employer": "Mersey Care NHS Foundation Trust",
+          "specialty": "Urgent Care Mental Health Services"
         },
         {
-          "title": "Radiology Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Essex/Chelmsford/Mid_South_Essex_NHS_Foundation_Trust/Radiology/Radiology-v8354670",
+          "title": "Health Care Support Worker - Drop In Sessions",
+          "url": "https://www.healthjobsuk.com/job/UK/Herefordshire/Hereford/Wye_Valley_NHS_Trust/Health_Care_Assistant/Health_Care_Assistant-v8311194",
           "source": "NHS Jobs",
-          "county": "Essex",
-          "town": "Chelmsford",
-          "employer": "Mid South Essex NHS Foundation Trust",
-          "specialty": "Radiology"
+          "county": "Herefordshire",
+          "town": "Hereford",
+          "employer": "Wye Valley NHS Trust",
+          "specialty": "Health Care Assistant"
         },
         {
-          "title": "Healthcare Assistant - Adolescent Inpatient Services - Oxford",
-          "url": "https://www.healthjobsuk.com/job/UK/Oxfordshire/Oxford/Oxford_Health_NHS_Foundation_Trust/Child_Adolescent_Mental_Health_Services_Inpatient_Unit/Child_Adolescent_Mental_Health_Services_Inpatient_Unit-v8356022",
+          "title": "Paediatric Clinical Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/Homerton_Healthcare_NHS_Foundation_Trust/Paediatrics/Paediatrics-v8321796",
           "source": "NHS Jobs",
-          "county": "Oxfordshire",
-          "town": "Oxford",
-          "employer": "Oxford Health NHS Foundation Trust",
-          "specialty": "Child Adolescent Mental Health Services Inpatient Unit"
-        },
-        {
-          "title": "Theatre Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Norfolk/Great_Yarmouth/James_Paget_University_Hospitals_NHS_Foundation_Trust/Operating_Theatres/Operating_Theatres-v8358339",
-          "source": "NHS Jobs",
-          "county": "Norfolk",
-          "town": "Great Yarmouth",
-          "employer": "James Paget University Hospitals NHS Foundation Trust",
-          "specialty": "Operating Theatres"
-        },
-        {
-          "title": "Play Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Surrey/Slough/Frimley_Health_NHS_Foundation_Trust/Paediatrics/Paediatrics-v8359858",
-          "source": "NHS Jobs",
-          "county": "Surrey",
-          "town": "Slough",
-          "employer": "Frimley Health NHS Foundation Trust",
+          "county": "London",
+          "town": "London",
+          "employer": "Homerton Healthcare NHS Foundation Trust",
           "specialty": "Paediatrics"
         },
         {
-          "title": "Bank Healthcare Support Worker - HMP Liverpool",
-          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Liverpool/Spectrum_Community_Health_CIC/Healthcare_Support_Worker/Healthcare_Support_Worker-v8359956",
+          "title": "Healthcare Assistant (mental health)",
+          "url": "https://www.healthjobsuk.com/job/UK/London/Sutton/Central_North_West_London_NHS_Foundation_Trust/Health_Justice_Services/Health_Justice_Services-v8350984",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "Sutton",
+          "employer": "Central North West London NHS Foundation Trust",
+          "specialty": "Health Justice Services"
+        },
+        {
+          "title": "Senior Healthcare Support Worker, Gynaecology Outpatients",
+          "url": "https://www.healthjobsuk.com/job/UK/Surrey/Chertsey/Ashford_St_Peters_Hospitals_NHS_Foundation_Trust/Healthcare_Support_Worker/Healthcare_Support_Worker-v8363561",
+          "source": "NHS Jobs",
+          "county": "Surrey",
+          "town": "Chertsey",
+          "employer": "Ashford St Peters Hospitals NHS Foundation Trust",
+          "specialty": "Healthcare Support Worker"
+        },
+        {
+          "title": "Senior Health Care Support Worker - Spinal Injuries",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Southport/Mersey_West_Lancashire_Teaching_Hospitals_NHS_Trust/Spinal_Injuries/Spinal_Injuries-v8373694",
+          "source": "NHS Jobs",
+          "county": "Merseyside",
+          "town": "Southport",
+          "employer": "Mersey West Lancashire Teaching Hospitals NHS Trust",
+          "specialty": "Spinal Injuries"
+        },
+        {
+          "title": "Senior Health Care Assistant",
+          "url": "https://www.healthjobsuk.com/job/UK/Gloucestershire/Cheltenham/Gloucestershire_Health_Care_NHS_Foundation_Trust/Mental_Health/Mental_Health-v8383108",
+          "source": "NHS Jobs",
+          "county": "Gloucestershire",
+          "town": "Cheltenham",
+          "employer": "Gloucestershire Health Care NHS Foundation Trust",
+          "specialty": "Mental Health"
+        },
+        {
+          "title": "Lived Experience Peer Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Merseyside/Mersey_Care_NHS_Foundation_Trust/Lived_Experience_Criminal_Justice_Mental_Health_Services/Lived_Experience_Criminal_Justice_Mental_Health_Services-v8383600",
+          "source": "NHS Jobs",
+          "county": "Merseyside",
+          "town": "Merseyside",
+          "employer": "Mersey Care NHS Foundation Trust",
+          "specialty": "Lived Experience Criminal Justice Mental Health Services"
+        },
+        {
+          "title": "PTS Ambulance Care Assistant - West Yorkshire",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/West_Yorkshire/Yorkshire_Ambulance_Service_NHS_Trust/PTS/PTS-v8384384",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "West Yorkshire",
+          "employer": "Yorkshire Ambulance Service NHS Trust",
+          "specialty": "PTS"
+        },
+        {
+          "title": "Healthcare Support Worker - HMP Liverpool",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Liverpool/Spectrum_Community_Health_CIC/Healthcare_Support_Worker/Healthcare_Support_Worker-v8361765",
           "source": "NHS Jobs",
           "county": "West Yorkshire",
           "town": "Liverpool",
@@ -597,139 +471,265 @@
           "specialty": "Healthcare Support Worker"
         },
         {
-          "title": "HPB Cancer Support Worker / Navigator",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Fazakerley_Liverpool/Liverpool_University_Hospitals_NHS_Foundation_Trust/HPB/HPB-v8362107",
+          "title": "Health Support Worker - Webinar - Online Information Session",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Leeds/Leeds_York_Partnership_NHS_Foundation_Trust/Health_Support_Worker/Health_Support_Worker-v8387029",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "Leeds",
+          "employer": "Leeds York Partnership NHS Foundation Trust",
+          "specialty": "Health Support Worker"
+        },
+        {
+          "title": "Advanced Biomedical Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/London/Carshalton/St_Georges_University_Hospitals_NHS_Foundation_Trust/Clinical_Blood_Sciences/Clinical_Blood_Sciences-v8334622",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "Carshalton",
+          "employer": "St Georges University Hospitals NHS Foundation Trust",
+          "specialty": "Clinical Blood Sciences"
+        },
+        {
+          "title": "Health Care Support Worker - Ward 2B Respiratory",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Prescot/Mersey_West_Lancashire_Teaching_Hospitals_NHS_Trust/Respiratory/Respiratory-v8346858",
           "source": "NHS Jobs",
           "county": "Merseyside",
-          "town": "Fazakerley Liverpool",
-          "employer": "Liverpool University Hospitals NHS Foundation Trust",
-          "specialty": "HPB"
+          "town": "Prescot",
+          "employer": "Mersey West Lancashire Teaching Hospitals NHS Trust",
+          "specialty": "Respiratory"
         },
         {
-          "title": "Health Care Assistant - AMU / MAC / B3",
-          "url": "https://www.healthjobsuk.com/job/UK/Lancashire/Blackburn/East_Lancashire_Hospitals_NHS_Trust/Medicine_Emergency_Care/Medicine_Emergency_Care-v8375684",
+          "title": "Senior Healthcare Assistant Apprentice",
+          "url": "https://www.healthjobsuk.com/job/UK/Lancashire/Preston_Chorley/Lancashire_Teaching_Hospitals_NHS_Foundation_Trust/Apprenticeship/Apprenticeship-v8348175",
           "source": "NHS Jobs",
           "county": "Lancashire",
-          "town": "Blackburn",
-          "employer": "East Lancashire Hospitals NHS Trust",
-          "specialty": "Medicine Emergency Care"
+          "town": "Preston Chorley",
+          "employer": "Lancashire Teaching Hospitals NHS Foundation Trust",
+          "specialty": "Apprenticeship"
         },
         {
-          "title": "Support Worker - Adult Eating Disorders",
-          "url": "https://www.healthjobsuk.com/job/UK/Oxfordshire/Marlborough/Oxford_Health_NHS_Foundation_Trust/Adult_Mental_Health/Adult_Mental_Health-v8375782",
+          "title": "Healthcare Assistant",
+          "url": "https://www.healthjobsuk.com/job/UK/Shropshire/Bridgnorth/Shropshire_Community_Health_NHS_Trust/Healthcare_Assistant/Healthcare_Assistant-v8348804",
           "source": "NHS Jobs",
-          "county": "Oxfordshire",
-          "town": "Marlborough",
-          "employer": "Oxford Health NHS Foundation Trust",
-          "specialty": "Adult Mental Health"
+          "county": "Shropshire",
+          "town": "Bridgnorth",
+          "employer": "Shropshire Community Health NHS Trust",
+          "specialty": "Healthcare Assistant"
         },
         {
-          "title": "Senior Healthcare Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Lincolnshire/Lincoln/Lincolnshire_Partnership_NHS_Foundation_Trust/Francis_Willis_Unit/Francis_Willis_Unit-v8375806",
+          "title": "Healthcare Assistant",
+          "url": "https://www.healthjobsuk.com/job/UK/Tyne_Wear/Gateshead/Gateshead_Health_NHS_Foundation_Trust/Healthcare_Assistant_Operating_Theatre_Band/Healthcare_Assistant_Operating_Theatre_Band-v8350991",
+          "source": "NHS Jobs",
+          "county": "Tyne Wear",
+          "town": "Gateshead",
+          "employer": "Gateshead Health NHS Foundation Trust",
+          "specialty": "Healthcare Assistant Operating Theatre Band"
+        },
+        {
+          "title": "Healthcare Support Worker - Band 3",
+          "url": "https://www.healthjobsuk.com/job/UK/Lincolnshire/Skegness/Lincolnshire_Community_Health_Services_NHS_Trust/Healthcare_Support_Worker/Healthcare_Support_Worker-v8352009",
           "source": "NHS Jobs",
           "county": "Lincolnshire",
-          "town": "Lincoln",
-          "employer": "Lincolnshire Partnership NHS Foundation Trust",
-          "specialty": "Francis Willis Unit"
-        },
-        {
-          "title": "Rehabilitation Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/East_Sussex/St_Leonards_on_Sea/East_Sussex_Healthcare_NHS_Trust/Rehabilitation_Support_Worker/Rehabilitation_Support_Worker-v8375837",
-          "source": "NHS Jobs",
-          "county": "East Sussex",
-          "town": "St Leonards on Sea",
-          "employer": "East Sussex Healthcare NHS Trust",
-          "specialty": "Rehabilitation Support Worker"
-        },
-        {
-          "title": "Healthcare Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Dorset/Bournemouth/Dorset_HealthCare_University_NHS_Foundation_Trust/Community_Vaccination_Service/Community_Vaccination_Service-v8375850",
-          "source": "NHS Jobs",
-          "county": "Dorset",
-          "town": "Bournemouth",
-          "employer": "Dorset HealthCare University NHS Foundation Trust",
-          "specialty": "Community Vaccination Service"
-        },
-        {
-          "title": "Band 3 Healthcare Assistant - Zinnia Centre/Mary Seacole House",
-          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/sparkhill_winson_Green/Birmingham_Solihull_Mental_Health_NHS_Foundation_Trust/HCA/HCA-v8376117",
-          "source": "NHS Jobs",
-          "county": "Birmingham Black Country",
-          "town": "sparkhill winson Green",
-          "employer": "Birmingham Solihull Mental Health NHS Foundation Trust",
-          "specialty": "HCA"
-        },
-        {
-          "title": "Healthcare Support Worker - Brynheulog Ward",
-          "url": "https://www.healthjobsuk.com/job/UK/Powys/Newtown/Powys_Teaching_Health_Board/Healthcare_Support_Worker/Healthcare_Support_Worker-v8376405",
-          "source": "NHS Jobs",
-          "county": "Powys",
-          "town": "Newtown",
-          "employer": "Powys Teaching Health Board",
+          "town": "Skegness",
+          "employer": "Lincolnshire Community Health Services NHS Trust",
           "specialty": "Healthcare Support Worker"
         },
         {
-          "title": "Community Healthcare Assistant",
-          "url": "https://www.healthjobsuk.com/job/UK/Herefordshire/Droitwich_Spa/Herefordshire_Worcestershire_Health_Care_NHS_Trust/Community_Health_Services/Community_Health_Services-v8376480",
+          "title": "Community Healthcare Support Worker - CAMHS",
+          "url": "https://www.healthjobsuk.com/job/UK/Staffordshire/Shrewsbury/Midlands_Partnership_University_NHS_Foundation_Trust/Healthcare_Support_worker/Healthcare_Support_worker-v8373446",
           "source": "NHS Jobs",
-          "county": "Herefordshire",
-          "town": "Droitwich Spa",
-          "employer": "Herefordshire Worcestershire Health Care NHS Trust",
-          "specialty": "Community Health Services"
+          "county": "Staffordshire",
+          "town": "Shrewsbury",
+          "employer": "Midlands Partnership University NHS Foundation Trust",
+          "specialty": "Healthcare Support worker"
         },
         {
-          "title": "Healthcare Assistant - Day Stay &amp; Elective Admissions Lounge",
-          "url": "https://www.healthjobsuk.com/job/UK/Essex/Basildon/Mid_South_Essex_NHS_Foundation_Trust/Day_Surgery/Day_Surgery-v8376512",
+          "title": "(**) Healthcare Assistant - Notley Ward",
+          "url": "https://www.healthjobsuk.com/job/UK/Essex/Chelmsford/Mid_South_Essex_NHS_Foundation_Trust/Surgical_Healthcare_Support_Worker/Surgical_Healthcare_Support_Worker-v8377713",
           "source": "NHS Jobs",
           "county": "Essex",
-          "town": "Basildon",
+          "town": "Chelmsford",
           "employer": "Mid South Essex NHS Foundation Trust",
-          "specialty": "Day Surgery"
+          "specialty": "Surgical Healthcare Support Worker"
         },
         {
-          "title": "Clinical Support Worker/Clinical Support Worker Higher Level",
-          "url": "https://www.healthjobsuk.com/job/UK/Cleveland/Northallerton/South_Tees_Hospitals_NHS_Foundation_Trust/Corporate_Services/Corporate_Services-v8376561",
+          "title": "Health Care Support Worker - Bromyard (RA)",
+          "url": "https://www.healthjobsuk.com/job/UK/Herefordshire/Bromyard/Wye_Valley_NHS_Trust/Health_Care_Support_Worker/Health_Care_Support_Worker-v8385160",
+          "source": "NHS Jobs",
+          "county": "Herefordshire",
+          "town": "Bromyard",
+          "employer": "Wye Valley NHS Trust",
+          "specialty": "Health Care Support Worker"
+        },
+        {
+          "title": "Female Support Worker Whiteoak Respite Centre - Full &amp; Part Time Hours",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Bradford/St_Annes_Community_Services/Adult_Social_Care/Adult_Social_Care-v8387327",
+          "source": "NHS Jobs",
+          "county": "West Yorkshire",
+          "town": "Bradford",
+          "employer": "St Annes Community Services",
+          "specialty": "Adult Social Care"
+        },
+        {
+          "title": "Healthcare Support Worker - Emergency Department",
+          "url": "https://www.healthjobsuk.com/job/UK/Devon/Torquay/Torbay_South_Devon_NHS_Foundation_Trust/Emergency_Department/Emergency_Department-v8389152",
+          "source": "NHS Jobs",
+          "county": "Devon",
+          "town": "Torquay",
+          "employer": "Torbay South Devon NHS Foundation Trust",
+          "specialty": "Emergency Department"
+        },
+        {
+          "title": "Specialist Maternity Support Worker (Complex Needs and Safeguarding)",
+          "url": "https://www.healthjobsuk.com/job/UK/Devon/Torquay/Torbay_South_Devon_NHS_Foundation_Trust/Midwifery/Midwifery-v8389255",
+          "source": "NHS Jobs",
+          "county": "Devon",
+          "town": "Torquay",
+          "employer": "Torbay South Devon NHS Foundation Trust",
+          "specialty": "Midwifery"
+        },
+        {
+          "title": "Endoscopy Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Wirral/Wirral_University_Teaching_Hospital_NHS_Foundation_Trust/Medicine/Medicine-v8389359",
+          "source": "NHS Jobs",
+          "county": "Merseyside",
+          "town": "Wirral",
+          "employer": "Wirral University Teaching Hospital NHS Foundation Trust",
+          "specialty": "Medicine"
+        },
+        {
+          "title": "Health Care Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Essex/Brentwood/Provide_CIC/NursingRehab/NursingRehab-v8389810",
+          "source": "NHS Jobs",
+          "county": "Essex",
+          "town": "Brentwood",
+          "employer": "Provide CIC",
+          "specialty": "NursingRehab"
+        },
+        {
+          "title": "Respiratory Health Care Support Worker (Developmental Role)",
+          "url": "https://www.healthjobsuk.com/job/UK/Essex/Braintree/Provide_CIC/Respiratory/Respiratory-v8389832",
+          "source": "NHS Jobs",
+          "county": "Essex",
+          "town": "Braintree",
+          "employer": "Provide CIC",
+          "specialty": "Respiratory"
+        },
+        {
+          "title": "Senior Healthcare Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Lincolnshire/North_Hykeham/Lincolnshire_Partnership_NHS_Foundation_Trust/Brant_Ward/Brant_Ward-v8390740",
+          "source": "NHS Jobs",
+          "county": "Lincolnshire",
+          "town": "North Hykeham",
+          "employer": "Lincolnshire Partnership NHS Foundation Trust",
+          "specialty": "Brant Ward"
+        },
+        {
+          "title": "Peer Support Worker - CAMHS",
+          "url": "https://www.healthjobsuk.com/job/UK/Essex/Colchester/Essex_Partnership_University_NHS_Foundation_Trust/Child_Adolescent_Mental_Health_Services/Child_Adolescent_Mental_Health_Services-v8390780",
+          "source": "NHS Jobs",
+          "county": "Essex",
+          "town": "Colchester",
+          "employer": "Essex Partnership University NHS Foundation Trust",
+          "specialty": "Child Adolescent Mental Health Services"
+        },
+        {
+          "title": "Health Care Assistant - Pre-operative Assessment",
+          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Oldham/Northern_Care_Alliance_NHS_Foundation_Trust/Preoperative_assessment/Preoperative_assessment-v8390900",
+          "source": "NHS Jobs",
+          "county": "Manchester",
+          "town": "Oldham",
+          "employer": "Northern Care Alliance NHS Foundation Trust",
+          "specialty": "Preoperative assessment"
+        },
+        {
+          "title": "Clinical Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Cleveland/Middlesbrough/South_Tees_Hospitals_NHS_Foundation_Trust/Corporate_Services/Corporate_Services-v8391043",
           "source": "NHS Jobs",
           "county": "Cleveland",
-          "town": "Northallerton",
+          "town": "Middlesbrough",
           "employer": "South Tees Hospitals NHS Foundation Trust",
           "specialty": "Corporate Services"
         },
         {
-          "title": "Clinical Support Worker",
-          "url": "https://www.healthjobsuk.com/job/UK/Staffordshire/StokeonTrent/University_Hospitals_North_Midlands_NHS_Trust/Stroke/Stroke-v8376853",
+          "title": "Health Care Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Bradford/Bradford_District_Care_NHS_Foundation_Trust/Health_Care_Support_Worker/Health_Care_Support_Worker-v8391294",
           "source": "NHS Jobs",
-          "county": "Staffordshire",
-          "town": "StokeonTrent",
-          "employer": "University Hospitals North Midlands NHS Trust",
-          "specialty": "Stroke"
+          "county": "West Yorkshire",
+          "town": "Bradford",
+          "employer": "Bradford District Care NHS Foundation Trust",
+          "specialty": "Health Care Support Worker"
         },
         {
-          "title": "Healthcare Assistant",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Eastchurch_Isle_Sheppey/Oxleas_NHS_Foundation_Trust/Offender_Healthcare/Offender_Healthcare-v8376879",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Eastchurch Isle Sheppey",
-          "employer": "Oxleas NHS Foundation Trust",
-          "specialty": "Offender Healthcare"
-        },
-        {
-          "title": "Community Healthcare Assistant",
-          "url": "https://www.healthjobsuk.com/job/UK/Herefordshire/Kidderminster/Herefordshire_Worcestershire_Health_Care_NHS_Trust/Evening_Night_Community_Nursing_Service/Evening_Night_Community_Nursing_Service-v8376943",
+          "title": "Crisis Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Herefordshire/Worcester/Herefordshire_Worcestershire_Health_Care_NHS_Trust/Crisis_Support/Crisis_Support-v8391420",
           "source": "NHS Jobs",
           "county": "Herefordshire",
-          "town": "Kidderminster",
+          "town": "Worcester",
           "employer": "Herefordshire Worcestershire Health Care NHS Trust",
-          "specialty": "Evening Night Community Nursing Service"
+          "specialty": "Crisis Support"
         },
         {
-          "title": "Health Care Assistant - Renal Transplant",
-          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Salford/Northern_Care_Alliance_NHS_Foundation_Trust/Renal_Services_Transplant/Renal_Services_Transplant-v8377137",
+          "title": "Apprentice Health Care Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Lincolnshire/Scunthorpe/Northern_Lincolnshire_Goole_NHS_Foundation_Trust/Nursing/Nursing-v8391957",
           "source": "NHS Jobs",
-          "county": "Manchester",
-          "town": "Salford",
-          "employer": "Northern Care Alliance NHS Foundation Trust",
-          "specialty": "Renal Services Transplant"
+          "county": "Lincolnshire",
+          "town": "Scunthorpe",
+          "employer": "Northern Lincolnshire Goole NHS Foundation Trust",
+          "specialty": "Nursing"
+        },
+        {
+          "title": "Peri-Operative Health Care Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Cheshire/Warrington/North_Cheshire_Mersey_NHS_Foundation_Trust/Operating_Theatre_Department/Operating_Theatre_Department-v8392026",
+          "source": "NHS Jobs",
+          "county": "Cheshire",
+          "town": "Warrington",
+          "employer": "North Cheshire Mersey NHS Foundation Trust",
+          "specialty": "Operating Theatre Department"
+        },
+        {
+          "title": "B4 Clinical Support worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Surrey/Chertsey/Surrey_Borders_Partnership_NHS_Foundation_Trust/Runnymede_Neighbourhood_Mental_Health_Service/Runnymede_Neighbourhood_Mental_Health_Service-v8392078",
+          "source": "NHS Jobs",
+          "county": "Surrey",
+          "town": "Chertsey",
+          "employer": "Surrey Borders Partnership NHS Foundation Trust",
+          "specialty": "Runnymede Neighbourhood Mental Health Service"
+        },
+        {
+          "title": "Healthcare Support Worker - Lowton Ward",
+          "url": "https://www.healthjobsuk.com/job/UK/Lancashire/Wigan/Wrightington_Wigan_Leigh_Teaching_Hospitals_NHS_Foundation_Trust/Medicine/Medicine-v8392199",
+          "source": "NHS Jobs",
+          "county": "Lancashire",
+          "town": "Wigan",
+          "employer": "Wrightington Wigan Leigh Teaching Hospitals NHS Foundation Trust",
+          "specialty": "Medicine"
+        },
+        {
+          "title": "Speech and Language Therapy Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Oxfordshire/Headington/Oxford_University_Hospitals_NHS_Foundation_Trust/Speech_Language_Therapy_Support_Worker/Speech_Language_Therapy_Support_Worker-v8294331",
+          "source": "NHS Jobs",
+          "county": "Oxfordshire",
+          "town": "Headington",
+          "employer": "Oxford University Hospitals NHS Foundation Trust",
+          "specialty": "Speech Language Therapy Support Worker"
+        },
+        {
+          "title": "CNS Cancer Support Worker",
+          "url": "https://www.healthjobsuk.com/job/UK/Cornwall/Truro/Royal_Cornwall_Hospitals_NHS_Trust/Oncology/Oncology-v8321041",
+          "source": "NHS Jobs",
+          "county": "Cornwall",
+          "town": "Truro",
+          "employer": "Royal Cornwall Hospitals NHS Trust",
+          "specialty": "Oncology"
+        },
+        {
+          "title": "Non Clinical Support Worker - Housekeeper",
+          "url": "https://www.healthjobsuk.com/job/UK/Cumbria/Lancaster/University_Hospitals_Morecambe_Bay_NHS_Foundation_Trust/Housekeeping/Housekeeping-v8349347",
+          "source": "NHS Jobs",
+          "county": "Cumbria",
+          "town": "Lancaster",
+          "employer": "University Hospitals Morecambe Bay NHS Foundation Trust",
+          "specialty": "Housekeeping"
         }
       ]
     },
@@ -738,6 +738,195 @@
       "label": "Leadership &amp; management",
       "items": [
         {
+          "title": "Clinical Lead Continuing Healthcare",
+          "url": "https://www.healthjobsuk.com/job/UK/London/London/Central_London_Community_Healthcare_NHS_Trust/Continuing_Healthcare/Continuing_Healthcare-v8362813",
+          "source": "NHS Jobs",
+          "county": "London",
+          "town": "London",
+          "employer": "Central London Community Healthcare NHS Trust",
+          "specialty": "Continuing Healthcare"
+        },
+        {
+          "title": "Band 8a Locality Clinical Lead - Birmingham Healthy Minds",
+          "url": "https://www.healthjobsuk.com/job/UK/Birmingham_Black_Country/BIRMINGHAM/Birmingham_Solihull_Mental_Health_NHS_Foundation_Trust/CLINICAL_LOCALITY_LEAD/CLINICAL_LOCALITY_LEAD-v8392766",
+          "source": "NHS Jobs",
+          "county": "Birmingham Black Country",
+          "town": "BIRMINGHAM",
+          "employer": "Birmingham Solihull Mental Health NHS Foundation Trust",
+          "specialty": "CLINICAL LOCALITY LEAD"
+        },
+        {
+          "title": "Clinical Lead OT- Paediatrics Complex Disability Team",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Bebington/Wirral_University_Teaching_Hospital_NHS_Foundation_Trust/Clinical_Support/Clinical_Support-v7981143",
+          "source": "NHS Jobs",
+          "county": "Merseyside",
+          "town": "Bebington",
+          "employer": "Wirral University Teaching Hospital NHS Foundation Trust",
+          "specialty": "Clinical Support"
+        },
+        {
+          "title": "Clinical Lead Occupational Therapist - Neurology",
+          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Upton_Birkenhead/Wirral_University_Teaching_Hospital_NHS_Foundation_Trust/Clinical_Support/Clinical_Support-v8089826",
+          "source": "NHS Jobs",
+          "county": "Merseyside",
+          "town": "Upton Birkenhead",
+          "employer": "Wirral University Teaching Hospital NHS Foundation Trust",
+          "specialty": "Clinical Support"
+        },
+        {
+          "title": "Clinical Lead Occupational Therapist",
+          "url": "https://www.healthjobsuk.com/job/UK/Oxfordshire/Abingdon/Oxford_Health_NHS_Foundation_Trust/Clinical_Lead_Occupational_Therapist/Clinical_Lead_Occupational_Therapist-v8359490",
+          "source": "NHS Jobs",
+          "county": "Oxfordshire",
+          "town": "Abingdon",
+          "employer": "Oxford Health NHS Foundation Trust",
+          "specialty": "Clinical Lead Occupational Therapist"
+        },
+        {
+          "title": "Clinical Lead Dietitian - Surgery including Critical Care",
+          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Stockport/Stockport_NHS_Foundation_Trust/Surgery_Critical_Care/Surgery_Critical_Care-v8366062",
+          "source": "NHS Jobs",
+          "county": "Manchester",
+          "town": "Stockport",
+          "employer": "Stockport NHS Foundation Trust",
+          "specialty": "Surgery Critical Care"
+        },
+        {
+          "title": "Clinical Lead Occupational Therapist",
+          "url": "https://www.healthjobsuk.com/job/UK/South_Yorkshire/Doncaster/Rotherham_Doncaster_South_Humber_NHS_Foundation_Trust/Allied_Health_Professional_Nursing_Midwifery/Allied_Health_Professional_Nursing_Midwifery-v8366878",
+          "source": "NHS Jobs",
+          "county": "South Yorkshire",
+          "town": "Doncaster",
+          "employer": "Rotherham Doncaster South Humber NHS Foundation Trust",
+          "specialty": "Allied Health Professional Nursing Midwifery"
+        },
+        {
+          "title": "Clinical Lead Occupational Therapist",
+          "url": "https://www.healthjobsuk.com/job/UK/Cardiff/Cardiff/Velindre_Cancer_Centre/Occupational_Therapy/Occupational_Therapy-v8382447",
+          "source": "NHS Jobs",
+          "county": "Cardiff",
+          "town": "Cardiff",
+          "employer": "Velindre Cancer Centre",
+          "specialty": "Occupational Therapy"
+        },
+        {
+          "title": "Clinical Lead Dietitian - Diabetes",
+          "url": "https://www.healthjobsuk.com/job/UK/Nottinghamshire/SuttoninAshfield/Sherwood_Forest_Hospitals_NHS_Foundation_Trust/Specialist_Diabetes_Dietitian/Specialist_Diabetes_Dietitian-v8251644",
+          "source": "NHS Jobs",
+          "county": "Nottinghamshire",
+          "town": "SuttoninAshfield",
+          "employer": "Sherwood Forest Hospitals NHS Foundation Trust",
+          "specialty": "Specialist Diabetes Dietitian"
+        },
+        {
+          "title": "CHC Clinical Lead - Herts CPR141-02",
+          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Hemel_Hempsted/Central_East_Integrated_Care_Board/Clinical_Lead/Clinical_Lead-v8374460",
+          "source": "NHS Jobs",
+          "county": "Cambridgeshire",
+          "town": "Hemel Hempsted",
+          "employer": "Central East Integrated Care Board",
+          "specialty": "Clinical Lead"
+        },
+        {
+          "title": "Clinical Lead for Patient Flow",
+          "url": "https://www.healthjobsuk.com/job/UK/Kent/Dartford/Dartford_Gravesham_NHS_Trust/Clinical_Lead_Patient_Flow/Clinical_Lead_Patient_Flow-v8386492",
+          "source": "NHS Jobs",
+          "county": "Kent",
+          "town": "Dartford",
+          "employer": "Dartford Gravesham NHS Trust",
+          "specialty": "Clinical Lead Patient Flow"
+        },
+        {
+          "title": "Children&#039;s Occupational Therapist Experts at Hand Clinical Lead",
+          "url": "https://www.healthjobsuk.com/job/UK/Kent/Bromley/Bromley_Healthcare/Occupational_Therapy/Occupational_Therapy-v8388605",
+          "source": "NHS Jobs",
+          "county": "Kent",
+          "town": "Bromley",
+          "employer": "Bromley Healthcare",
+          "specialty": "Occupational Therapy"
+        },
+        {
+          "title": "Clinical Lead Occupational Therapist - Neurosurgery",
+          "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/Hull/Hull_University_Teaching_Hospitals_NHS_Trust/Occupational_Therapy/Occupational_Therapy-v8372840",
+          "source": "NHS Jobs",
+          "county": "East Yorkshire",
+          "town": "Hull",
+          "employer": "Hull University Teaching Hospitals NHS Trust",
+          "specialty": "Occupational Therapy"
+        },
+        {
+          "title": "Community Alcohol Care Team Clinical Lead/Manager",
+          "url": "https://www.healthjobsuk.com/job/UK/Merthyr_Tydfil/CTM_Wide/Cwm_Taf_Morgannwg_University_Health_Board/Community_Alcohol_Care_Team_Clinical_Lead_Manager/Community_Alcohol_Care_Team_Clinical_Lead_Manager-v8275658",
+          "source": "NHS Jobs",
+          "county": "Merthyr Tydfil",
+          "town": "CTM Wide",
+          "employer": "Cwm Taf Morgannwg University Health Board",
+          "specialty": "Community Alcohol Care Team Clinical Lead Manager"
+        },
+        {
+          "title": "Clinical Lead for CERN Wigan",
+          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Wigan/Greater_Manchester_Mental_Health_NHS_Foundation_Trust/Mental_Health/Mental_Health-v8314397",
+          "source": "NHS Jobs",
+          "county": "Manchester",
+          "town": "Wigan",
+          "employer": "Greater Manchester Mental Health NHS Foundation Trust",
+          "specialty": "Mental Health"
+        },
+        {
+          "title": "*INTERNAL* Clinical Lead Children’s Physiotherapy Service",
+          "url": "https://www.healthjobsuk.com/job/UK/Staffordshire/Stafford/Midlands_Partnership_University_NHS_Foundation_Trust/Paediatric_Physiotherapy/Paediatric_Physiotherapy-v8325982",
+          "source": "NHS Jobs",
+          "county": "Staffordshire",
+          "town": "Stafford",
+          "employer": "Midlands Partnership University NHS Foundation Trust",
+          "specialty": "Paediatric Physiotherapy"
+        },
+        {
+          "title": "Clinical Lead Clinical Standards &amp; Utilisation Management",
+          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Ely/Central_East_Integrated_Care_Board/Clinical_Advisory_Population_Risk/Clinical_Advisory_Population_Risk-v8350167",
+          "source": "NHS Jobs",
+          "county": "Cambridgeshire",
+          "town": "Ely",
+          "employer": "Central East Integrated Care Board",
+          "specialty": "Clinical Advisory Population Risk"
+        },
+        {
+          "title": "Clinical Lead - Forensic Transitions Team",
+          "url": "https://www.healthjobsuk.com/job/UK/Staffordshire/Shrewsbury/Midlands_Partnership_University_NHS_Foundation_Trust/Forensic_Mental_Health_Care/Forensic_Mental_Health_Care-v8368344",
+          "source": "NHS Jobs",
+          "county": "Staffordshire",
+          "town": "Shrewsbury",
+          "employer": "Midlands Partnership University NHS Foundation Trust",
+          "specialty": "Forensic Mental Health Care"
+        },
+        {
+          "title": "Clinical Lead",
+          "url": "https://www.healthjobsuk.com/job/UK/Norfolk/Norwich/East_England_Community_Health_Care_NHS_Trust/Community_Nursing/Community_Nursing-v8378237",
+          "source": "NHS Jobs",
+          "county": "Norfolk",
+          "town": "Norwich",
+          "employer": "East England Community Health Care NHS Trust",
+          "specialty": "Community Nursing"
+        },
+        {
+          "title": "Clinical Lead",
+          "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/Hull/Humber_Teaching_NHS_Foundation_Trust/Community_Mental_Health/Community_Mental_Health-v8378795",
+          "source": "NHS Jobs",
+          "county": "East Yorkshire",
+          "town": "Hull",
+          "employer": "Humber Teaching NHS Foundation Trust",
+          "specialty": "Community Mental Health"
+        },
+        {
+          "title": "Senior Clinical Lead (RMN)",
+          "url": "https://www.healthjobsuk.com/job/UK/Surrey/Leatherhead/Surrey_Borders_Partnership_NHS_Foundation_Trust/Childrens/Childrens-v8379136",
+          "source": "NHS Jobs",
+          "county": "Surrey",
+          "town": "Leatherhead",
+          "employer": "Surrey Borders Partnership NHS Foundation Trust",
+          "specialty": "Childrens"
+        },
+        {
           "title": "Clinical Lead Radiographer, CT",
           "url": "https://www.healthjobsuk.com/job/UK/Warwickshire/Coventry/University_Hospitals_Coventry_Warwickshire_NHS_Trust/CT/CT-v8373387",
           "source": "NHS Jobs",
@@ -745,15 +934,6 @@
           "town": "Coventry",
           "employer": "University Hospitals Coventry Warwickshire NHS Trust",
           "specialty": "CT"
-        },
-        {
-          "title": "Clinical Lead Physiotherapist in Neurology &amp; Therapy Outpatients",
-          "url": "https://www.healthjobsuk.com/job/UK/London/London/University_College_London_Hospitals_NHS_Foundation_Trust/Neurology/Neurology-v8373712",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "London",
-          "employer": "University College London Hospitals NHS Foundation Trust",
-          "specialty": "Neurology"
         },
         {
           "title": "Clinical Lead / Therapy Team Lead",
@@ -781,24 +961,6 @@
           "town": "Chester",
           "employer": "Cheshire Wirral Partnership NHS FoundationTrust",
           "specialty": "Clinical Lead"
-        },
-        {
-          "title": "Clinical Lead and Operational Manager - Community Neurology Service",
-          "url": "https://www.healthjobsuk.com/job/UK/London/East_Ham/East_London_NHS_Foundation_Trust/Neurological_Therapies/Neurological_Therapies-v8339639",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "East Ham",
-          "employer": "East London NHS Foundation Trust",
-          "specialty": "Neurological Therapies"
-        },
-        {
-          "title": "Consultant Clinical Psychologist and Clinical Lead Autism Services",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Sidcup/Oxleas_NHS_Foundation_Trust/Adult_Neurodevelopmental/Adult_Neurodevelopmental-v8365158",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Sidcup",
-          "employer": "Oxleas NHS Foundation Trust",
-          "specialty": "Adult Neurodevelopmental"
         },
         {
           "title": "Chaplaincy &amp; Spiritual Care Manager",
@@ -835,15 +997,6 @@
           "town": "Thatcham",
           "employer": "Berkshire Healthcare NHS Foundation Trust",
           "specialty": "Community Nursing West Berkshire"
-        },
-        {
-          "title": "Clinical Lead Occupational Therapist Adult Autism Services",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Sidcup/Oxleas_NHS_Foundation_Trust/Adult_Neurodevelopmental/Adult_Neurodevelopmental-v8355804",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Sidcup",
-          "employer": "Oxleas NHS Foundation Trust",
-          "specialty": "Adult Neurodevelopmental"
         },
         {
           "title": "Advanced Paramedic Clinical Lead - West Yorkshire",
@@ -936,96 +1089,6 @@
           "specialty": "Speech Language Therapy"
         },
         {
-          "title": "Clinical Lead Occupational Therapist",
-          "url": "https://www.healthjobsuk.com/job/UK/Kent/Ashford/Kent_Community_Health_NHS_Foundation_Trust/Learning_Disabilities/Learning_Disabilities-v8297076",
-          "source": "NHS Jobs",
-          "county": "Kent",
-          "town": "Ashford",
-          "employer": "Kent Community Health NHS Foundation Trust",
-          "specialty": "Learning Disabilities"
-        },
-        {
-          "title": "Primary Care Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Shaftesbury/Oxleas_NHS_Foundation_Trust/Offender_Healthcare/Offender_Healthcare-v8341791",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Shaftesbury",
-          "employer": "Oxleas NHS Foundation Trust",
-          "specialty": "Offender Healthcare"
-        },
-        {
-          "title": "Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/Cheshire/Bebington_Wirral/Cheshire_Wirral_Partnership_NHS_FoundationTrust/Clinical_Lead/Clinical_Lead-v8265819",
-          "source": "NHS Jobs",
-          "county": "Cheshire",
-          "town": "Bebington Wirral",
-          "employer": "Cheshire Wirral Partnership NHS FoundationTrust",
-          "specialty": "Clinical Lead"
-        },
-        {
-          "title": "Clinical Lead - Obstetric Consultant",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Shefford/Central_East_Integrated_Care_Board/Obstetric_Consultant/Obstetric_Consultant-v8336371",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Shefford",
-          "employer": "Central East Integrated Care Board",
-          "specialty": "Obstetric Consultant"
-        },
-        {
-          "title": "Clinical Lead - Neonatal Consultant",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Shefford/Central_East_Integrated_Care_Board/Neonatal_Consultant/Neonatal_Consultant-v8345432",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Shefford",
-          "employer": "Central East Integrated Care Board",
-          "specialty": "Neonatal Consultant"
-        },
-        {
-          "title": "Clinical Lead Clinical and Professional Standards Management",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Ely_Cambridge/Central_East_Integrated_Care_Board/Clinical_Professional_Standards_Management/Clinical_Professional_Standards_Management-v8347252",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Ely Cambridge",
-          "employer": "Central East Integrated Care Board",
-          "specialty": "Clinical Professional Standards Management"
-        },
-        {
-          "title": "Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Ely/Central_East_Integrated_Care_Board/Clinical_Advisory/Clinical_Advisory-v8349171",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Ely",
-          "employer": "Central East Integrated Care Board",
-          "specialty": "Clinical Advisory"
-        },
-        {
-          "title": "Clinical Lead CYP Crisis Service- Trust Wide",
-          "url": "https://www.healthjobsuk.com/job/UK/Manchester/Oldham_Stockport/Pennine_Care_NHS_Foundation_Trust/Nurse_OT_social_worker_with_mental_health_experience/Nurse_OT_social_worker_with_mental_health_experience-v8351352",
-          "source": "NHS Jobs",
-          "county": "Manchester",
-          "town": "Oldham Stockport",
-          "employer": "Pennine Care NHS Foundation Trust",
-          "specialty": "Nurse OT social worker with mental health experience"
-        },
-        {
-          "title": "Band 6 Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/Warwickshire/Coventry/Coventry_Warwickshire_Partnership_NHS_Trust/Band_Clinical_Lead_Nurse/Band_Clinical_Lead_Nurse-v8352660",
-          "source": "NHS Jobs",
-          "county": "Warwickshire",
-          "town": "Coventry",
-          "employer": "Coventry Warwickshire Partnership NHS Trust",
-          "specialty": "Band Clinical Lead Nurse"
-        },
-        {
-          "title": "Clinical Lead for Neonatal ODN",
-          "url": "https://www.healthjobsuk.com/job/UK/Cambridgeshire/Cambridge/Cambridge_University_Hospitals_NHS_Foundation_Trust/Neonatal/Neonatal-v8353201",
-          "source": "NHS Jobs",
-          "county": "Cambridgeshire",
-          "town": "Cambridge",
-          "employer": "Cambridge University Hospitals NHS Foundation Trust",
-          "specialty": "Neonatal"
-        },
-        {
           "title": "Clinical Lead – Neurodiversity Speech &amp; Language Therapy",
           "url": "https://www.healthjobsuk.com/job/UK/London/London/Royal_Free_London_NHS_Foundation_Trust/Community_Paediatrics/Community_Paediatrics-v8100231",
           "source": "NHS Jobs",
@@ -1033,69 +1096,6 @@
           "town": "London",
           "employer": "Royal Free London NHS Foundation Trust",
           "specialty": "Community Paediatrics"
-        },
-        {
-          "title": "Clinical Lead: (DLD)  Speech and Language Therapist",
-          "url": "https://www.healthjobsuk.com/job/UK/London/Enfield/Royal_Free_London_NHS_Foundation_Trust/Speech_Language_Therapy/Speech_Language_Therapy-v8169650",
-          "source": "NHS Jobs",
-          "county": "London",
-          "town": "Enfield",
-          "employer": "Royal Free London NHS Foundation Trust",
-          "specialty": "Speech Language Therapy"
-        },
-        {
-          "title": "Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/Merseyside/Liverpool/Mersey_Care_NHS_Foundation_Trust/Aintree_Core_Mental_Health_Services/Aintree_Core_Mental_Health_Services-v8312849",
-          "source": "NHS Jobs",
-          "county": "Merseyside",
-          "town": "Liverpool",
-          "employer": "Mersey Care NHS Foundation Trust",
-          "specialty": "Aintree Core Mental Health Services"
-        },
-        {
-          "title": "Clinical Lead Dudley ECMHT Older Adults",
-          "url": "https://www.healthjobsuk.com/job/UK/West_Midlands/Brierley_Hill/Black_Country_Healthcare_NHS_Foundation_Trust/Mental_Health_Sevice_Older_Adults_Community/Mental_Health_Sevice_Older_Adults_Community-v8348581",
-          "source": "NHS Jobs",
-          "county": "West Midlands",
-          "town": "Brierley Hill",
-          "employer": "Black Country Healthcare NHS Foundation Trust",
-          "specialty": "Mental Health Sevice Older Adults Community"
-        },
-        {
-          "title": "Lymphoedema Specialist Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/Norfolk/Kings_Lynn/East_England_Community_Health_Care_NHS_Trust/Lymphoedema/Lymphoedema-v8351168",
-          "source": "NHS Jobs",
-          "county": "Norfolk",
-          "town": "Kings Lynn",
-          "employer": "East England Community Health Care NHS Trust",
-          "specialty": "Lymphoedema"
-        },
-        {
-          "title": "Clinical Lead - Digital Transformation Delivery",
-          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/London/NHS_England/Clinical_Lead/Clinical_Lead-v8328917",
-          "source": "NHS Jobs",
-          "county": "West Yorkshire",
-          "town": "London",
-          "employer": "NHS England",
-          "specialty": "Clinical Lead"
-        },
-        {
-          "title": "Clinical Lead SLT - 17 hpw - 12 mths",
-          "url": "https://www.healthjobsuk.com/job/UK/West_Yorkshire/Bradford/Bradford_Teaching_Hospitals_NHS_Foundation_Trust/Specialist_SALT/Specialist_SALT-v8335102",
-          "source": "NHS Jobs",
-          "county": "West Yorkshire",
-          "town": "Bradford",
-          "employer": "Bradford Teaching Hospitals NHS Foundation Trust",
-          "specialty": "Specialist SALT"
-        },
-        {
-          "title": "Learning Disability Physical Health Liaison Clinical Lead",
-          "url": "https://www.healthjobsuk.com/job/UK/Lincolnshire/Lincoln/Lincolnshire_Partnership_NHS_Foundation_Trust/Learning_Disabilities_Autism/Learning_Disabilities_Autism-v8341671",
-          "source": "NHS Jobs",
-          "county": "Lincolnshire",
-          "town": "Lincoln",
-          "employer": "Lincolnshire Partnership NHS Foundation Trust",
-          "specialty": "Learning Disabilities Autism"
         }
       ]
     }

@@ -102,23 +102,27 @@ def strip_tags(s):
 
 
 def title_from_id(attr):
-    """RCNi names each anchor ZONE_1_LINK_1_NEWS_<headline words>. Last resort
+    """RCNi names each anchor either ZONE_1_LINK_1_NEWS_<headline words> (older
+    template) or just <Headline_words> (current template, Oct 2026). Last resort
     only: the underscores have eaten the original punctuation, so 'If I lose my
     PIN, I lose my home': nurse speaks out comes back without its quotes or
     colon. Accurate, but it reads like a telegram."""
     m = re.match(r'^ZONE_\d+_LINK_\d+_[A-Z]+_(.+)$', attr or '')
-    if not m:
+    words = m.group(1) if m else (attr or '')
+    if not re.match(r'^[A-Za-z0-9]+(_[A-Za-z0-9]+)+$', words):
         return ''
-    return re.sub(r'_+', ' ', m.group(1)).strip()
+    return re.sub(r'_+', ' ', words).strip()
 
 
 def title_from_heading(html, pos):
-    """For a 'Read more' button, the real headline is the nearest <strong> above
-    it, punctuation intact. Preferred over the id-derived version."""
+    """For a 'Read more' button, the real headline is the nearest heading above
+    it, punctuation intact. Preferred over the id-derived version. RCNi has used
+    both <h3> (current template, Oct 2026) and plain <strong> for the headline
+    text, so both are checked and the one closest to pos wins."""
     window = html[max(0, pos - 2600):pos]
     best = ''
-    for m in re.finditer(r'<strong>(.*?)</strong>', window, re.S | re.I):
-        text = strip_tags(m.group(1))
+    for m in re.finditer(r'<(h3|strong)\b[^>]*>(.*?)</\1>', window, re.S | re.I):
+        text = strip_tags(m.group(2))
         # Section labels ("NEWS", "CARDIOVASCULAR") are short and shouty; skip them.
         if len(text) >= 18 and not text.isupper() and not SKIP_TITLE.match(text):
             best = text
@@ -141,8 +145,18 @@ def harvest(msg, cache):
             continue
 
         title = strip_tags(inner)
-        if not title or SKIP_TITLE.match(title):
-            anchor_id = re.search(r'\bid="([^"]+)"', attrs)
+        anchor_id = re.search(r'\bid="([^"]+)"', attrs)
+        if not title:
+            # A bare image anchor sits BEFORE its own <h3> in this template (its
+            # "Read more" companion, same id, sits after the heading and carries
+            # this same destination once utm is stripped) — skip it here rather
+            # than risk grabbing the PREVIOUS section's headline on a backward
+            # search, or a punctuation-free id-derived title when the button
+            # version will give the real one a few anchors later.
+            continue
+        if SKIP_TITLE.match(title):
+            # A visible "Read more" button sits AFTER its own heading, so the
+            # nearest heading above it is reliably its own.
             title = (title_from_heading(html, m.start())
                      or title_from_id(anchor_id.group(1) if anchor_id else ''))
         if len(title) < 18 or SKIP_TITLE.match(title):
