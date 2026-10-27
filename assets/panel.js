@@ -93,6 +93,13 @@
     j._speciality = j.speciality || "Not specified";
     return j;
   }
+  // Aggregator rows (Reed, Adzuna) name the advertiser, so a member can see
+  // which agency or employer the role is with, not just the feed it came from.
+  var AGGREGATORS = {adzuna:"Adzuna", reed:"Reed"};
+  function advertiser(j){
+    var feed = AGGREGATORS[j._recruiter];
+    return feed && j.company ? j.company + " via " + feed : j._recruiter;
+  }
   function valueOf(j, key){
     if (key === "salaryBand") return j._salaryBand;
     if (key === "postedBand") return j._postedBand;
@@ -324,7 +331,7 @@
         + (sal ? '<span class="jm-tag sal">'+sal+'</span>' : "")
         + (j.clinical_experience_required ? '<span class="jm-tag clin">Clinical background</span>' : "")
         + (j.speciality ? '<span class="jm-tag">'+esc(j.speciality)+'</span>' : "")
-        + '<span>'+esc(j._recruiter)+(d!==null&&d<=7?" · new this week":"")+'</span>'
+        + '<span>'+esc(advertiser(j))+(d!==null&&d<=7?" · new this week":"")+'</span>'
         + '</div></div><span class="jm-go">›</span></a>';
     });
     if (jobs.length > state.limit){
