@@ -66,15 +66,6 @@
     "notes": "One RSS feed detected by probe_sources.py."
   },
   {
-    "name": "On Target Recruitment",
-    "domain": "www.otrsales.co.uk",
-    "job_url_pattern": "/job",
-    "enabled": false,
-    "verified": "2026-09-16",
-    "route": "none_found",
-    "notes": "robots.txt allows everything, but no job URLs surfaced from sitemap with the current pattern. Needs a look at their real URL structure before enabling."
-  },
-  {
     "name": "ID Search & Selection",
     "domain": "idsearchandselection.com",
     "job_url_pattern": "/job",
