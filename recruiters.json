@@ -142,11 +142,12 @@
   {
     "name": "SRG",
     "domain": "www.srgtalent.com",
-    "job_url_pattern": "/job",
+    "job_url_pattern": "/jobs/\\d",
+    "adapter": "srg",
     "enabled": false,
-    "verified": "2026-09-16",
-    "route": "none_found",
-    "notes": "robots.txt allows everything, but the jobs listing (/jobs, /us/jobs) is a client-side JS widget (references api.herefish.com, a Bullhorn/Herefish ATS) with no job links in the rendered HTML and no job URLs in the sitemap. Would need either a Herefish/Bullhorn API integration or headless-browser rendering — neither is in scope for the current polite-fetch crawler. Not enabled."
+    "verified": "2026-10-28",
+    "route": "sitemap_jsonld_nested",
+    "notes": "Disabled 28/10/2026 (Lou's lean-routine rule): permitted route works via sitemap + nested JobPosting (adapter srg), but 0 of 52 UK roles pass the gates — lab/QA/engineering only — for ~100s crawl a day. Re-enable by setting enabled:true. Re-scoped 28/10/2026 (supersedes 16/09 'none_found'). robots.txt allows all. sitemap.xml lists per-job pages /jobs/<id>-<slug> (68 on 28/10/2026, mostly pre-clinical/lab/QA/engineering; also 16 US roles). Each page carries a schema.org JobPosting nested under a WebPage 'mainEntity', which the generic extractor misses; scripts/adapters/srg.py parse() unwraps it, drops non-UK/Ireland roles and collapses repeated address fields. No Herefish/API use. Low expected yield for medical sales: 0 of 68 passed the title+sector gates on 28/10/2026; kept enabled because the route is permitted and costs ~100s/day."
   },
   {
     "name": "EPM Scientific",
@@ -180,10 +181,11 @@
     "name": "Hays MedTech",
     "domain": "www.hays.co.uk",
     "job_url_pattern": "/job-detail/[^/]+_\\d+",
-    "enabled": false,
-    "verified": "2026-09-16",
-    "route": "js_rendered",
-    "notes": "Scoping attempt 16/09/2026: /jobs/life-sciences returns 200 but is entirely JS-rendered — zero job links and zero JSON-LD in the server HTML, so the narrower medtech scope we wanted is not reachable without headless rendering. Out of scope for the polite-fetch crawler. Closed, not pending."
+    "adapter": "hays-medtech",
+    "enabled": true,
+    "verified": "2026-10-28",
+    "route": "sitemap_jsonld_adapter",
+    "notes": "Re-scoped 28/10/2026 (supersedes 16/09 'js_rendered'). Hays' robots.txt advertises https://www.hays.co.uk/sitemap/en-GB/job-sitemap.xml (6,266 jobs, all sectors, <loc> in CDATA so the generic sitemap regex cannot read it). Per-job pages /job-detail/<slug>_<id> carry top-level JobPosting JSON-LD. robots.txt (User-agent *) only disallows /job-detail/*/apply and the search widgets, which are never touched. scripts/adapters/hays-medtech.py list_jobs() reads the sitemap, applies the pipeline's own title gate to the URL slug (6,266 -> 63 fetches), then keeps only postings whose Hays 'industry' label is health/medical/pharma/life-science/device (the sector gate alone passed Construction/Manufacturing/Staffing roles). ~5 min/run at the 1.5s delay (robots Crawl-delay is only set for named bots, none ours). Expected yield is small (2 of 6,266 on 28/10/2026)."
   },
   {
     "name": "Progress Recruitment",
