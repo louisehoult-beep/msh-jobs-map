@@ -299,20 +299,14 @@
 
     var hintEl = document.getElementById("jmHint");
 
-    if (!anyFilterActive()){
-      // Opening state: the map is the interface, not a 300-row list.
-      host.innerHTML = '<div class="jm-empty"><b>Pick a region or a filter to see the roles</b>'
-        + 'Click any region on the map, or use the filters on the left, and the matching '
-        + 'vacancies will be listed here.</div>';
-      if (hintEl) hintEl.textContent = "Click a region on the map, or use the filters, to list the roles";
-      return;
-    }
-
     if (hintEl){
+      // Opening state lists every role (Lou, 28/10/2026: "I want all roles showing").
       var labels = activeFilterLabels();
-      hintEl.textContent = labels.length === 1
-        ? "Showing: " + labels[0]
-        : "Showing " + labels.length + " filters \u00b7 use Clear all to reset";
+      hintEl.textContent = !anyFilterActive()
+        ? "Showing all roles · click a region or use the filters to narrow"
+        : labels.length === 1
+          ? "Showing: " + labels[0]
+          : "Showing " + labels.length + " filters · use Clear all to reset";
     }
 
     if (!jobs.length){
