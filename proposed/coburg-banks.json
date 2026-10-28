@@ -1,0 +1,9 @@
+{
+  "name": "Coburg Banks",
+  "domain": "www.coburgbanks.co.uk",
+  "job_url_pattern": "/job-opportunities/",
+  "enabled": false,
+  "verified": "2026-10-28",
+  "route": "no_medical_sales_roles",
+  "notes": "Keep disabled (checked 2026-10-28). Webflow site; job pages have an empty ld+json skeleton (no JobPosting) and the live listing (/job-opportunities, paginated ?7438c5b5_page=N) shows only 61 roles across Social Care (19), IT, Engineering, Sales (9), Construction, Call Centre, Admin, Manufacturing. All 9 Sales roles read in full are non-medical (property auctions, engineering services, capital equipment/industrial, forestry machinery, advertising, LAN cabling, candidate manager). The 'Social Care' sector is care-home/support-worker work, not sales. No UK medical/healthcare sales role exists, so an adapter would return nothing the sector gate keeps. Revisit if /job-opportunities starts showing medical/healthcare Sales roles. If re-enabled: discover from the listing pages (sector label, title, location, salary are on the listing cards; sitemap has 222 job URLs but only ~61 are live) and fetch only Sales/Health sector detail pages."
+}
