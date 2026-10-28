@@ -1,0 +1,10 @@
+{
+  "name": "Kirkham Young",
+  "domain": "www.kirkhamyoung.co.uk",
+  "adapter": "kirkham-young",
+  "job_url_pattern": "/careers/",
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "adapter",
+  "notes": "Specialist medical sales / MedTech recruiter. No third-party ATS: own WordPress job board. No per-job pages, no JobPosting JSON-LD, no job URLs in sitemap.xml/page-sitemap.xml (checked 28/10/2026). All live roles (15 on the day) are server-rendered as article.jbb-card on /careers/ in one page with no pagination (also ?job_sector=21 returns the same 15). robots.txt allows everything except /wp-admin/ and wpforms uploads. Adapter list_jobs() fetches /careers/ once and parses cards (title, ref, posted dd/mm/yyyy, region list, sector, full description). Listing url is /careers/#<Ref> (e.g. #SK12812) because roles have no own URL; the ref is also source_id. No salary published. Locations are UK regions (e.g. 'Home Counties, London') or a long all-regions list for national roles, not postcodes. Client employer is never named, so company is 'Kirkham Young'. Not every card is a sales role (e.g. Market Access, Applications Specialist); classify gates decide."
+}
