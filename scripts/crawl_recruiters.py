@@ -22,6 +22,7 @@ Discipline built in, not bolted on:
 import gzip
 import json
 import re
+from datetime import date
 import sys
 import time
 import urllib.error
@@ -279,7 +280,8 @@ def normalise(posting: dict, url: str, recruiter: str) -> dict:
         "salary_min": lo,
         "salary_max": hi,
         "contract_type": _clean(posting.get("employmentType")) or None,
-        "posted_date": _clean(posting.get("datePosted")) or None,
+        # Undated postings (some agencies omit datePosted) take first-seen date; verify.py requires one.
+        "posted_date": _clean(posting.get("datePosted")) or date.today().isoformat(),
         "valid_through": _clean(posting.get("validThrough")) or None,
         "industry": _clean(posting.get("industry")) or None,
         "url": url,
@@ -292,7 +294,6 @@ def _is_recent(posted: str | None) -> bool:
     m = re.match(r"(\d{4})-(\d{2})-(\d{2})", posted)
     if not m:
         return True
-    from datetime import date
     y, mo, d = (int(g) for g in m.groups())
     try:
         age = (date.today() - date(y, mo, d)).days
