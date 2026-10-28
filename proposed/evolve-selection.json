@@ -1,0 +1,11 @@
+{
+  "name": "Evolve Selection",
+  "domain": "www.evolveselection.com",
+  "job_url_pattern": "/job-search/\\d+-[^/]+/.+/job$",
+  "adapter": "evolve-selection",
+  "listing_pages": ["/browse-view/healthcare/medtech/jobs", "/browse-view/sales/jobs"],
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "adapter_list_jobs",
+  "notes": "Re-enabled 2026-10-28. Detail pages now DO carry a schema.org JobPosting block (the 16/09 'no JSON-LD' finding no longer holds). The real problem was discovery: the sitemap is stale (3,000+ job URLs last modified 2024-25) and /job matched 6,020 non-vacancy URLs. The adapter ignores the sitemap and walks the live browse-view listings (9 roles per page via GET ?tmpl=component&layout=ajax&limitstart=N until empty), then reads JSON-LD from each live detail page. Drops roles whose only regions are USA / Republic Of Ireland. ~13 live roles; about 17 requests per run (robots, 2 listings x 2-3 pages, 13 details). robots.txt allows these paths."
+}
