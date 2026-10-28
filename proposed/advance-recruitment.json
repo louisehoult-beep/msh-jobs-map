@@ -1,0 +1,10 @@
+{
+  "name": "Advance Recruitment",
+  "domain": "www.advancerecruitment.net",
+  "job_url_pattern": "/careers/",
+  "adapter": "advance-recruitment",
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "adapter",
+  "notes": "Enabled 28/10/2026. No JSON-LD and no job URLs in sitemap; /cm/jobs is server-rendered Next.js with the full result set in __NEXT_DATA__ (8 per page, ?page=N). Adapter list_jobs reads those pages; job URL is /careers/<seoTitle>. robots.txt only disallows /admin. Skips 'International' (non-UK) roles and collapses the same vacancy posted once per region. Client employer is anonymised by the agency. 12 on site 28/10/2026, 8 after UK + duplicate filtering, 8 pass gates."
+}

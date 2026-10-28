@@ -1,0 +1,9 @@
+{
+  "name": "ID Search & Selection",
+  "domain": "www.id-ss.com",
+  "job_url_pattern": "/job",
+  "enabled": false,
+  "verified": "2026-10-28",
+  "route": "error",
+  "notes": "Disabled 28/10/2026. Old domain idsearchandselection.com does not resolve (NXDOMAIN); real site is id-ss.com (from PMLiVE/PharmiWeb/search listings). id-ss.com serves a certificate for uk67.siteground.eu only (SAN mismatch, valid Aug-Nov 2026), so TLS verification fails; not bypassed. Separately, ID Search & Selection is a medical communications recruiter (Surrey): Indeed/CV-Library listings show med writer, editor, account director/manager roles, not medical sales, so it would add few or no gate-passing roles. Recheck if they fix the certificate."
+}
