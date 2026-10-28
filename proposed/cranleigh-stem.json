@@ -1,0 +1,11 @@
+{
+  "name": "Cranleigh STEM",
+  "domain": "www.cranleighstem.co.uk",
+  "job_url_pattern": "/opportunities/[a-z0-9-]+-\\d+$",
+  "listing_pages": ["/opportunities", "/opportunities?page=2", "/opportunities?page=3", "/opportunities?page=4"],
+  "adapter": "cranleigh-stem",
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "html_adapter",
+  "notes": "cranleighstem.com 301s to www.cranleighstem.co.uk (domain changed; use the .co.uk host). robots.txt has only content-signal comments, no Disallow. No sitemap (404) and no JSON-LD: vacancies are linked from /opportunities (paged, 10 per page, ?page=1 equals the bare URL, page 4 empty) and parsed by scripts/adapters/cranleigh-stem.py from the page markup. Mostly STEM/engineering/sustainability: on 2026-10-28 only 1 of 29 live roles was medical (Business Development Associate, sector label Medical Devices, London), 1 animal health (Mexico, not UK), 2 biotech technicians. Expect a thin, intermittent yield; sector label is passed as industry and prefixed to the description so the sector gate can see it. Page's salary text carries a stray 'k' (e.g. £28000k) which the adapter strips."
+}

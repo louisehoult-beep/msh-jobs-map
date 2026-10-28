@@ -1,0 +1,9 @@
+{
+  "name": "Progress Recruitment",
+  "domain": "www.progressuk.com",
+  "job_url_pattern": "/job",
+  "enabled": false,
+  "verified": "2026-10-28",
+  "route": "no_listings",
+  "notes": "Re-checked 2026-10-28. robots.txt allows all but /wp-admin and lists wp-sitemap.xml. Site is a brochure site (about, candidates, clients, sectors/medical, sectors/pharmaceutical-life-sciences, careers-with-us = Progress's own staff careers, register-with-progress). No vacancy listing or job pages are published; candidates register for a CV-match service. Nothing to crawl; keep disabled. Intermittent timeouts seen on the apex progressuk.com, www works."
+}

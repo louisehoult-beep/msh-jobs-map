@@ -1,0 +1,9 @@
+{
+  "name": "Star Medical",
+  "domain": "starmedical.co.uk",
+  "job_url_pattern": "/job",
+  "enabled": false,
+  "verified": "2026-10-28",
+  "route": "none_found",
+  "notes": "starmedical.co.uk no longer serves a recruitment site: on 2026-10-28 the home page is titled 'UK Betting Outside GamStop - 2026 Top Sites' (og:site_name UnfilteredCasinosUK.uk.com), i.e. the domain has been taken over by a gambling affiliate site. /jobs returns 404. No jobs, nothing to crawl. Keep disabled; remove from the Hub's recruiter table (careers.html) if listed."
+}
