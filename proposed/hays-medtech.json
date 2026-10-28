@@ -1,0 +1,10 @@
+{
+  "name": "Hays MedTech",
+  "domain": "www.hays.co.uk",
+  "job_url_pattern": "/job-detail/[^/]+_\\d+",
+  "adapter": "hays-medtech",
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "sitemap_jsonld_adapter",
+  "notes": "Re-scoped 28/10/2026 (supersedes 16/09 'js_rendered'). Hays' robots.txt advertises https://www.hays.co.uk/sitemap/en-GB/job-sitemap.xml (6,266 jobs, all sectors, <loc> in CDATA so the generic sitemap regex cannot read it). Per-job pages /job-detail/<slug>_<id> carry top-level JobPosting JSON-LD. robots.txt (User-agent *) only disallows /job-detail/*/apply and the search widgets, which are never touched. scripts/adapters/hays-medtech.py list_jobs() reads the sitemap, applies the pipeline's own title gate to the URL slug (6,266 -> 63 fetches), then keeps only postings whose Hays 'industry' label is health/medical/pharma/life-science/device (the sector gate alone passed Construction/Manufacturing/Staffing roles). ~5 min/run at the 1.5s delay (robots Crawl-delay is only set for named bots, none ours). Expected yield is small (2 of 6,266 on 28/10/2026)."
+}

@@ -1,0 +1,10 @@
+{
+  "name": "SRG",
+  "domain": "www.srgtalent.com",
+  "job_url_pattern": "/jobs/\\d",
+  "adapter": "srg",
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "sitemap_jsonld_nested",
+  "notes": "Re-scoped 28/10/2026 (supersedes 16/09 'none_found'). robots.txt allows all. sitemap.xml lists per-job pages /jobs/<id>-<slug> (68 on 28/10/2026, mostly pre-clinical/lab/QA/engineering; also 16 US roles). Each page carries a schema.org JobPosting nested under a WebPage 'mainEntity', which the generic extractor misses; scripts/adapters/srg.py parse() unwraps it, drops non-UK/Ireland roles and collapses repeated address fields. No Herefish/API use. Low expected yield for medical sales: 0 of 68 passed the title+sector gates on 28/10/2026; kept enabled because the route is permitted and costs ~100s/day."
+}
