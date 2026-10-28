@@ -1,0 +1,9 @@
+{
+  "name": "TRS Consulting",
+  "domain": "www.trsconsulting.com",
+  "job_url_pattern": "/job",
+  "enabled": false,
+  "verified": "2026-10-28",
+  "route": "none",
+  "notes": "Not a medical recruiter. trsconsulting.com is a US (Nevada / SF Bay Area) 'Information Technology Services' WordPress site, title 'TRS Consulting Information Technology Services'. The one RSS feed probe_sources.py found is the stock WordPress blog feed: channel description 'Information Technology Services', last build 16 Jun 2025, zero items. Sitemap lists only page-sitemap.xml (static pages). No vacancies, no JobPosting JSON-LD, no ATS. trsconsulting.co.uk redirects to Performance Health UK (unrelated). No adapter written. Re-enable only if the correct UK medical-sales recruiter domain is identified."
+}
