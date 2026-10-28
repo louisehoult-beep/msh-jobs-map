@@ -301,12 +301,50 @@ def _is_recent(posted: str | None) -> bool:
     return age <= MAX_AGE_DAYS
 
 
+def load_adapter(rec: dict):
+    """
+    Optional per-site HTML adapter for recruiters that publish no usable
+    JobPosting JSON-LD. recruiters.json names it ("adapter": "<slug>") and the
+    module lives at scripts/adapters/<slug>.py. It may define either or both:
+
+      parse(html, url) -> list[dict]
+          Detail page -> JobPosting-shaped dicts (title, jobLocation or
+          _location_text, datePosted, baseSalary, ...), used when the page
+          has no JSON-LD.
+      list_jobs(fetch, rec) -> list[dict]
+          For sites with no per-job pages worth fetching: returns JobPosting-
+          shaped dicts each carrying "url". fetch(url) goes through the same
+          robots-honouring, rate-limited Host as everything else.
+    """
+    slug = rec.get("adapter")
+    if not slug:
+        return None
+    import importlib.util
+    path = Path(__file__).parent / "adapters" / f"{slug}.py"
+    spec = importlib.util.spec_from_file_location(f"adapters.{slug}", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def crawl_recruiter(rec: dict, cache: dict) -> tuple[list[dict], dict]:
     name, domain = rec["name"], rec["domain"]
+    adapter = load_adapter(rec)
     pattern = re.compile(rec["job_url_pattern"], re.I)
 
     report = {"recruiter": name, "domain": domain}
     host = Host(domain)
+
+    if adapter is not None and hasattr(adapter, "list_jobs"):
+        def fetch(url, accept="text/html"):
+            return host.fetch(url, accept=accept)
+        listings = []
+        for posting in adapter.list_jobs(fetch, rec):
+            listing = normalise(posting, posting.get("url", ""), name)
+            if listing["title"] and listing["url"] and _is_recent(listing["posted_date"]):
+                listings.append(listing)
+        report.update({"route": "adapter:list_jobs", "listings": len(listings)})
+        return listings, report
 
     entries = collect_sitemap_urls(host)
     job_entries = [e for e in entries if pattern.search(e["loc"])]
@@ -342,6 +380,8 @@ def crawl_recruiter(rec: dict, cache: dict) -> tuple[list[dict], dict]:
         fetched += 1
 
         postings = extract_jobpostings(html)
+        if (not postings or not _clean(postings[0].get("title"))) and adapter is not None and hasattr(adapter, "parse"):
+            postings = adapter.parse(html, url)
         if not postings:
             site_cache[url] = {"lastmod": lastmod, "listing": None, "no_jsonld": True}
             continue
