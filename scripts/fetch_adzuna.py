@@ -10,6 +10,7 @@ stay well inside that.
 If the keys aren't set, this returns an empty list rather than raising, so
 the rest of the pipeline can still be exercised locally against fixtures.
 """
+from datetime import date as _date
 import json
 import os
 import urllib.parse
@@ -96,7 +97,7 @@ def fetch_adzuna_listings() -> list[dict]:
                 "salary_min": job.get("salary_min"),
                 "salary_max": job.get("salary_max"),
                 "contract_type": job.get("contract_type"),
-                "posted_date": job.get("created"),
+                "posted_date": job.get("created") or _date.today().isoformat(),  # undated: first-seen date; verify.py requires one
                 "url": job.get("redirect_url"),
             }
         )

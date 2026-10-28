@@ -9,6 +9,7 @@ If the key isn't set, this returns an empty list rather than raising, so
 the rest of the pipeline (classify/dedupe/geocode/verify) can still be
 exercised locally against fixtures without live credentials.
 """
+from datetime import date as _date
 import base64
 import json
 import os
@@ -104,7 +105,7 @@ def fetch_reed_listings() -> list[dict]:
                 "contract_type": "Permanent" if job.get("permanent") else (
                     "Contract" if job.get("contractType") else None
                 ),
-                "posted_date": job.get("date"),
+                "posted_date": job.get("date") or _date.today().isoformat(),  # undated: first-seen date; verify.py requires one
                 "url": job.get("jobUrl"),
             }
         )
