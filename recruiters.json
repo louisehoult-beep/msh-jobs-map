@@ -9,7 +9,7 @@
     "enabled": true,
     "verified": "2026-09-16",
     "route": "jsonld",
-    "notes": "Full JobPosting JSON-LD incl. baseSalary min/max and industry. Job URLs are NOT in the sitemap \u2014 discovered from /job-search/ instead. robots.txt has an explicit Allow: /job-search."
+    "notes": "Full JobPosting JSON-LD incl. baseSalary min/max and industry. Job URLs are NOT in the sitemap — discovered from /job-search/ instead. robots.txt has an explicit Allow: /job-search."
   },
   {
     "name": "CHASE",
@@ -18,34 +18,40 @@
     "enabled": true,
     "verified": "2026-09-16",
     "route": "jsonld",
-    "notes": "Full JobPosting JSON-LD. Client usually anonymised as 'Private Company' \u2014 recruiter attribution matters here."
+    "notes": "Full JobPosting JSON-LD. Client usually anonymised as 'Private Company' — recruiter attribution matters here."
   },
   {
     "name": "Coburg Banks",
     "domain": "www.coburgbanks.co.uk",
-    "job_url_pattern": "/job",
+    "job_url_pattern": "/job-opportunities/",
     "enabled": false,
-    "verified": "2026-09-16",
-    "route": "no_jsonld",
-    "notes": "Disabled 16/09/2026: 192 pages fetched on the first live run, 0 listings \u2014 job URLs exist in the sitemap but pages carry no JobPosting JSON-LD. Needs an HTML adapter before re-enabling."
+    "verified": "2026-10-28",
+    "route": "no_medical_sales_roles",
+    "notes": "Keep disabled (checked 2026-10-28). Webflow site; job pages have an empty ld+json skeleton (no JobPosting) and the live listing (/job-opportunities, paginated ?7438c5b5_page=N) shows only 61 roles across Social Care (19), IT, Engineering, Sales (9), Construction, Call Centre, Admin, Manufacturing. All 9 Sales roles read in full are non-medical (property auctions, engineering services, capital equipment/industrial, forestry machinery, advertising, LAN cabling, candidate manager). The 'Social Care' sector is care-home/support-worker work, not sales. No UK medical/healthcare sales role exists, so an adapter would return nothing the sector gate keeps. Revisit if /job-opportunities starts showing medical/healthcare Sales roles. If re-enabled: discover from the listing pages (sector label, title, location, salary are on the listing cards; sitemap has 222 job URLs but only ~61 are live) and fetch only Sales/Health sector detail pages."
   },
   {
     "name": "Evolve Selection",
     "domain": "www.evolveselection.com",
-    "job_url_pattern": "/job",
-    "enabled": false,
-    "verified": "2026-09-16",
-    "route": "no_jsonld",
-    "notes": "Disabled 16/09/2026: 400 pages fetched on the first live run, 0 listings \u2014 no JobPosting JSON-LD, and the /job pattern matched 6,020 mostly-non-vacancy URLs, burning the whole per-run budget. Needs a tightened pattern AND an HTML adapter before re-enabling."
+    "job_url_pattern": "/job-search/\\d+-[^/]+/.+/job$",
+    "adapter": "evolve-selection",
+    "listing_pages": [
+      "/browse-view/healthcare/medtech/jobs",
+      "/browse-view/sales/jobs"
+    ],
+    "enabled": true,
+    "verified": "2026-10-28",
+    "route": "adapter_list_jobs",
+    "notes": "Re-enabled 2026-10-28. Detail pages now DO carry a schema.org JobPosting block (the 16/09 'no JSON-LD' finding no longer holds). The real problem was discovery: the sitemap is stale (3,000+ job URLs last modified 2024-25) and /job matched 6,020 non-vacancy URLs. The adapter ignores the sitemap and walks the live browse-view listings (9 roles per page via GET ?tmpl=component&layout=ajax&limitstart=N until empty), then reads JSON-LD from each live detail page. Drops roles whose only regions are USA / Republic Of Ireland. ~13 live roles; about 17 requests per run (robots, 2 listings x 2-3 pages, 13 details). robots.txt allows these paths."
   },
   {
     "name": "Advance Recruitment",
     "domain": "www.advancerecruitment.net",
-    "job_url_pattern": "/cm/candidate/jobs/",
-    "enabled": false,
-    "verified": "2026-09-16",
-    "route": "no_jsonld",
-    "notes": "Disabled 16/09/2026: 7 pages fetched, 0 listings \u2014 no JobPosting JSON-LD. Likely a search-driven site needing an HTML adapter."
+    "job_url_pattern": "/careers/",
+    "adapter": "advance-recruitment",
+    "enabled": true,
+    "verified": "2026-10-28",
+    "route": "adapter",
+    "notes": "Enabled 28/10/2026. No JSON-LD and no job URLs in sitemap; /cm/jobs is server-rendered Next.js with the full result set in __NEXT_DATA__ (8 per page, ?page=N). Adapter list_jobs reads those pages; job URL is /careers/<seoTitle>. robots.txt only disallows /admin. Skips 'International' (non-UK) roles and collapses the same vacancy posted once per region. Client employer is anonymised by the agency. 12 on site 28/10/2026, 8 after UK + duplicate filtering, 8 pass gates."
   },
   {
     "name": "BMS Performance",
@@ -60,28 +66,35 @@
     "name": "TRS Consulting",
     "domain": "www.trsconsulting.com",
     "job_url_pattern": "/job",
-    "enabled": true,
-    "verified": "2026-09-16",
-    "route": "rss",
-    "notes": "One RSS feed detected by probe_sources.py."
+    "enabled": false,
+    "verified": "2026-10-28",
+    "route": "none",
+    "notes": "Not a medical recruiter. trsconsulting.com is a US (Nevada / SF Bay Area) 'Information Technology Services' WordPress site, title 'TRS Consulting Information Technology Services'. The one RSS feed probe_sources.py found is the stock WordPress blog feed: channel description 'Information Technology Services', last build 16 Jun 2025, zero items. Sitemap lists only page-sitemap.xml (static pages). No vacancies, no JobPosting JSON-LD, no ATS. trsconsulting.co.uk redirects to Performance Health UK (unrelated). No adapter written. Re-enable only if the correct UK medical-sales recruiter domain is identified."
   },
   {
     "name": "ID Search & Selection",
-    "domain": "idsearchandselection.com",
+    "domain": "www.id-ss.com",
     "job_url_pattern": "/job",
     "enabled": false,
-    "verified": "2026-09-16",
+    "verified": "2026-10-28",
     "route": "error",
-    "notes": "Connection error on probe \u2014 recheck domain/TLS before enabling."
+    "notes": "Disabled 28/10/2026. Old domain idsearchandselection.com does not resolve (NXDOMAIN); real site is id-ss.com (from PMLiVE/PharmiWeb/search listings). id-ss.com serves a certificate for uk67.siteground.eu only (SAN mismatch, valid Aug-Nov 2026), so TLS verification fails; not bypassed. Separately, ID Search & Selection is a medical communications recruiter (Surrey): Indeed/CV-Library listings show med writer, editor, account director/manager roles, not medical sales, so it would add few or no gate-passing roles. Recheck if they fix the certificate."
   },
   {
     "name": "Cranleigh STEM",
-    "domain": "cranleighstem.com",
-    "job_url_pattern": "/job",
-    "enabled": false,
-    "verified": "2026-09-16",
-    "route": "none_found",
-    "notes": "No sitemap job URLs found with current pattern."
+    "domain": "www.cranleighstem.co.uk",
+    "job_url_pattern": "/opportunities/[a-z0-9-]+-\\d+$",
+    "listing_pages": [
+      "/opportunities",
+      "/opportunities?page=2",
+      "/opportunities?page=3",
+      "/opportunities?page=4"
+    ],
+    "adapter": "cranleigh-stem",
+    "enabled": true,
+    "verified": "2026-10-28",
+    "route": "html_adapter",
+    "notes": "cranleighstem.com 301s to www.cranleighstem.co.uk (domain changed; use the .co.uk host). robots.txt has only content-signal comments, no Disallow. No sitemap (404) and no JSON-LD: vacancies are linked from /opportunities (paged, 10 per page, ?page=1 equals the bare URL, page 4 empty) and parsed by scripts/adapters/cranleigh-stem.py from the page markup. Mostly STEM/engineering/sustainability: on 2026-10-28 only 1 of 29 live roles was medical (Business Development Associate, sector label Medical Devices, London), 1 animal health (Mexico, not UK), 2 biotech technicians. Expect a thin, intermittent yield; sector label is passed as industry and prefixed to the description so the sector gate can see it. Page's salary text carries a stray 'k' (e.g. £28000k) which the adapter strips."
   },
   {
     "name": "Clinical Professionals",
@@ -90,16 +103,16 @@
     "enabled": false,
     "verified": "2026-09-16",
     "route": "blocked_403",
-    "notes": "Returned HTTP 403 to the probe. Do not hammer \u2014 needs a decision on whether to approach them directly for a feed."
+    "notes": "Returned HTTP 403 to the probe. Do not hammer — needs a decision on whether to approach them directly for a feed."
   },
   {
     "name": "Star Medical",
     "domain": "starmedical.co.uk",
     "job_url_pattern": "/job",
     "enabled": false,
-    "verified": "2026-09-16",
+    "verified": "2026-10-28",
     "route": "none_found",
-    "notes": "No sitemap job URLs found with current pattern."
+    "notes": "starmedical.co.uk no longer serves a recruitment site: on 2026-10-28 the home page is titled 'UK Betting Outside GamStop - 2026 Top Sites' (og:site_name UnfilteredCasinosUK.uk.com), i.e. the domain has been taken over by a gambling affiliate site. /jobs returns 404. No jobs, nothing to crawl. Keep disabled; remove from the Hub's recruiter table (careers.html) if listed."
   },
   {
     "name": "Barrington James",
@@ -108,10 +121,11 @@
     "listing_pages": [
       "/job-search/"
     ],
+    "adapter": "barrington-james",
     "enabled": true,
-    "verified": "2026-09-16",
+    "verified": "2026-10-28",
     "route": "jsonld",
-    "notes": "Confirmed full JobPosting JSON-LD on a real job page (e.g. /job/market-access-consultant/). robots.txt allows everything. Job detail URLs ARE in the sitemap (https://www.barringtonjames.com/api/sitemap.xml) \u2014 93 matching /job/<slug>/ found there, so sitemap-first discovery works; /job-search/ kept as an HTML fallback."
+    "notes": "70 job URLs in sitemap. Their JobPosting JSON-LD is invalid JSON (raw newlines in description), so the shared extractor drops 49 of 70 pages; adapter re-parses with strict=False, rebuilds location from addressCountry / 'Location:' line, and drops postings with no UK signal (pipeline has no non-UK gate). 2026-10-28: the 5 roles matching the title gate are all overseas (Account Manager Singapore, Business Development Manager Paris, Sales/Account Manager Tokyo, Sales Representative Tokyo, Senior Product Manager Helsinki); 3 of them would pass title+sector gates and be mislabelled UK-wide without the adapter's UK filter; the 21 originally parsed are scientists/regulatory/clinical-ops/IT, none match the title gate. Expect ~0 feed listings most days; correct, not a fault. No classify.py change needed."
   },
   {
     "name": "Carrot Recruitment",
@@ -123,7 +137,7 @@
     "enabled": true,
     "verified": "2026-09-16",
     "route": "jsonld",
-    "notes": "Confirmed full JobPosting JSON-LD (incl. baseSalary, employmentType, hiringOrganization) on a real job page. Domain corrected from www.carrotrecruitment.co.uk to www.carrotrecruitment.com: the .co.uk serves its own pages and its own robots.txt (also Allow: /), but every job link on it \u2014 and the site's own robots.txt Sitemap: line \u2014 points at .com, so .com is the real host to crawl. Dedicated job-sitemap.xml at https://www.carrotrecruitment.com/job-sitemap.xml, 61 job URLs."
+    "notes": "Confirmed full JobPosting JSON-LD (incl. baseSalary, employmentType, hiringOrganization) on a real job page. Domain corrected from www.carrotrecruitment.co.uk to www.carrotrecruitment.com: the .co.uk serves its own pages and its own robots.txt (also Allow: /), but every job link on it — and the site's own robots.txt Sitemap: line — points at .com, so .com is the real host to crawl. Dedicated job-sitemap.xml at https://www.carrotrecruitment.com/job-sitemap.xml, 61 job URLs."
   },
   {
     "name": "SRG",
@@ -132,7 +146,7 @@
     "enabled": false,
     "verified": "2026-09-16",
     "route": "none_found",
-    "notes": "robots.txt allows everything, but the jobs listing (/jobs, /us/jobs) is a client-side JS widget (references api.herefish.com, a Bullhorn/Herefish ATS) with no job links in the rendered HTML and no job URLs in the sitemap. Would need either a Herefish/Bullhorn API integration or headless-browser rendering \u2014 neither is in scope for the current polite-fetch crawler. Not enabled."
+    "notes": "robots.txt allows everything, but the jobs listing (/jobs, /us/jobs) is a client-side JS widget (references api.herefish.com, a Bullhorn/Herefish ATS) with no job links in the rendered HTML and no job URLs in the sitemap. Would need either a Herefish/Bullhorn API integration or headless-browser rendering — neither is in scope for the current polite-fetch crawler. Not enabled."
   },
   {
     "name": "EPM Scientific",
@@ -141,16 +155,17 @@
     "enabled": false,
     "verified": "2026-09-16",
     "route": "blocked",
-    "notes": "robots.txt itself returns HTTP 429 (Too Many Requests) to a single polite request with a real UA \u2014 repeated on retry after a delay. This is bot-protection (Phaidon International group site), not a rate-limit we tripped. Per the no-evasion rule, left alone entirely: no UA spoofing, no retries beyond the one polite check. Not enabled."
+    "notes": "robots.txt itself returns HTTP 429 (Too Many Requests) to a single polite request with a real UA — repeated on retry after a delay. This is bot-protection (Phaidon International group site), not a rate-limit we tripped. Per the no-evasion rule, left alone entirely: no UA spoofing, no retries beyond the one polite check. Not enabled."
   },
   {
     "name": "Cure Talent",
     "domain": "www.curetalent.co.uk",
     "job_url_pattern": "/careers/\\d+/[^/]+",
-    "enabled": false,
-    "verified": "2026-09-16",
+    "adapter": "cure-talent",
+    "enabled": true,
+    "verified": "2026-10-28",
     "route": "html_parse",
-    "notes": "robots.txt allows everything. Sitemap (https://curetalent.co.uk/sitemap.xml, small \u2014 33 entries) lists real job-detail URLs under /careers/<id>/<slug> (16 found). Fetched a real job page: no JSON-LD JobPosting \u2014 it's a bespoke ATS template with only OG/meta tags (title, description, location as free text). Would need a purpose-built HTML adapter reading the page's meta tags/DOM, not the JSON-LD path. Not enabled until that adapter exists. Also worth flagging: current live vacancies here (audiology, biomedical science, dietetics, pharmacy, podiatry, speech therapy) are NHS Allied Health Professional/clinical-support roles, not medical sales \u2014 fits the 'clinical-support' half of the pipeline's remit, not the sales half."
+    "notes": "Re-verified 2026-10-28. Job pages live on www.curetalent.co.uk; the bare domain 301-redirects to www, and robots.txt (www) allows everything except /admin. Sitemap https://www.curetalent.co.uk/sitemap.xml (also fetched via the www host) lists job pages under /careers/<id>/<slug> (12 on 2026-10-28). The earlier note (no JSON-LD) was wrong: every job page has a schema.org JobPosting in a script type=application/ld+json, but wrapped in a '// <![CDATA[ ... // ]]>' comment and with raw newlines inside strings, so the shared extract_jobpostings() cannot parse it. adapters/cure-talent.py parse() strips the wrapper and loads with strict=False. Fields available: title, hiringOrganization (Cure Talent, the agency), jobLocation address (locality, region, 4-char outward postcode area, e.g. SW1), baseSalary min/max, datePosted, validThrough, employmentType, description (HTML-escaped). The site has been rebuilt since Sept: it is now a MedTech specialist (engineering, regulatory, quality, commercial) rather than NHS allied-health vacancies; most live roles are not sales, so the classify gate removes them. The sitemap carries lastmod, so incremental fetching works. Live run 2026-10-28: 12 job URLs, 12 parsed, 9 within the 120-day age limit, 1 passes the classify gates (Business Development Executive (SME), London, hearing care, 45-55k). jobLocation streetAddress is the placeholder 'High Street' on every job; locality, region and outward postcode area are real. Low volume, but it is a real medtech agency posting sales roles now."
   },
   {
     "name": "Network Scientific",
@@ -159,7 +174,7 @@
     "enabled": true,
     "verified": "2026-09-16",
     "route": "jsonld",
-    "notes": "Confirmed JobPosting JSON-LD (title, datePosted, employmentType, hiringOrganization, jobLocation, description) on a real job page. robots.txt allows everything. Job URLs are NOT in the generic sitemap.xml/sitemap_index.xml fallback paths \u2014 they're in a dedicated WordPress 'AWSM Job Openings' child sitemap, https://www.networkscientificrecruitment.com/awsm_job_openings-sitemap.xml, discoverable by following the <sitemap> children listed in the main sitemap.xml (which the crawler already does). 37 job URLs found there; includes medical-device sales roles (e.g. distributor-sales-specialist, clinical-sales-specialist, account-manager-london)."
+    "notes": "Confirmed JobPosting JSON-LD (title, datePosted, employmentType, hiringOrganization, jobLocation, description) on a real job page. robots.txt allows everything. Job URLs are NOT in the generic sitemap.xml/sitemap_index.xml fallback paths — they're in a dedicated WordPress 'AWSM Job Openings' child sitemap, https://www.networkscientificrecruitment.com/awsm_job_openings-sitemap.xml, discoverable by following the <sitemap> children listed in the main sitemap.xml (which the crawler already does). 37 job URLs found there; includes medical-device sales roles (e.g. distributor-sales-specialist, clinical-sales-specialist, account-manager-london)."
   },
   {
     "name": "Hays MedTech",
@@ -168,16 +183,16 @@
     "enabled": false,
     "verified": "2026-09-16",
     "route": "js_rendered",
-    "notes": "Scoping attempt 16/09/2026: /jobs/life-sciences returns 200 but is entirely JS-rendered \u2014 zero job links and zero JSON-LD in the server HTML, so the narrower medtech scope we wanted is not reachable without headless rendering. Out of scope for the polite-fetch crawler. Closed, not pending."
+    "notes": "Scoping attempt 16/09/2026: /jobs/life-sciences returns 200 but is entirely JS-rendered — zero job links and zero JSON-LD in the server HTML, so the narrower medtech scope we wanted is not reachable without headless rendering. Out of scope for the polite-fetch crawler. Closed, not pending."
   },
   {
     "name": "Progress Recruitment",
     "domain": "www.progressuk.com",
     "job_url_pattern": "/job",
     "enabled": false,
-    "verified": "2026-09-16",
+    "verified": "2026-10-28",
     "route": "no_listings",
-    "notes": "Correct domain is progressuk.com (confirmed from the Hub's own verified recruiter table on careers.html \u2014 the earlier progresssalesrecruitment.com was NXDOMAIN). Site resolves 200, robots.txt allows all but /wp-admin, but the sitemap holds only 16 static pages and /vacancies//jobs//current-vacancies/ all 404 \u2014 they do not publish crawlable job listings on their own site. Nothing to crawl; not a blocker."
+    "notes": "Re-checked 2026-10-28. robots.txt allows all but /wp-admin and lists wp-sitemap.xml. Site is a brochure site (about, candidates, clients, sectors/medical, sectors/pharmaceutical-life-sciences, careers-with-us = Progress's own staff careers, register-with-progress). No vacancy listing or job pages are published; candidates register for a CV-match service. Nothing to crawl; keep disabled. Intermittent timeouts seen on the apex progressuk.com, www works."
   },
   {
     "name": "Mediplacements",
@@ -186,7 +201,7 @@
     "enabled": false,
     "verified": "2026-09-16",
     "route": "empty_jsonld",
-    "notes": "Disabled 16/09/2026 after a real run: 162 job pages fetched, 0 usable listings. The pages DO carry a JobPosting JSON-LD block, but every field in it is an empty string (title:'', datePosted:'', empty address, empty employmentType) \u2014 a broken schema template. A 'does a JobPosting exist?' check passes here and still yields nothing, so route detection must check field VALUES, not just presence. Real data is in the HTML body only, so this needs an HTML adapter. Note the live roles are NHS AHP/clinical-support (pharmacy technician, dietitian, sterile technician), not medical sales, so this is low priority."
+    "notes": "Disabled 16/09/2026 after a real run: 162 job pages fetched, 0 usable listings. The pages DO carry a JobPosting JSON-LD block, but every field in it is an empty string (title:'', datePosted:'', empty address, empty employmentType) — a broken schema template. A 'does a JobPosting exist?' check passes here and still yields nothing, so route detection must check field VALUES, not just presence. Real data is in the HTML body only, so this needs an HTML adapter. Note the live roles are NHS AHP/clinical-support (pharmacy technician, dietitian, sterile technician), not medical sales, so this is low priority."
   },
   {
     "name": "eMedCareers",
@@ -195,6 +210,16 @@
     "enabled": false,
     "verified": "2026-09-16",
     "route": "blocked",
-    "notes": "robots.txt itself returns HTTP 403 (Forbidden) to a single polite request with a real, identifying UA \u2014 confirmed on retry. Per the fail-closed policy this is treated as fully disallowed. Not enabled, and no further requests attempted."
+    "notes": "robots.txt itself returns HTTP 403 (Forbidden) to a single polite request with a real, identifying UA — confirmed on retry. Per the fail-closed policy this is treated as fully disallowed. Not enabled, and no further requests attempted."
+  },
+  {
+    "name": "Kirkham Young",
+    "domain": "www.kirkhamyoung.co.uk",
+    "adapter": "kirkham-young",
+    "job_url_pattern": "/careers/",
+    "enabled": true,
+    "verified": "2026-10-28",
+    "route": "adapter",
+    "notes": "Specialist medical sales / MedTech recruiter. No third-party ATS: own WordPress job board. No per-job pages, no JobPosting JSON-LD, no job URLs in sitemap.xml/page-sitemap.xml (checked 28/10/2026). All live roles (15 on the day) are server-rendered as article.jbb-card on /careers/ in one page with no pagination (also ?job_sector=21 returns the same 15). robots.txt allows everything except /wp-admin/ and wpforms uploads. Adapter list_jobs() fetches /careers/ once and parses cards (title, ref, posted dd/mm/yyyy, region list, sector, full description). Listing url is /careers/#<Ref> (e.g. #SK12812) because roles have no own URL; the ref is also source_id. No salary published. Locations are UK regions (e.g. 'Home Counties, London') or a long all-regions list for national roles, not postcodes. Client employer is never named, so company is 'Kirkham Young'. Not every card is a sales role (e.g. Market Access, Applications Specialist); classify gates decide."
   }
 ]

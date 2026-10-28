@@ -53,6 +53,10 @@ SALES_TITLE_PATTERNS = [
     # Found by the 16/09/2026 coverage audit: real medical-sales roles that the
     # earlier patterns let through the net.
     r"\bmedical\s*sales\s*associate\b",
+    # Lou, 28/10/2026: Kirkham Young titles roles "Medical Sales – Cardiology",
+    # "Hospital Sales – Capital Equipment"; Cranleigh uses "Business Development Associate".
+    r"\b(medical|hospital|healthcare)\s*sales\b",
+    r"\bbusiness\s*development\s*associate\b",
     r"\bsales\s*associate\b",
     r"\bbusiness\s*development\s*consultant\b",
     r"\bclinical\s*sales\s*support\b",
