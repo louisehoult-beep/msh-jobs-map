@@ -1,0 +1,10 @@
+{
+  "name": "Cure Talent",
+  "domain": "www.curetalent.co.uk",
+  "job_url_pattern": "/careers/\\d+/[^/]+",
+  "adapter": "cure-talent",
+  "enabled": true,
+  "verified": "2026-10-28",
+  "route": "html_parse",
+  "notes": "Re-verified 2026-10-28. Job pages live on www.curetalent.co.uk; the bare domain 301-redirects to www, and robots.txt (www) allows everything except /admin. Sitemap https://www.curetalent.co.uk/sitemap.xml (also fetched via the www host) lists job pages under /careers/<id>/<slug> (12 on 2026-10-28). The earlier note (no JSON-LD) was wrong: every job page has a schema.org JobPosting in a script type=application/ld+json, but wrapped in a '// <![CDATA[ ... // ]]>' comment and with raw newlines inside strings, so the shared extract_jobpostings() cannot parse it. adapters/cure-talent.py parse() strips the wrapper and loads with strict=False. Fields available: title, hiringOrganization (Cure Talent, the agency), jobLocation address (locality, region, 4-char outward postcode area, e.g. SW1), baseSalary min/max, datePosted, validThrough, employmentType, description (HTML-escaped). The site has been rebuilt since Sept: it is now a MedTech specialist (engineering, regulatory, quality, commercial) rather than NHS allied-health vacancies; most live roles are not sales, so the classify gate removes them. The sitemap carries lastmod, so incremental fetching works. Live run 2026-10-28: 12 job URLs, 12 parsed, 9 within the 120-day age limit, 1 passes the classify gates (Business Development Executive (SME), London, hearing care, 45-55k). jobLocation streetAddress is the placeholder 'High Street' on every job; locality, region and outward postcode area are real. Low volume, but it is a real medtech agency posting sales roles now."
+}
