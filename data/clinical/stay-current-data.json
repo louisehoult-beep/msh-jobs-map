@@ -18,10 +18,42 @@
       "date": "09 Nov"
     },
     {
+      "url": "https://www.nursinginpractice.com/analysis/interviews/interview-nmc-entering-new-era-as-paul-rees-vows-to-turn-regulator-around-once-and-for-all/",
+      "title": "Interview: NMC entering ‘new era’ as Paul Rees vows to ‘turn regulator around once and for all’",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/vaccination-and-infection/patients-urged-to-get-vaccinated-as-data-shows-flu-activity-is-increasing/",
+      "title": "Patients urged to get vaccinated as data shows flu activity is ‘increasing’",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/respiratory/nurse-led-clinics-could-benefit-from-40m-reallocated-funding-for-gp-practices/",
+      "title": "Nurse-led clinics could benefit from £40m reallocated funding for GP practices",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
       "url": "https://www.nursinginpractice.com/clinical/diabetes-and-endocrinology/eye-drops-used-for-eye-examinations-recalled-over-incorrect-expiry-date/",
       "title": "Eye drops used for eye examinations recalled over incorrect expiry date",
       "src": "nip",
       "label": "Nursing in Practice",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.careengland.org.uk/inner-city-care-limited/",
+      "title": "Inner City Care Limited",
+      "src": "careeng",
+      "label": "Care England",
       "iso": "2026-11-09",
       "date": "09 Nov"
     },
@@ -48,14 +80,6 @@
       "label": "DHSC",
       "iso": "2026-11-09",
       "date": "09 Nov"
-    },
-    {
-      "url": "https://www.careinspectorate.wales/261103-we-want-your-views-ahead-our-first-joint-section-5-inspection-rhondda-cynon-taf",
-      "title": "We want your views ahead of our first joint Section 5 inspection in Rhondda Cynon Taf Care Inspectorate Wales, alongside Estyn and His Majesty's Inspectorate of Constabulary and Fire & Rescue Services (HMICFRS) are asking people, practitioners and those in a position of trust in Rhondda Cynon Taf to share their views ahead of our inspection in January 2027",
-      "src": "ciw",
-      "label": "CIW",
-      "iso": "2026-11-06",
-      "date": "06 Nov"
     },
     {
       "url": "https://www.nursingtimes.net/policies-and-guidance/darlington-nurses-receive-death-threat-from-trans-activist-06-11-2026/",
@@ -98,30 +122,6 @@
       "date": "06 Nov"
     },
     {
-      "url": "https://www.nursinginpractice.com/clinical/paediatrics/primary-care-lacks-involvement-in-supporting-transition-from-child-to-adult-health-care/",
-      "title": "Primary care ‘lacks involvement’ in supporting transition from child to adult health care",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-06",
-      "date": "06 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/clinical/vaccination-and-infection/health-news-watch-west-nile-virus-in-europe-healthwatch-retained-and-more/",
-      "title": "Health news watch: West Nile virus in Europe, Healthwatch retained and more",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-05",
-      "date": "05 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/professional/regulation/nmc-urged-to-review-title-and-scope-of-learning-disability-nursing/",
-      "title": "NMC urged to review title and scope of learning disability nursing",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-05",
-      "date": "05 Nov"
-    },
-    {
       "url": "https://www.england.nhs.uk/2026/11/nhs-diagnoses-one-thousand-cancers-a-day/",
       "title": "NHS diagnoses one thousand cancers a day",
       "src": "nhse",
@@ -148,14 +148,6 @@
     {
       "url": "https://www.careengland.org.uk/oral-health-in-care-homes-turning-research-into-practical-action/",
       "title": "Oral health in care homes: turning research into practical action",
-      "src": "careeng",
-      "label": "Care England",
-      "iso": "2026-11-05",
-      "date": "05 Nov"
-    },
-    {
-      "url": "https://www.careengland.org.uk/england-urged-to-close-care-home-oral-health-gap-as-new-toolkit-launches/",
-      "title": "England urged to close care home oral health gap as new toolkit launches",
       "src": "careeng",
       "label": "Care England",
       "iso": "2026-11-05",
@@ -206,6 +198,14 @@
       "title": "Black History Month: Dr Herbert Mwebe on Recognising the Contribution of Diaspora Nursing and Midwifery Associations",
       "src": "nmc",
       "label": "NMC",
+      "iso": "2026-11-03",
+      "date": "03 Nov"
+    },
+    {
+      "url": "https://www.careinspectorate.wales/261103-we-want-your-views-ahead-our-first-joint-section-5-inspection-rhondda-cynon-taf",
+      "title": "We want your views ahead of our first joint Section 5 inspection in Rhondda Cynon Taf Care Inspectorate Wales, alongside Estyn and His Majesty's Inspectorate of Constabulary and Fire & Rescue Services (HMICFRS) are asking people, practitioners and those in a position of trust in Rhondda Cynon Taf to share their views ahead of our inspection in January 2027",
+      "src": "ciw",
+      "label": "CIW",
       "iso": "2026-11-03",
       "date": "03 Nov"
     },
@@ -686,6 +686,14 @@
       "title": "Blog The Ockenden report on Nottingham maternity services - next steps for chief people officers Dean Royles outlines key actions for chief people officers following the Ockenden Report, focusing on culture, leadership and patient safety.",
       "src": "nhsemp",
       "label": "NHS Employers",
+      "iso": null,
+      "date": ""
+    },
+    {
+      "url": "https://www.ihpn.org.uk/blog/the-road-to-net-zero",
+      "title": "Blog The road to net zero: The role of independent providers 09/11/2026 Five years on from the independent healthcare sector’s commitment to net zero, IHPN has published a new roadmap setting out key milestones and practical steps to help providers reduce emissions and achieve their sustainability ambitions. Read more",
+      "src": "ihpn",
+      "label": "IHPN",
       "iso": null,
       "date": ""
     },
