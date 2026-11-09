@@ -1,4 +1,18 @@
-{"items": [
-  {"title": "Flux and fracture: CQC warns of fast-changing social care market while inequalities persist across health and care", "url": "https://www.cqc.org.uk/publications/major-report/state-care", "src": "mail", "iso": "2026-10-23", "aud": "all"},
-  {"title": "Social care nurses an 'untapped resource', says outgoing CNO", "url": "https://www.nursingtimes.net/social-care/social-care-nurses-an-untapped-resource-says-outgoing-cno-30-10-2026/", "src": "mail", "iso": "2026-10-30", "aud": "nurse"}
-]}
+{
+  "items": [
+    {
+      "title": "Flux and fracture: CQC warns of fast-changing social care market while inequalities persist across health and care",
+      "url": "https://www.cqc.org.uk/publications/major-report/state-care",
+      "src": "mail",
+      "iso": "2026-10-23",
+      "aud": "all"
+    },
+    {
+      "title": "Social care nurses an 'untapped resource', says outgoing CNO",
+      "url": "https://www.nursingtimes.net/social-care/social-care-nurses-an-untapped-resource-says-outgoing-cno-30-10-2026/",
+      "src": "mail",
+      "iso": "2026-10-30",
+      "aud": "nurse"
+    }
+  ]
+}
