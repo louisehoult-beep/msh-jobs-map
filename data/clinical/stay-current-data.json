@@ -1,11 +1,43 @@
 {
-  "refreshed": "2026-11-09",
+  "refreshed": "2026-11-10",
   "items": [
     {
       "url": "https://socialcare.wales/news-stories/review-of-safeguarding-resources",
       "title": "Review of safeguarding resources through a trauma- and ACE-informed lens",
       "src": "scw",
       "label": "Social Care Wales",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/primary-care/investment-into-gps-a-short-term-fix-without-nurses-09-11-2026/",
+      "title": "Success of winter plan will ‘rely on whole general practice workforce’",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/bladder-and-bowel/nurses-charities-and-mps-band-together-in-continence-campaign-09-11-2026/",
+      "title": "Nurses, charities and MPs band together in continence campaign",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/leadership/nurse-appointed-to-senior-commissioning-role-for-north-lanarkshire-09-11-2026/",
+      "title": "Nurse appointed to senior commissioning role for North Lanarkshire",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-09",
+      "date": "09 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/social-care/pioneering-icb-scheme-enables-care-home-nurses-to-vaccinate-residents-09-11-2026/",
+      "title": "Pioneering ICB scheme enables care home nurses to vaccinate residents",
+      "src": "nt",
+      "label": "Nursing Times",
       "iso": "2026-11-09",
       "date": "09 Nov"
     },
@@ -80,38 +112,6 @@
       "label": "DHSC",
       "iso": "2026-11-09",
       "date": "09 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/policies-and-guidance/darlington-nurses-receive-death-threat-from-trans-activist-06-11-2026/",
-      "title": "Darlington nurses receive death threat from trans activist",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-06",
-      "date": "06 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/public-health/nurses-and-mps-protest-cuts-to-public-health-nursing-in-suffolk-06-11-2026/",
-      "title": "Nurses and MPs protest cuts to public health nursing in Suffolk",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-06",
-      "date": "06 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/nurse-wellbeing/sleep-disorders-caused-by-night-shifts-may-be-making-nurses-unwell-06-11-2026/",
-      "title": "Sleep disorders caused by night shifts may be making nurses unwell",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-06",
-      "date": "06 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/workforce/exclusive-racial-gap-in-london-nursing-recruitment-continues-06-11-2026/",
-      "title": "Exclusive: Racial gap in London nursing recruitment continues",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-06",
-      "date": "06 Nov"
     },
     {
       "url": "https://www.nursinginpractice.com/community-nursing/district-nurse-cuts-to-blame-for-rising-end-of-life-ae-visits-says-rcn/",
