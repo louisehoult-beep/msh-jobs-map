@@ -1,18 +1,32 @@
 {
   "items": [
     {
-      "title": "Flux and fracture: CQC warns of fast-changing social care market while inequalities persist across health and care",
-      "url": "https://www.cqc.org.uk/publications/major-report/state-care",
+      "title": "Call for learning disability nurse workforce plan in England",
+      "url": "https://www.nursingtimes.net/learning-disabilities/call-for-learning-disability-nurse-workforce-plan-in-england-13-11-2026/",
       "src": "mail",
-      "iso": "2026-10-23",
+      "iso": "2026-11-13",
+      "aud": "nurse"
+    },
+    {
+      "title": "Unique scheme enables care home nurses to vaccinate residents",
+      "url": "https://www.nursingtimes.net/social-care/pioneering-icb-scheme-enables-care-home-nurses-to-vaccinate-residents-09-11-2026/",
+      "src": "mail",
+      "iso": "2026-11-09",
       "aud": "all"
     },
     {
-      "title": "Social care nurses an 'untapped resource', says outgoing CNO",
-      "url": "https://www.nursingtimes.net/social-care/social-care-nurses-an-untapped-resource-says-outgoing-cno-30-10-2026/",
+      "title": "ICB job losses cost £500m while risking expertise and staff morale",
+      "url": "https://www.nursingtimes.net/policies-and-guidance/report-icb-job-losses-cost-500m-while-risking-expertise-and-morale-04-11-2026/",
       "src": "mail",
-      "iso": "2026-10-30",
+      "iso": "2026-11-04",
       "aud": "nurse"
+    },
+    {
+      "title": "York council left disabled boy without the support to communicate for more than a year",
+      "url": "https://www.lgo.org.uk/information-centre/news/2026/nov/york-council-left-disabled-boy-without-the-support-to-communicate-for-more-than-a-year/",
+      "src": "mail",
+      "iso": "2026-11-05",
+      "aud": "care"
     }
   ]
 }
