@@ -2,6 +2,22 @@
   "refreshed": "2026-11-16",
   "items": [
     {
+      "url": "https://www.rcn.org.uk/news-and-events/news/uk-rcn-renews-call-for-long-covid-recognition-161126",
+      "title": "RCN renews call for long COVID recognition",
+      "src": "rcn",
+      "label": "RCN",
+      "iso": "2026-11-16",
+      "date": "16 Nov"
+    },
+    {
+      "url": "https://www.cqc.org.uk/news/cqc-publishes-equality-objectives-annual-report-202526",
+      "title": "CQC publishes equality objectives annual report 2025/26",
+      "src": "cqc",
+      "label": "CQC",
+      "iso": "2026-11-16",
+      "date": "16 Nov"
+    },
+    {
       "url": "https://www.nice.org.uk/news/articles/less-invasive-capsule-sponge-tests-could-help-detect-oesophageal-cancer-earlier",
       "title": "Less invasive capsule sponge tests could help detect oesophageal cancer earlier",
       "src": "nice",
@@ -18,10 +34,34 @@
       "date": "16 Nov"
     },
     {
+      "url": "https://www.nursingtimes.net/public-health/new-public-health-framework-16-11-2026/",
+      "title": "New public health framework ‘celebrates’ role of nurses and midwives",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-16",
+      "date": "16 Nov"
+    },
+    {
       "url": "https://www.nursingtimes.net/public-health/syphilis-factsheet-on-sexually-transmitted-infections-16-11-2026/",
       "title": "Syphilis: factsheet on sexually transmitted infections",
       "src": "nt",
       "label": "Nursing Times",
+      "iso": "2026-11-16",
+      "date": "16 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/uk-wide-framework-to-strengthen-and-celebrate-nurses-contribution-to-public-health/",
+      "title": "UK-wide framework to ‘strengthen and celebrate’ nurses’ contribution to public health",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-16",
+      "date": "16 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/more-health-and-social-care-workers-to-be-balloted-on-strike-action-in-northern-ireland/",
+      "title": "More health and social care workers to be balloted on strike action in Northern Ireland",
+      "src": "nip",
+      "label": "Nursing in Practice",
       "iso": "2026-11-16",
       "date": "16 Nov"
     },
@@ -74,14 +114,6 @@
       "date": "13 Nov"
     },
     {
-      "url": "https://www.nursingtimes.net/education-and-training/announcing-our-nursing-times-student-editors-for-2026-27-13-11-2026/",
-      "title": "Announcing our Nursing Times student editors for 2026-27",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-13",
-      "date": "13 Nov"
-    },
-    {
       "url": "https://www.nursinginpractice.com/latest-news/nurse-struck-off-after-working-under-influence-of-alcohol-and-failing-to-administer-medication/",
       "title": "Nurse struck off after working under influence of alcohol and failing to administer medication",
       "src": "nip",
@@ -92,14 +124,6 @@
     {
       "url": "https://www.nursinginpractice.com/clinical/elderly-care/care-workers-set-to-spend-less-time-travelling-between-visits-under-new-government-plans/",
       "title": "Care workers set to spend less time travelling between visits under new government plans",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-13",
-      "date": "13 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/microsoft-outage-disrupts-patient-prescriptions-and-gp-practice-systems/",
-      "title": "Microsoft outage disrupts patient prescriptions and GP practice systems",
       "src": "nip",
       "label": "Nursing in Practice",
       "iso": "2026-11-13",
@@ -134,14 +158,6 @@
       "title": "RQIA Statement – Publication of Module 6 of UK Covid-19 Inquiry Report",
       "src": "rqia",
       "label": "RQIA",
-      "iso": "2026-11-12",
-      "date": "12 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/general-practice-staff-in-wales-trained-to-use-ai-tool/",
-      "title": "General practice staff in Wales trained to use AI tool",
-      "src": "nip",
-      "label": "Nursing in Practice",
       "iso": "2026-11-12",
       "date": "12 Nov"
     },
@@ -538,14 +554,6 @@
       "date": "21 Oct"
     },
     {
-      "url": "https://www.rcn.org.uk/news-and-events/news/uk-social-care-was-so-badly-failed-rcn-responds-to-covid-inquiry-report-201026",
-      "title": "‘Social care was so badly failed’: RCN responds to COVID Inquiry report",
-      "src": "rcn",
-      "label": "RCN",
-      "iso": "2026-10-20",
-      "date": "20 Oct"
-    },
-    {
       "url": "https://www.rqia.org.uk/chief-executive-recruitment",
       "title": "Chief Executive Recruitment – Lead the Future of Health and Social Care Regulation and Improvement in Northern Ireland",
       "src": "rqia",
@@ -560,14 +568,6 @@
       "label": "RCM",
       "iso": "2026-10-19",
       "date": "19 Oct"
-    },
-    {
-      "url": "https://www.cqc.org.uk/news/cqc-publishes-equality-objectives-annual-report-202526",
-      "title": "CQC publishes equality objectives annual report 2025/26",
-      "src": "cqc",
-      "label": "CQC",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
     },
     {
       "url": "https://www.cqc.org.uk/news/cqcs-annual-report-enforcement-ionising-radiation-medical-exposure-regulations-england",
@@ -592,14 +592,6 @@
       "label": "RCM",
       "iso": "2026-10-14",
       "date": "14 Oct"
-    },
-    {
-      "url": "https://www.cqc.org.uk/news/cqc-regulate-autism-and-adhd-diagnostic-assessments",
-      "title": "CQC to regulate autism and ADHD diagnostic assessments",
-      "src": "cqc",
-      "label": "CQC",
-      "iso": "2026-10-13",
-      "date": "13 Oct"
     },
     {
       "url": "https://rcm.org.uk/media-releases/2026/10/basildon-midwives-win-almost-750000-after-exposure-to-dangerous-levels-of-nitrous-oxide/",
