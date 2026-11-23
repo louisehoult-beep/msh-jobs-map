@@ -1,6 +1,270 @@
 {
-  "refreshed": "2026-11-16",
+  "refreshed": "2026-11-23",
   "items": [
+    {
+      "url": "https://www.nursingtimes.net/end-of-life-and-palliative-care/staffs-hospices-join-forces-on-pioneering-home-care-initiative-23-11-2026/",
+      "title": "Staffs hospices join forces on pioneering home care initiative",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/policies-and-guidance/nurse-views-wanted-on-proposed-nhs-pension-scheme-changes-23-11-2026/",
+      "title": "Nurse views wanted on proposed NHS pension scheme changes",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/social-care/nursing-times-awards-2026-nursing-in-social-care-winner-and-shortlist-23-11-2026/",
+      "title": "Nursing Times Awards 2026: Nursing in Social Care winner and shortlist",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/haematology/nurse-competencies-for-sickle-cell-and-thalassaemia-disorders-23-11-2026/",
+      "title": "Nurse competencies for sickle cell and thalassaemia disorders",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/dedicated-staffing-budget-needed-to-make-general-practice-pay-rises-more-affordable/",
+      "title": "Dedicated staffing budget needed to make general practice pay rises ‘more affordable’",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/elderly-care/district-nurse-support-helps-care-home-avoid-unnecessary-referrals/",
+      "title": "District nurse support helps Wolverhampton care home avoid unnecessary referrals",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/cancer/ai-assisted-breast-cancer-screening-trial-hopes-to-free-up-staff-time/",
+      "title": "AI-assisted breast cancer screening trial hopes to ‘free up staff time’",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.england.nhs.uk/2026/11/first-women-join-world-leading-ai-assisted-nhs-breast-screening-trial/",
+      "title": "First women join world-leading AI-assisted NHS breast screening trial",
+      "src": "nhse",
+      "label": "NHS England",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/second-wave-of-gaza-children-arrive-for-specialist-nhs-treatment",
+      "title": "Second wave of Gaza children arrive for specialist NHS treatment",
+      "src": "dhsc",
+      "label": "DHSC",
+      "iso": "2026-11-23",
+      "date": "23 Nov"
+    },
+    {
+      "url": "https://www.england.nhs.uk/2026/11/nhs-urges-over-40s-to-know-their-numbers-amid-alarming-rise-in-high-blood-pressure-emergencies/",
+      "title": "NHS urges over 40s to know their numbers amid “alarming” rise in high blood pressure emergencies",
+      "src": "nhse",
+      "label": "NHS England",
+      "iso": "2026-11-21",
+      "date": "21 Nov"
+    },
+    {
+      "url": "https://www.rcn.org.uk/news-and-events/news/uk-nursing-programme-hours-protected-in-nmc-education-reform-plans-201126",
+      "title": "Nursing programme hours protected in NMC education reform plans",
+      "src": "rcn",
+      "label": "RCN",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.rcn.org.uk/news-and-events/news/uk-wales-nurse-of-the-year-2026-201126",
+      "title": "Care home nurse named RCN Wales Nurse of the Year",
+      "src": "rcn",
+      "label": "RCN",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.nursingtimes.net/policies-and-guidance/safeguarding-nurse-sees-trusts-defence-struck-out-in-3m-tribunal-20-11-2026/",
+      "title": "Safeguarding nurse sees trust’s defence struck out in £3m tribunal",
+      "src": "nt",
+      "label": "Nursing Times",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/clinical/vaccination-and-infection/low-flu-vaccine-uptake-among-toddlers-as-gp-visits-for-flu-like-illness-rise/",
+      "title": "Low flu vaccine uptake among toddlers as GP visits for flu-like illness rise",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.nursinginpractice.com/latest-news/nmc-warns-ai-generated-referrals-are-complicating-fitness-to-practise-assessments/",
+      "title": "NMC warns AI-generated referrals are complicating fitness to practise assessments",
+      "src": "nip",
+      "label": "Nursing in Practice",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/ukhsa-issues-first-cold-health-alert-of-winter-202627",
+      "title": "UKHSA cold-health alerts winter 2026/27",
+      "src": "ukhsa",
+      "label": "UKHSA",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/new-ai-guidance-to-cut-paperwork-and-free-more-time-for-care",
+      "title": "New AI guidance to cut paperwork and free more time for care",
+      "src": "dhsc",
+      "label": "DHSC",
+      "iso": "2026-11-20",
+      "date": "20 Nov"
+    },
+    {
+      "url": "https://www.nmc.org.uk/news/news-and-updates/nmc-sets-out-plans-to-strengthen-practice-learning-for-nursing-and-midwifery-students/",
+      "title": "NMC sets out plans to strengthen practice learning for nursing and midwifery students",
+      "src": "nmc",
+      "label": "NMC",
+      "iso": "2026-11-19",
+      "date": "19 Nov"
+    },
+    {
+      "url": "https://www.nmc.org.uk/news/news-and-updates/nmc-welcomes-uk-wide-practice-framework-for-nursing-and-midwifery-professionals/",
+      "title": "NMC welcomes UK-wide practice framework for nursing and midwifery professionals",
+      "src": "nmc",
+      "label": "NMC",
+      "iso": "2026-11-19",
+      "date": "19 Nov"
+    },
+    {
+      "url": "https://rcm.org.uk/media-releases/2026/11/a-deepening-crisis-unemployed-graduate-midwives-in-wales-set-to-rise/",
+      "title": "‘A deepening crisis’: Unemployed graduate midwives in Wales set to rise",
+      "src": "rcm",
+      "label": "RCM",
+      "iso": "2026-11-19",
+      "date": "19 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/thousands-of-young-children-at-risk-from-flu-with-just-over-a-third-of-2-and-3-year-olds-vaccinated",
+      "title": "Thousands of young children at risk from flu with just over a third of 2-and-3-year olds vaccinated",
+      "src": "ukhsa",
+      "label": "UKHSA",
+      "iso": "2026-11-19",
+      "date": "19 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/latest-ukhsa-weekly-winter-virus-surveillance-data",
+      "title": "Latest weekly winter virus surveillance data",
+      "src": "ukhsa",
+      "label": "UKHSA",
+      "iso": "2026-11-19",
+      "date": "19 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/new-mens-health-ambassador-to-help-improve-mens-health",
+      "title": "New Men’s Health Ambassador to help improve men’s health",
+      "src": "dhsc",
+      "label": "DHSC",
+      "iso": "2026-11-19",
+      "date": "19 Nov"
+    },
+    {
+      "url": "https://www.careinspectorate.wales/care-inspectorate-wales-publishes-its-approach-artificial-intelligence",
+      "title": "Care Inspectorate Wales publishes its approach to artificial intelligence Care Inspectorate Wales (CIW) has today published two statements setting out its approach to artificial intelligence",
+      "src": "ciw",
+      "label": "CIW",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.careinspectorate.wales/261103-we-want-your-views-ahead-our-first-joint-section-5-inspection-rhondda-cynon-taf",
+      "title": "We want your views ahead of our first joint Section 5 inspection in Rhondda Cynon Taf Care Inspectorate Wales, alongside Estyn and His Majesty's Inspectorate of Constabulary and Fire & Rescue Services (HMICFRS) are asking people, practitioners and those in a position of trust in Rhondda Cynon Taf to share their views ahead of our inspection in January 2027",
+      "src": "ciw",
+      "label": "CIW",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.rqia.org.uk/rqia-publishes-winter-plan-2026-27",
+      "title": "RQIA Publishes Winter Plan 2026-27",
+      "src": "rqia",
+      "label": "RQIA",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.rqia.org.uk/annual-quality-report-2025-2026-published",
+      "title": "Annual Quality Report 2025-2026 published",
+      "src": "rqia",
+      "label": "RQIA",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.careengland.org.uk/abbey-healthcare/",
+      "title": "Abbey Healthcare",
+      "src": "careeng",
+      "label": "Care England",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/news/new-champion-to-give-unpaid-carers-a-stronger-voice",
+      "title": "New champion to give unpaid carers a stronger voice",
+      "src": "dhsc",
+      "label": "DHSC",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.gov.uk/government/speeches/health-and-social-care-secretary-speech-at-kings-fund",
+      "title": "Using neighbourhood support teams to keep people out of hospital",
+      "src": "dhsc",
+      "label": "DHSC",
+      "iso": "2026-11-18",
+      "date": "18 Nov"
+    },
+    {
+      "url": "https://www.nmc.org.uk/news/news-and-updates/nmc-launches-new-strategy-to-strengthen-midwifery-regulation-and-improve-safety/",
+      "title": "NMC launches new strategy to strengthen midwifery regulation and improve safety",
+      "src": "nmc",
+      "label": "NMC",
+      "iso": "2026-11-17",
+      "date": "17 Nov"
+    },
+    {
+      "url": "https://www.nice.org.uk/news/articles/nice-and-launch-pioneering-partnership-with-manchester-university-nhs-foundation-trust-to-help-shape-the-future-of-evidence-based-care",
+      "title": "Pioneering partnership with Manchester University NHS Foundation Trust to help shape the future of evidence-based care",
+      "src": "nice",
+      "label": "NICE",
+      "iso": "2026-11-17",
+      "date": "17 Nov"
+    },
+    {
+      "url": "https://www.nice.org.uk/news/articles/less-invasive-capsule-sponge-tests-could-help-detect-oesophageal-cancer-earlier",
+      "title": "Less invasive capsule sponge tests could help detect oesophageal cancer earlier",
+      "src": "nice",
+      "label": "NICE",
+      "iso": "2026-11-17",
+      "date": "17 Nov"
+    },
     {
       "url": "https://www.rcn.org.uk/news-and-events/news/uk-rcn-renews-call-for-long-covid-recognition-161126",
       "title": "RCN renews call for long COVID recognition",
@@ -18,68 +282,12 @@
       "date": "16 Nov"
     },
     {
-      "url": "https://www.nice.org.uk/news/articles/less-invasive-capsule-sponge-tests-could-help-detect-oesophageal-cancer-earlier",
-      "title": "Less invasive capsule sponge tests could help detect oesophageal cancer earlier",
-      "src": "nice",
-      "label": "NICE",
-      "iso": "2026-11-16",
-      "date": "16 Nov"
-    },
-    {
       "url": "https://www.nice.org.uk/news/articles/hundreds-of-people-set-to-benefit-after-nice-gives-green-light-to-life-extending-advanced-anal-cancer-treatment",
       "title": "Hundreds of people set to benefit after green light for life-extending advanced anal cancer treatment",
       "src": "nice",
       "label": "NICE",
       "iso": "2026-11-16",
       "date": "16 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/public-health/new-public-health-framework-16-11-2026/",
-      "title": "New public health framework ‘celebrates’ role of nurses and midwives",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-16",
-      "date": "16 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/public-health/syphilis-factsheet-on-sexually-transmitted-infections-16-11-2026/",
-      "title": "Syphilis: factsheet on sexually transmitted infections",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-16",
-      "date": "16 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/uk-wide-framework-to-strengthen-and-celebrate-nurses-contribution-to-public-health/",
-      "title": "UK-wide framework to ‘strengthen and celebrate’ nurses’ contribution to public health",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-16",
-      "date": "16 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/more-health-and-social-care-workers-to-be-balloted-on-strike-action-in-northern-ireland/",
-      "title": "More health and social care workers to be balloted on strike action in Northern Ireland",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-16",
-      "date": "16 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/clinical/cancer/new-life-extending-anal-cancer-treatment-available-on-nhs-nice-confirms/",
-      "title": "New life-extending anal cancer treatment available on NHS, NICE confirms",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-16",
-      "date": "16 Nov"
-    },
-    {
-      "url": "https://www.gov.uk/government/news/ukhsa-issues-first-cold-health-alert-of-winter-202627",
-      "title": "UKHSA cold-health alerts winter 2026/27",
-      "src": "ukhsa",
-      "label": "UKHSA",
-      "iso": "2026-11-14",
-      "date": "14 Nov"
     },
     {
       "url": "https://socialcare.wales/news-stories/thank-you-personal-assistants",
@@ -98,38 +306,6 @@
       "date": "13 Nov"
     },
     {
-      "url": "https://www.nursingtimes.net/sustainability-and-environment/cop31-nursing-voice-making-inroads-on-climate-agenda-13-11-2026/",
-      "title": "COP31: Nursing voice ‘making inroads’ on climate agenda",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-13",
-      "date": "13 Nov"
-    },
-    {
-      "url": "https://www.nursingtimes.net/research-and-innovation/university-hospital-status-boost-for-borders-nurses-13-11-2026/",
-      "title": "University hospital status boost for Borders nurses",
-      "src": "nt",
-      "label": "Nursing Times",
-      "iso": "2026-11-13",
-      "date": "13 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/latest-news/nurse-struck-off-after-working-under-influence-of-alcohol-and-failing-to-administer-medication/",
-      "title": "Nurse struck off after working under influence of alcohol and failing to administer medication",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-13",
-      "date": "13 Nov"
-    },
-    {
-      "url": "https://www.nursinginpractice.com/clinical/elderly-care/care-workers-set-to-spend-less-time-travelling-between-visits-under-new-government-plans/",
-      "title": "Care workers set to spend less time travelling between visits under new government plans",
-      "src": "nip",
-      "label": "Nursing in Practice",
-      "iso": "2026-11-13",
-      "date": "13 Nov"
-    },
-    {
       "url": "https://www.england.nhs.uk/2026/11/nhs-statement-on-microsoft-outage/",
       "title": "NHS statement on Microsoft outage",
       "src": "nhse",
@@ -142,14 +318,6 @@
       "title": "Annabel Lloyd appointed Director of Service Support and Improvement",
       "src": "scw",
       "label": "Social Care Wales",
-      "iso": "2026-11-12",
-      "date": "12 Nov"
-    },
-    {
-      "url": "https://www.rqia.org.uk/annual-quality-report-2025-2026-published",
-      "title": "Annual Quality Report 2025-2026 published",
-      "src": "rqia",
-      "label": "RQIA",
       "iso": "2026-11-12",
       "date": "12 Nov"
     },
@@ -178,14 +346,6 @@
       "date": "12 Nov"
     },
     {
-      "url": "https://www.gov.uk/government/news/latest-ukhsa-weekly-winter-virus-surveillance-data",
-      "title": "Latest weekly winter virus surveillance data",
-      "src": "ukhsa",
-      "label": "UKHSA",
-      "iso": "2026-11-12",
-      "date": "12 Nov"
-    },
-    {
       "url": "https://www.gov.uk/government/news/over-400-antibiotic-resistant-infections-each-week-in-2025",
       "title": "Over 400 antibiotic-resistant infections each week in 2025",
       "src": "ukhsa",
@@ -198,22 +358,6 @@
       "title": "Time running out for over 580,000 young people to get 1st dose of MenB",
       "src": "ukhsa",
       "label": "UKHSA",
-      "iso": "2026-11-12",
-      "date": "12 Nov"
-    },
-    {
-      "url": "https://www.gov.uk/government/speeches/minister-mcgoverns-social-care-speech-at-the-ncasc-conference",
-      "title": "Building a national care service through neighbourhood home care",
-      "src": "dhsc",
-      "label": "DHSC",
-      "iso": "2026-11-12",
-      "date": "12 Nov"
-    },
-    {
-      "url": "https://www.gov.uk/government/news/more-familiar-carers-and-less-travel-under-new-social-care-plans",
-      "title": "More familiar carers and less travel under new social care plans",
-      "src": "dhsc",
-      "label": "DHSC",
       "iso": "2026-11-12",
       "date": "12 Nov"
     },
@@ -246,14 +390,6 @@
       "title": "SCIE responds to new report on injustice faced by self-funders",
       "src": "scie",
       "label": "SCIE",
-      "iso": "2026-11-10",
-      "date": "10 Nov"
-    },
-    {
-      "url": "https://www.gov.uk/government/speeches/minister-alison-mcgovern-speech-at-the-youth-access-conference",
-      "title": "Minister McGovern speech at the Youth Access conference",
-      "src": "dhsc",
-      "label": "DHSC",
       "iso": "2026-11-10",
       "date": "10 Nov"
     },
@@ -298,42 +434,10 @@
       "date": "09 Nov"
     },
     {
-      "url": "https://www.gov.uk/government/news/40-million-for-gps-to-keep-vulnerable-patients-out-of-hospital-this-winter",
-      "title": "£40 million for GPs to keep vulnerable patients out of hospital this winter",
-      "src": "dhsc",
-      "label": "DHSC",
-      "iso": "2026-11-09",
-      "date": "09 Nov"
-    },
-    {
       "url": "https://www.lgo.org.uk/information-centre/news/2026/nov/york-council-left-disabled-boy-without-the-support-to-communicate-for-more-than-a-year/",
       "title": "York council left disabled boy without the support to communicate for more than a year",
       "src": "mail",
       "label": "Sector news",
-      "iso": "2026-11-05",
-      "date": "05 Nov"
-    },
-    {
-      "url": "https://www.england.nhs.uk/2026/11/nhs-diagnoses-one-thousand-cancers-a-day/",
-      "title": "NHS diagnoses one thousand cancers a day",
-      "src": "nhse",
-      "label": "NHS England",
-      "iso": "2026-11-05",
-      "date": "05 Nov"
-    },
-    {
-      "url": "https://www.careengland.org.uk/trade-union-reforms-what-adult-social-care-providers-need-to-know/",
-      "title": "Trade Union Reforms: What Adult Social Care Providers Need to Know",
-      "src": "careeng",
-      "label": "Care England",
-      "iso": "2026-11-05",
-      "date": "05 Nov"
-    },
-    {
-      "url": "https://www.gov.uk/government/news/uk-citizen-returned-from-drc-for-specialist-ebola-care",
-      "title": "UK citizen returned from DRC for specialist Ebola care",
-      "src": "dhsc",
-      "label": "DHSC",
       "iso": "2026-11-05",
       "date": "05 Nov"
     },
@@ -354,26 +458,10 @@
       "date": "04 Nov"
     },
     {
-      "url": "https://www.nmc.org.uk/news/news-and-updates/nmc-launches-new-strategy-to-strengthen-midwifery-regulation-and-improve-safety/",
-      "title": "NMC launches new strategy to strengthen midwifery regulation and improve safety",
-      "src": "nmc",
-      "label": "NMC",
-      "iso": "2026-11-03",
-      "date": "03 Nov"
-    },
-    {
       "url": "https://www.nmc.org.uk/news/news-and-updates/black-history-month-dr-herbert-mwebe-on-recognising-the-contribution-of-diaspora-nursing-and-midwifery-associations/",
       "title": "Black History Month: Dr Herbert Mwebe on Recognising the Contribution of Diaspora Nursing and Midwifery Associations",
       "src": "nmc",
       "label": "NMC",
-      "iso": "2026-11-03",
-      "date": "03 Nov"
-    },
-    {
-      "url": "https://www.careinspectorate.wales/261103-we-want-your-views-ahead-our-first-joint-section-5-inspection-rhondda-cynon-taf",
-      "title": "We want your views ahead of our first joint Section 5 inspection in Rhondda Cynon Taf Care Inspectorate Wales, alongside Estyn and His Majesty's Inspectorate of Constabulary and Fire & Rescue Services (HMICFRS) are asking people, practitioners and those in a position of trust in Rhondda Cynon Taf to share their views ahead of our inspection in January 2027",
-      "src": "ciw",
-      "label": "CIW",
       "iso": "2026-11-03",
       "date": "03 Nov"
     },
@@ -398,14 +486,6 @@
       "title": "Exciting opportunity to transform your organisation’s culture",
       "src": "scw",
       "label": "Social Care Wales",
-      "iso": "2026-11-03",
-      "date": "03 Nov"
-    },
-    {
-      "url": "https://www.gov.uk/government/news/ukhsa-launches-human-biomonitoring-study",
-      "title": "UKHSA launches human biomonitoring study",
-      "src": "ukhsa",
-      "label": "UKHSA",
       "iso": "2026-11-03",
       "date": "03 Nov"
     },
@@ -450,22 +530,6 @@
       "date": "02 Nov"
     },
     {
-      "url": "https://www.england.nhs.uk/2026/11/new-nhs-system-to-help-doctors-spot-deteriorating-children-faster-in-emergency-departments/",
-      "title": "New NHS system to help doctors spot deteriorating children faster in emergency departments",
-      "src": "nhse",
-      "label": "NHS England",
-      "iso": "2026-11-01",
-      "date": "01 Nov"
-    },
-    {
-      "url": "https://www.careinspectorate.wales/261026-apply-be-next-chair-ciw-national-advisory-board",
-      "title": "Apply to be the next Chair of the CIW National Advisory Board Monitor and scrutinise our activities, help deliver our priorities, and lead the Board who provide a voice for the people that our work impacts",
-      "src": "ciw",
-      "label": "CIW",
-      "iso": "2026-10-30",
-      "date": "30 Oct"
-    },
-    {
       "url": "https://www.nmc.org.uk/news/news-and-updates/black-history-month-gamu-chirozva-on-finding-her-voice-challenging-injustice-and-supporting-others/",
       "title": "Black History Month: Gamu Chirozva on finding her voice, challenging injustice and supporting others",
       "src": "nmc",
@@ -490,14 +554,6 @@
       "date": "28 Oct"
     },
     {
-      "url": "https://www.nmc.org.uk/news/news-and-updates/black-history-month-twila-nkombo-on-heritage-nursing-and-finding-her-purpose/",
-      "title": "Black History Month: Twila Nkombo on heritage, nursing and finding her purpose",
-      "src": "nmc",
-      "label": "NMC",
-      "iso": "2026-10-27",
-      "date": "27 Oct"
-    },
-    {
       "url": "https://www.nice.org.uk/news/articles/ai-could-help-spot-prostate-cancer-more-accurately-says-nice",
       "title": "New AI tools could help spot prostate cancer more accurately",
       "src": "nice",
@@ -514,14 +570,6 @@
       "date": "26 Oct"
     },
     {
-      "url": "https://www.nmc.org.uk/news/news-and-updates/black-history-month-paulette-lewis-on-leadership-heritage-and-supporting-the-next-generation/",
-      "title": "Black History Month: Paulette Lewis on leadership, heritage and supporting the next generation",
-      "src": "nmc",
-      "label": "NMC",
-      "iso": "2026-10-23",
-      "date": "23 Oct"
-    },
-    {
       "url": "https://www.nice.org.uk/news/articles/nice-recommends-enhertu-for-people-with-her2-low-advanced-breast-cancer",
       "title": "NICE recommends Enhertu for people with HER2-low advanced breast cancer",
       "src": "nice",
@@ -536,22 +584,6 @@
       "label": "SCIE",
       "iso": "2026-10-23",
       "date": "23 Oct"
-    },
-    {
-      "url": "https://www.rcn.org.uk/news-and-events/news/uk-nursing-student-debt-immediate-action-needed-over-deep-injustice-221026",
-      "title": "Nursing student debt: immediate action needed over ‘deep injustice’",
-      "src": "rcn",
-      "label": "RCN",
-      "iso": "2026-10-22",
-      "date": "22 Oct"
-    },
-    {
-      "url": "https://www.rcn.org.uk/news-and-events/news/uk-rcn-mourns-the-loss-of-elected-member-peter-davis-211026",
-      "title": "RCN mourns the loss of elected member Peter Davis",
-      "src": "rcn",
-      "label": "RCN",
-      "iso": "2026-10-21",
-      "date": "21 Oct"
     },
     {
       "url": "https://www.rqia.org.uk/chief-executive-recruitment",
@@ -574,14 +606,6 @@
       "title": "CQC’s annual report on enforcement of the Ionising Radiation (Medical Exposure) Regulations in England published",
       "src": "cqc",
       "label": "CQC",
-      "iso": "2026-10-15",
-      "date": "15 Oct"
-    },
-    {
-      "url": "https://www.rqia.org.uk/new-chair-appointed-to-the-regulation-and-quality-improvement-authority",
-      "title": "New Chair appointed to the Regulation and Quality Improvement Authority",
-      "src": "rqia",
-      "label": "RQIA",
       "iso": "2026-10-15",
       "date": "15 Oct"
     },
@@ -626,12 +650,12 @@
       "date": "06 Oct"
     },
     {
-      "url": "https://www.nice.org.uk/news/articles/draft-guidance-aims-to-improve-identification-of-ocd-and-body-dysmorphic-disorder",
-      "title": "Draft guidance aims to improve identification of OCD and body dysmorphic disorder",
-      "src": "nice",
-      "label": "NICE",
-      "iso": "2026-09-17",
-      "date": "17 Sep"
+      "url": "https://www.rqia.org.uk/rqia-statement-rqia-publishes-follow-up-inspection-report-on-the-temporary-emergency-general-surgery-egs-pathways-in-the-western-hsc-trust",
+      "title": "RQIA Statement: RQIA publishes follow-up Inspection Report on the temporary Emergency General Surgery (EGS) Pathways in the Western HSC Trust",
+      "src": "rqia",
+      "label": "RQIA",
+      "iso": "2026-09-15",
+      "date": "15 Sep"
     },
     {
       "url": "https://rcm.org.uk/media-releases/2026/09/rcm-urges-health-secretary-to-restart-nhs-pay-talks-or-risk-losing-more-midwives/",
@@ -642,28 +666,12 @@
       "date": "11 Sep"
     },
     {
-      "url": "https://www.rqia.org.uk/rqia-publishes-final-report-on-review-of-records-of-deceased-patients-neurology",
-      "title": "RQIA publishes final report on Review of Records of Deceased Patients (Neurology)",
-      "src": "rqia",
-      "label": "RQIA",
-      "iso": "2026-09-10",
-      "date": "10 Sep"
-    },
-    {
       "url": "https://florence-nightingale-foundation.org.uk/remember-a-charity-week-2026/",
       "title": "Remember A Charity Week: What Will You Be Remembered For?",
       "src": "fnf",
       "label": "Florence Nightingale Foundation",
       "iso": "2026-09-07",
       "date": "07 Sep"
-    },
-    {
-      "url": "https://rcm.org.uk/media-releases/2026/09/rcm-scotland-the-problem-was-never-the-number-of-health-boards-its-the-lack-of-priority-given-to-maternity-care/",
-      "title": "RCM Scotland: “The problem was never the number of health boards – it’s the lack of priority given to maternity care”",
-      "src": "rcm",
-      "label": "RCM",
-      "iso": "2026-09-02",
-      "date": "02 Sep"
     },
     {
       "url": "https://www.nhsemployers.org/articles/asbestos-nhs-buildings-what-nhs-staff-need-know",
