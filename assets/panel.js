@@ -3,7 +3,7 @@
  * because WordPress HTML-escapes literal & < > there and breaks the script.
  */
 (function(){
-  var css = "\n  /* Namespaced to .jm so nothing here leaks into the rest of the Hub page;\n     every color used is one of style.css's own tokens (--blue/--gold/\n     --purple/--border/--panel2/--dim), so the panel reads as native to\n     the site rather than a bolted-on design. */\n  #jmPanel .jm{font-size:13px;}\n  #jmPanel .h2 .src{font-weight:600;}\n  .jm-wrap{display:grid;grid-template-columns:220px 1fr;gap:0;border-top:1px solid var(--border);}\n  @media(max-width:820px){.jm-wrap{grid-template-columns:1fr;}}\n\n  .jm-filters{padding:16px 18px 20px;border-right:1px solid var(--border);}\n  @media(max-width:820px){.jm-filters{border-right:none;border-bottom:1px solid var(--border);}}\n  .jm-grp{border-bottom:1px solid #f0ece3;}\n  .jm-grp:last-of-type{border-bottom:none;}\n  .jm-grp>summary{padding:10px 2px;cursor:pointer;font-weight:600;color:var(--ink);list-style:none;\n                  display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}\n  .jm-grp>summary:hover{color:var(--gold);}\n  .jm-grp>summary::after{content:'+';color:var(--dim);font-weight:400;font-size:15px;}\n  .jm-grp[open]>summary::after{content:'\\2013';}\n  .jm-opts{padding:0 2px 10px;display:flex;flex-direction:column;gap:7px;}\n  .jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;line-height:1.3;}\n  .jm-opts input{accent-color:var(--gold);flex:none;}\n  .jm-n{color:var(--dim);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;}\n  .jm-clear{width:100%;margin-top:16px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;\n            padding:8px;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--ink);\n            cursor:pointer;font-family:inherit;font-weight:600;}\n  .jm-clear:hover{border-color:var(--gold);color:var(--gold);}\n\n  .jm-main{min-width:0;}\n  .jm-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;\n          padding:14px 20px;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel2);}\n  .jm-count{font-size:13px;color:var(--ink);} .jm-count b{color:var(--gold);font-size:16px;}\n  .jm-hint{font-size:11.5px;color:var(--dim);}\n\n  /* Map and key sit side by side so the map gets the full height available. */\n  .jm-stage{display:grid;grid-template-columns:1fr 200px;gap:22px;padding:20px 20px 18px;\n            align-items:start;background:var(--panel2);border-bottom:1px solid var(--border);}\n  @media(max-width:900px){.jm-stage{grid-template-columns:1fr;gap:16px;}}\n\n  .jm-mapbox{min-width:0;}\n  .jm-mapbox svg{width:100%;height:auto;display:block;max-height:560px;margin:0 auto;}\n  .jm-region{stroke:#fff;stroke-width:1.4;cursor:pointer;transition:filter .15s;fill-rule:evenodd;}\n  .jm-region:hover{filter:brightness(1.1);}\n  .jm-region.sel{stroke:var(--gold);stroke-width:3;}\n  .jm-rlabel{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;text-anchor:middle;\n             pointer-events:none;letter-spacing:.3px;}\n  .jm-rcount{font-size:12px;font-weight:700;text-anchor:middle;pointer-events:none;\n             font-variant-numeric:tabular-nums;}\n\n  .jm-key{font-size:11.5px;color:var(--ink);}\n  .jm-key h4{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);\n             font-weight:700;margin:0 0 10px;}\n  .jm-key .jm-scale{display:flex;flex-direction:column;gap:3px;margin-bottom:8px;}\n  .jm-key .jm-step{display:flex;align-items:center;gap:9px;}\n  .jm-key .jm-step i{width:22px;height:13px;display:block;border:1px solid var(--border);\n                     border-radius:2px;flex:none;}\n  .jm-key .jm-step span{color:var(--dim);font-size:11px;font-variant-numeric:tabular-nums;}\n  .jm-key .jm-keynote{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);\n                      color:var(--dim);line-height:1.55;font-size:11px;}\n  .jm-key .jm-keynote b{color:var(--ink);display:block;margin-bottom:3px;font-size:11.5px;}\n  .jm-key .jm-natbtn{margin-top:9px;width:100%;background:var(--panel);border:1px solid var(--border);\n                     border-radius:6px;padding:7px 9px;font-size:11px;color:var(--ink);cursor:pointer;\n                     font-family:inherit;font-weight:600;text-align:left;line-height:1.4;}\n  .jm-key .jm-natbtn:hover{border-color:var(--gold);color:var(--gold);}\n\n  .jm-list{padding:0;}\n  .jm-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px 20px;\n          text-decoration:none;color:inherit;border-bottom:1px solid #f0ece3;}\n  .jm-row:last-child{border-bottom:none;}\n  .jm-row:hover{background:var(--panel2);}\n  .jm-title{font-weight:600;font-size:13px;color:var(--ink);line-height:1.35;}\n  .jm-meta{font-size:11.5px;color:var(--dim);margin-top:7px;display:flex;gap:7px;flex-wrap:wrap;align-items:center;}\n  .jm-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;\n          background:var(--panel2);border:1px solid var(--border);color:var(--dim);white-space:nowrap;}\n  .jm-tag.lvl{color:var(--purple);border-color:#dcd0ec;background:#f4f0fa;}\n  .jm-tag.clin{background:var(--ink);border-color:var(--ink);color:#fff;}\n  .jm-tag.sal{color:#7a5b14;border-color:#e8d5a8;background:#fbf3df;}\n  .jm-go{color:var(--gold);font-size:15px;flex:none;font-weight:700;}\n  .jm-empty{padding:38px 24px;text-align:center;color:var(--dim);font-size:13px;line-height:1.6;}\n  .jm-empty b{display:block;color:var(--ink);font-size:14px;margin-bottom:6px;}\n  .jm-more{text-align:center;padding:14px;}\n  .jm-more button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:10px 24px;\n                  font-weight:700;font-size:12px;letter-spacing:.3px;cursor:pointer;font-family:inherit;}\n  .jm-more button:hover{background:#8f6f24;}\n  .jm-loading{padding:36px;text-align:center;color:var(--dim);font-size:13px;}\n";
+  var css = "/* KORE-style restyle (Lou, 27/11/2026): navy stage, gold coastline, gold pins,\n   region cards with gold count badges, serif headline. Namespaced to #jmPanel. */\n#jmPanel{--k-navy:#071731;--k-deep:#030D1F;--k-gold:#CFA654;--k-gold2:#EECB6F;--k-goldt:#E0BE8E;--k-mist:#DBE3EE;--k-serif:'Cormorant Garamond',Georgia,serif;\n  background:radial-gradient(900px 420px at 85% 0%,rgba(207,166,84,.10),transparent 70%),linear-gradient(180deg,#071731 0%,#030D1F 100%)!important;\n  border:1px solid rgba(207,166,84,.32)!important;border-radius:22px!important;color:#fff;overflow:hidden;box-shadow:0 40px 80px -40px rgba(3,13,31,.7)}\n#jmPanel>h2,#jmPanel>.body{display:none!important}\n#jmPanel .jm{font-size:13px;color:#fff}\n.jm-head{padding:44px 40px 8px}\n.jm-kick{margin:0 0 10px;font:700 12px/1.3 Inter,system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--k-goldt)}\n.jm-head h3{margin:0;font:500 44px/1.08 var(--k-serif);color:#fff;letter-spacing:-.01em}\n.jm-head h3 em{font-style:italic;color:var(--k-goldt)}\n.jm-lede{margin:14px 0 0;max-width:760px;font-size:15px;line-height:1.6;color:var(--k-mist)}\n.jm-stamp{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:7px 13px;border-radius:999px;border:1px solid rgba(207,166,84,.35);background:rgba(3,13,31,.55);font:600 12px/1 Inter,sans-serif;color:var(--k-mist)}\n.jm-stamp i{width:8px;height:8px;border-radius:50%;background:var(--k-gold2);box-shadow:0 0 10px var(--k-gold2);animation:jmblink 2s ease-in-out infinite}\n@keyframes jmblink{50%{opacity:.35}}\n.jm-wrap{display:grid;grid-template-columns:230px 1fr;gap:0;margin-top:26px;border-top:1px solid rgba(207,166,84,.22)}\n@media(max-width:860px){.jm-wrap{grid-template-columns:1fr}}\n.jm-filters{padding:18px 20px 22px;border-right:1px solid rgba(207,166,84,.22);background:rgba(3,13,31,.35)}\n@media(max-width:860px){.jm-filters{order:2;border-right:none;border-top:1px solid rgba(207,166,84,.22)}.jm-main{order:1}}\n.jm-grp{border-bottom:1px solid rgba(207,166,84,.16)}\n.jm-grp:last-of-type{border-bottom:none}\n.jm-grp>summary{padding:11px 2px;cursor:pointer;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;letter-spacing:.02em}\n.jm-grp>summary::-webkit-details-marker{display:none}\n.jm-grp>summary:hover{color:var(--k-goldt)}\n.jm-grp>summary::after{content:'+';color:var(--k-gold);font-weight:400;font-size:16px}\n.jm-grp[open]>summary::after{content:'\\2013'}\n.jm-opts{padding:0 2px 12px;display:flex;flex-direction:column;gap:8px}\n.jm-opts label{font-size:12.5px;display:flex;align-items:center;gap:8px;color:var(--k-mist);cursor:pointer;line-height:1.3}\n.jm-opts label:hover{color:#fff}\n.jm-opts input{accent-color:var(--k-gold);flex:none}\n.jm-n{color:var(--k-goldt);font-size:11px;margin-left:auto;font-variant-numeric:tabular-nums;opacity:.85}\n.jm-clear{width:100%;margin-top:16px;background:transparent;border:1px solid rgba(207,166,84,.45);border-radius:10px;padding:9px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--k-goldt);cursor:pointer;font-family:inherit;font-weight:700}\n.jm-clear:hover{background:rgba(207,166,84,.12);color:#fff}\n.jm-main{min-width:0}\n.jm-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 24px;flex-wrap:wrap;border-bottom:1px solid rgba(207,166,84,.22)}\n.jm-count{font-size:13px;color:var(--k-mist)}.jm-count b{color:var(--k-gold2);font:600 22px/1 var(--k-serif);margin-right:3px}\n.jm-hint{font-size:12px;color:var(--k-mist);opacity:.85}\n.jm-stage{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:22px;padding:22px 24px;align-items:start;border-bottom:1px solid rgba(207,166,84,.22)}\n@media(max-width:1100px){.jm-stage{grid-template-columns:1fr}}\n.jm-mapbox{position:relative;min-width:0;border-radius:20px;overflow:hidden;padding:10px;background:radial-gradient(500px 400px at 70% 78%,rgba(207,166,84,.16),transparent 70%),linear-gradient(165deg,#0b1f3d 0%,#030D1F 100%);border:1px solid rgba(207,166,84,.32);box-shadow:0 40px 80px -40px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.08)}\n.jm-mapbox::before{content:\"\";position:absolute;inset:0;background-image:linear-gradient(rgba(207,166,84,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(207,166,84,.05) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}\n.jm-mapbox svg{position:relative;width:100%;height:auto;display:block;max-height:640px;margin:0 auto}\n.jm-region{cursor:pointer;transition:fill .25s;fill-rule:evenodd}\n.jm-region:hover{fill:#1a3a63}\n.jm-region.sel{fill:#1d4373}\n.jm-coast{fill:none;stroke:#CFA654;stroke-width:1;stroke-opacity:.75;pointer-events:none}\n.jm-coast.sel{stroke:#EECB6F;stroke-width:2.2;stroke-opacity:1}\n.jm-pin{cursor:pointer;outline:none}\n.jm-pin .ring{pointer-events:none;fill:none;stroke:#EECB6F;stroke-width:1.4;transform-box:fill-box;transform-origin:center;animation:jmring 2.8s ease-out infinite}\n.jm-pin .ring.r2{animation-delay:1.4s}\n@keyframes jmring{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.6);opacity:0}}\n.jm-pin .core{stroke:rgba(3,13,31,.6);stroke-width:1;transform-box:fill-box;transform-origin:center;transition:transform .25s}\n.jm-pin:hover .core,.jm-pin.on .core,.jm-pin:focus-visible .core{transform:scale(1.18);filter:drop-shadow(0 0 7px #EECB6F)}\n.jm-pin:focus-visible .core{stroke:#fff;stroke-width:2.5}\n.jm-pin text{pointer-events:none;font:700 11px Inter,sans-serif;fill:#030D1F;text-anchor:middle;dominant-baseline:central;font-variant-numeric:tabular-nums}\n.jm-leg{position:absolute;right:14px;bottom:12px;display:flex;gap:14px;margin:0;font:600 11.5px/1 Inter,sans-serif;color:var(--k-mist);background:rgba(3,13,31,.75);padding:8px 12px;border-radius:999px;border:1px solid rgba(207,166,84,.3)}\n.jm-leg span{display:flex;align-items:center;gap:7px}\n.jm-leg i{width:9px;height:9px;border-radius:50%;background:#EECB6F;box-shadow:0 0 10px #EECB6F;display:inline-block}\n.jm-key{min-width:0}\n.jm-key h4{margin:2px 0 12px;font:700 11px/1.3 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--k-goldt)}\n.jm-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}\n@media(max-width:560px){.jm-cards{grid-template-columns:1fr}}\n.jm-rb{width:100%;text-align:left;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:11px 13px;border-radius:12px;border:1px solid rgba(207,166,84,.3);background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));color:#fff;cursor:pointer;box-shadow:0 18px 36px -24px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.08);transition:transform .25s,border-color .25s,background .25s;font:inherit}\n.jm-rb:hover{border-color:#CFA654;transform:translateY(-2px)}\n.jm-rb:focus-visible{outline:2px solid #fff;outline-offset:2px}\n.jm-rb[aria-pressed=\"true\"]{border-color:#CFA654;background:linear-gradient(135deg,#14304F,#0b1f3d);box-shadow:0 18px 36px -18px rgba(207,166,84,.55),inset 0 1px 0 rgba(255,255,255,.12)}\n.jm-rb .nm{font:700 13.5px/1.3 Inter,sans-serif;color:#fff}\n.jm-rb .sb{grid-column:1;font-size:12px;color:var(--k-mist)}\n.jm-rb .bd{grid-row:1/span 2;grid-column:2;align-self:center;display:grid;place-items:center;min-width:30px;height:28px;padding:0 6px;border-radius:8px;font:700 13px/1 Inter,sans-serif;color:#030D1F;background:linear-gradient(135deg,#B58B41,#EECB6F);box-shadow:0 8px 18px -8px rgba(207,166,84,.8),inset 0 1px 0 rgba(255,255,255,.4);font-variant-numeric:tabular-nums}\n.jm-rb.zero{opacity:.45}\n.jm-rb.nat{grid-column:1/-1;border-style:dashed}\n.jm-list{padding:6px 16px 16px}\n.jm-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:8px;padding:14px 18px;text-decoration:none!important;color:inherit;border-radius:14px;border:1px solid rgba(207,166,84,.18);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));transition:border-color .2s,transform .2s,background .2s}\n.jm-row:hover{border-color:#CFA654;background:linear-gradient(135deg,#14304F,#0b1f3d);transform:translateX(3px)}\n.jm-title{font-weight:700;font-size:14px;color:#fff;line-height:1.35}\n.jm-meta{font-size:11.5px;color:var(--k-mist);margin-top:8px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}\n.jm-tag{display:inline-block;font-size:10.5px;font-weight:600;padding:3px 9px;border-radius:99px;background:rgba(219,227,238,.08);border:1px solid rgba(219,227,238,.2);color:var(--k-mist);white-space:nowrap}\n.jm-tag.lvl{color:#fff;border-color:rgba(219,227,238,.35)}\n.jm-tag.clin{background:#fff;border-color:#fff;color:#030D1F}\n.jm-tag.sal{color:#030D1F;border-color:transparent;background:linear-gradient(135deg,#B58B41,#EECB6F)}\n.jm-go{color:var(--k-gold2);font-size:20px;flex:none;font-weight:700}\n.jm-empty{padding:38px 24px;text-align:center;color:var(--k-mist);font-size:13px;line-height:1.6}\n.jm-empty b{display:block;color:#fff;font:500 22px/1.3 var(--k-serif);margin-bottom:6px}\n.jm-more{text-align:center;padding:18px}\n.jm-more button{background:linear-gradient(135deg,#B58B41,#EECB6F);color:#030D1F;border:none;border-radius:999px;padding:12px 28px;font-weight:700;font-size:12.5px;letter-spacing:.04em;cursor:pointer;font-family:inherit;box-shadow:0 12px 26px -12px rgba(207,166,84,.8)}\n.jm-more button:hover{filter:brightness(1.08)}\n.jm-loading{padding:36px;text-align:center;color:var(--k-mist);font-size:13px}\n@media(max-width:640px){.jm-head{padding:30px 18px 4px}.jm-head h3{font-size:32px}.jm-stage{padding:16px}.jm-bar{padding:14px 16px}.jm-list{padding:4px 10px 12px}.jm-leg{position:static;margin:10px auto 2px;width:fit-content}}\n@media(prefers-reduced-motion:reduce){.jm-pin .ring,.jm-stamp i{animation:none;opacity:0}}\n";
   var tag = document.createElement('style');
   tag.setAttribute('data-jm','1');
   tag.appendChild(document.createTextNode(css));
@@ -167,17 +167,41 @@
     });
   }
 
-  // Sequential blue ramp built from the site's own --blue token (#39689e),
-  // not a categorical palette — pale to deep as count rises. No brown.
-  var RAMP = ["#eef2f6", "#c9dae9", "#7fa0c4", "#39689e", "#1c3a5e"];
-  function colourFor(n, max){
-    if (!n) return "#f4f1ea";
-    var r = max ? n/max : 0;
-    if (r > .8) return RAMP[4];
-    if (r > .55) return RAMP[3];
-    if (r > .3) return RAMP[2];
-    if (r > .08) return RAMP[1];
-    return RAMP[0];
+  // KORE-style map (Lou, 27/11/2026): navy land with a gold dot texture and a
+  // glowing gold coastline, one gold pin per region sized by its count, and
+  // region cards with gold count badges in place of the old colour key.
+  var NUDGE = { "England — North": [0, 22], "England — South & East": [-6, 22], "London": [10, -26] };
+  var SHORT = function(n){ return n.replace("England — ", ""); };
+
+  // Header in the KORE pattern, built from the page's own intro paragraph and
+  // stamp so the live page markup does not need editing.
+  (function head(){
+    var panel = document.getElementById("jmPanel");
+    if (!panel || panel.querySelector(".jm-head")) return;
+    if (!document.querySelector("link[data-jm-font]")){
+      var lk = document.createElement("link");
+      lk.rel = "stylesheet"; lk.setAttribute("data-jm-font","1");
+      lk.href = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap";
+      document.head.appendChild(lk);
+    }
+    var intro = panel.querySelector(".body p");
+    var h = document.createElement("div");
+    h.className = "jm-head";
+    h.innerHTML = '<p class="jm-kick">Live sales jobs map</p>'
+      + '<h3>Roles across <em>the UK and Ireland</em></h3>'
+      + '<p class="jm-lede"></p><div class="jm-stamp"><i></i><span class="jm-st"></span></div>';
+    h.querySelector(".jm-lede").textContent = intro ? intro.textContent : "";
+    var stamp = document.getElementById("jmStamp");
+    if (stamp) h.querySelector(".jm-st").appendChild(stamp);
+    var jm = panel.querySelector(".jm");
+    panel.insertBefore(h, jm);
+  })();
+
+  function toggleRegion(r){
+    if (!state.filters.region) state.filters.region = new Set();
+    if (state.filters.region.has(r)) state.filters.region.delete(r);
+    else state.filters.region.add(r);
+    state.limit = 25; render();
   }
 
   function buildMap(){
@@ -185,106 +209,84 @@
     if (!geo) return;
     var pool = matching("region"), counts = {};
     pool.forEach(function(j){ counts[j.region] = (counts[j.region]||0)+1; });
-
     var names = Object.keys(geo.paths);
-    var regional = names.map(function(n){ return counts[n]||0; });
-    var max = Math.max.apply(null, regional.concat([1]));
+    var max = Math.max.apply(null, names.map(function(n){ return counts[n]||0; }).concat([1]));
     var sel = state.filters.region;
 
     var svgEl = document.getElementById("jmMap");
     svgEl.setAttribute("viewBox", geo.viewBox);
-    var svg = "";
+    var vb = geo.viewBox.split(" ");
+    var svg = '<defs>'
+      + '<pattern id="jmDots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1" fill="rgba(207,166,84,.34)"/></pattern>'
+      + '<linearGradient id="jmLand" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#132a4a"/><stop offset="1" stop-color="#0a1830"/></linearGradient>'
+      + '<radialGradient id="jmPinG" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#FFF4D6"/><stop offset=".45" stop-color="#EECB6F"/><stop offset="1" stop-color="#B58B41"/></radialGradient>'
+      + '<filter id="jmGl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
+      + '<radialGradient id="jmHalo" cx="66%" cy="78%" r="55%"><stop offset="0" stop-color="rgba(207,166,84,.22)"/><stop offset="1" stop-color="rgba(207,166,84,0)"/></radialGradient>'
+      + '</defs>';
     names.forEach(function(name){
-      var n = counts[name]||0;
       var isSel = sel && sel.has(name);
-      var fill = colourFor(n, max);
-      var light = (n/max) > .5;
-      svg += '<path class="jm-region'+(isSel?" sel":"")+'" d="'+geo.paths[name]+'" fill="'+fill+'" data-r="'+esc(name)+'">'
-          +  '<title>'+esc(name)+': '+n+' vacancies</title></path>';
+      svg += '<path class="jm-region'+(isSel?" sel":"")+'" d="'+geo.paths[name]+'" fill="url(#jmLand)" data-r="'+esc(name)+'"><title>'+esc(name)+': '+(counts[name]||0)+' vacancies</title></path>';
     });
-    // Manual label nudges for shapes too tight/collision-prone for the raw
-    // area centroid: North's waist is narrow near the Scotland border so
-    // its two-line label needs pushing south to stay inside the shape;
-    // London's true centroid sits almost on top of South & East's, so it
-    // gets pulled out to a callout point with a leader line, and South &
-    // East's own label nudges away to give it room.
-    var NUDGE = {
-      "England — North": [0, 22],
-      "England — South & East": [-14, 18]
-    };
-    var LONDON_CALLOUT = [44, -46];
-
-    // labels drawn after all fills so they always sit on top
+    names.forEach(function(name){
+      svg += '<path d="'+geo.paths[name]+'" fill="url(#jmDots)" style="pointer-events:none"/>';
+    });
+    names.forEach(function(name){
+      var isSel = sel && sel.has(name);
+      svg += '<path class="jm-coast'+(isSel?" sel":"")+'" d="'+geo.paths[name]+'" filter="url(#jmGl)"/>';
+    });
     names.forEach(function(name){
       var n = counts[name]||0;
-      var c = geo.centroids[name];
-      var light = (n/max) > .5;
-      var cx = c[0], cy = c[1];
-      var isLondon = name === "London";
-      if (NUDGE[name]){ cx += NUDGE[name][0]; cy += NUDGE[name][1]; }
-      if (isLondon){ cx = c[0] + LONDON_CALLOUT[0]; cy = c[1] + LONDON_CALLOUT[1]; }
-      var short = name.replace("England — ","").toUpperCase();
-      var haloStyle = 'style="paint-order:stroke;stroke:#faf8f3;stroke-width:3px;stroke-linejoin:round;"';
-      svg += '<g style="pointer-events:none;">';
-      if (isLondon){
-        svg += '<line x1="'+c[0]+'" y1="'+c[1]+'" x2="'+cx+'" y2="'+(cy+9)+'" stroke="#8C8273" stroke-width=".9"/>';
-        svg += '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="2" fill="#8C8273"/>';
-      }
-      svg += '<text class="jm-rlabel" x="'+cx+'" y="'+cy+'" fill="'+(isLondon?"#0B1C33":(light?"#F5F1E8":"#0B1C33"))+'" '+(isLondon?haloStyle:'')+'>'+esc(short)+'</text>';
-      svg += '<text class="jm-rcount" x="'+cx+'" y="'+(cy+13)+'" fill="'+(isLondon?"#a8842c":(light?"#E0BE8E":"#a8842c"))+'" '+(isLondon?haloStyle:'')+'>'+n+'</text>';
-      svg += '</g>';
+      if (!n) return;
+      var c = geo.centroids[name], d = NUDGE[name] || [0,0];
+      var x = c[0]+d[0], y = c[1]+d[1];
+      var r = 10 + 8*Math.sqrt(n/max);
+      var on = sel && sel.has(name);
+      svg += '<g class="jm-pin'+(on?" on":"")+'" data-r="'+esc(name)+'" tabindex="0" role="button" aria-label="'+esc(name)+': '+n+' vacancies">'
+        + '<circle class="ring" cx="'+x+'" cy="'+y+'" r="'+r+'"/><circle class="ring r2" cx="'+x+'" cy="'+y+'" r="'+r+'"/>'
+        + '<circle class="core" cx="'+x+'" cy="'+y+'" r="'+r+'" fill="url(#jmPinG)"/>'
+        + '<text x="'+x+'" y="'+y+'"'+(n>99?' style="font-size:10px"':'')+'>'+n+'</text></g>';
     });
     svgEl.innerHTML = svg;
 
-    svgEl.querySelectorAll(".jm-region").forEach(function(p){
-      p.addEventListener("click", function(){
-        var r = p.dataset.r;
-        if (!state.filters.region) state.filters.region = new Set();
-        if (state.filters.region.has(r)) state.filters.region.delete(r);
-        else state.filters.region.add(r);
-        state.limit = 25; render();
+    if (!svgEl.parentNode.querySelector(".jm-leg")){
+      var leg = document.createElement("p");
+      leg.className = "jm-leg";
+      leg.innerHTML = '<span><i></i>Live vacancies by region</span>';
+      svgEl.parentNode.appendChild(leg);
+    }
+
+    svgEl.querySelectorAll(".jm-region,.jm-pin").forEach(function(p){
+      p.addEventListener("click", function(){ toggleRegion(p.dataset.r); });
+      if (p.classList.contains("jm-pin")) p.addEventListener("keydown", function(v){
+        if (v.key === "Enter" || v.key === " "){ v.preventDefault(); toggleRegion(p.dataset.r); }
       });
     });
 
-    buildKey(counts, max);
+    buildKey(counts, names);
   }
 
-  // The key sits beside the map rather than above it, so the map gets the
-  // full height of the block.
-  function buildKey(counts, max){
+  // Region cards beside the map, KORE style: name, role count, gold badge.
+  function buildKey(counts, names){
     var host = document.getElementById("jmKey");
     if (!host) return;
-    var bands = [
-      {c: RAMP[4], lo: Math.ceil(max*0.8)},
-      {c: RAMP[3], lo: Math.ceil(max*0.55)},
-      {c: RAMP[2], lo: Math.ceil(max*0.3)},
-      {c: RAMP[1], lo: Math.ceil(max*0.08)},
-      {c: RAMP[0], lo: 1}
-    ];
-    var html = '<h4>Vacancies by region</h4><div class="jm-scale">';
-    bands.forEach(function(b, i){
-      var hi = i === 0 ? max : bands[i-1].lo - 1;
-      var label = (b.lo >= hi) ? String(b.lo) : b.lo + "\u2013" + hi;
-      html += '<div class="jm-step"><i style="background:' + b.c + '"></i><span>' + label + '</span></div>';
+    var sel = state.filters.region;
+    var list = names.slice().sort(function(a,b){ return (counts[b]||0)-(counts[a]||0) || a.localeCompare(b); });
+    var html = '<h4>Choose a region</h4><ul class="jm-cards">';
+    list.forEach(function(name){
+      var n = counts[name]||0, on = sel && sel.has(name);
+      html += '<li><button type="button" class="jm-rb'+(n?"":" zero")+'" data-r="'+esc(name)+'" aria-pressed="'+(on?"true":"false")+'">'
+        + '<span class="nm">'+esc(SHORT(name))+'</span><span class="sb">'+n+' role'+(n===1?"":"s")+'</span><span class="bd">'+n+'</span></button></li>';
     });
-    html += '<div class="jm-step"><i style="background:#f4f1ea"></i><span>0</span></div></div>';
-
     var nat = counts[NATIONAL] || 0;
     if (nat){
-      html += '<div class="jm-keynote"><b>Not on the map</b>'
-           +  nat + ' role' + (nat===1?' is':'s are') + ' advertised as UK-wide or field-based, '
-           +  'with no fixed territory.'
-           +  '<button type="button" class="jm-natbtn" id="jmNatBtn">Show these ' + nat + ' roles</button>'
-           +  '</div>';
+      var onN = sel && sel.has(NATIONAL);
+      html += '<li style="grid-column:1/-1"><button type="button" class="jm-rb nat" data-r="'+esc(NATIONAL)+'" aria-pressed="'+(onN?"true":"false")+'">'
+        + '<span class="nm">UK-wide and field-based</span><span class="sb">No fixed territory, so not on the map</span><span class="bd">'+nat+'</span></button></li>';
     }
+    html += '</ul>';
     host.innerHTML = html;
-
-    var nb = document.getElementById("jmNatBtn");
-    if (nb) nb.addEventListener("click", function(){
-      if (!state.filters.region) state.filters.region = new Set();
-      state.filters.region.clear();
-      state.filters.region.add(NATIONAL);
-      state.limit = 25; render();
+    host.querySelectorAll(".jm-rb").forEach(function(b){
+      b.addEventListener("click", function(){ toggleRegion(b.dataset.r); });
     });
   }
 
